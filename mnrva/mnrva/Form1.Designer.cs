@@ -47,6 +47,7 @@
             this.ss = new System.Windows.Forms.Button();
             this.bw = new System.Windows.Forms.Button();
             this.gscale = new System.Windows.Forms.GroupBox();
+            this.fotocopiaRange = new System.Windows.Forms.TrackBar();
             this.otrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bordesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.coloresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,6 +58,7 @@
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.sfd = new System.Windows.Forms.SaveFileDialog();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,6 +69,7 @@
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shades)).BeginInit();
             this.gscale.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fotocopiaRange)).BeginInit();
             this.menu.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
@@ -242,6 +245,7 @@
             // 
             // gscale
             // 
+            this.gscale.Controls.Add(this.fotocopiaRange);
             this.gscale.Controls.Add(this.valuedis);
             this.gscale.Controls.Add(this.shades);
             this.gscale.Controls.Add(this.print);
@@ -254,6 +258,17 @@
             this.gscale.TabIndex = 6;
             this.gscale.TabStop = false;
             this.gscale.Text = "Grayscale";
+            // 
+            // fotocopiaRange
+            // 
+            this.fotocopiaRange.Location = new System.Drawing.Point(9, 258);
+            this.fotocopiaRange.Minimum = 1;
+            this.fotocopiaRange.Name = "fotocopiaRange";
+            this.fotocopiaRange.Size = new System.Drawing.Size(138, 45);
+            this.fotocopiaRange.TabIndex = 5;
+            this.fotocopiaRange.Tag = "shades";
+            this.fotocopiaRange.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.fotocopiaRange.Value = 1;
             // 
             // otrosToolStripMenuItem
             // 
@@ -295,6 +310,7 @@
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
             this.guardarToolStripMenuItem.Size = new System.Drawing.Size(153, 30);
             this.guardarToolStripMenuItem.Text = "Guardar";
+            this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
             // cargarToolStripMenuItem
             // 
@@ -357,6 +373,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.shades)).EndInit();
             this.gscale.ResumeLayout(false);
             this.gscale.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fotocopiaRange)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -396,6 +413,8 @@
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menu;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TrackBar fotocopiaRange;
+        private System.Windows.Forms.SaveFileDialog sfd;
     }
 }
 

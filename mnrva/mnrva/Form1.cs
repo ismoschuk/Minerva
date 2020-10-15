@@ -36,8 +36,9 @@ namespace mnrva
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 ruta = ofd.FileName;
-                pictureBox1.Image = Image.FromFile(ruta);
                 ogBmp = new Bitmap(ruta);
+                pictureBox1.Image = ogBmp;
+                pictureBox3.Image = ogBmp;
 
 
             }
@@ -57,5 +58,24 @@ namespace mnrva
             pictureBox3.Image = gs;
             pictureBox2.Image = gs;
         }
+
+        private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sfd.FileName = "out";
+            sfd.DefaultExt = "jpg";
+            sfd.Filter = "JPG images (*.jpg)|*.jpg";
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+
+                var fileName = sfd.FileName;
+                if (!System.IO.Path.HasExtension(fileName) || System.IO.Path.GetExtension(fileName) != "jpg")
+                    fileName = fileName + ".jpg";
+
+                ogBmp.Save(fileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+            }
+        }
+
+
     }
 }
