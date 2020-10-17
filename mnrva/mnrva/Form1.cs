@@ -13,7 +13,8 @@ namespace mnrva
     public partial class Form1 : Form
     {
         filtros filtro = new filtros();
-        Bitmap ogBmp;
+        //int zoom_auxH, zoom_auxW, zoom_aux;
+        Bitmap ogBmp, zoomed, edit;
         string ruta;
         public Form1()
         {
@@ -38,25 +39,28 @@ namespace mnrva
                 ruta = ofd.FileName;
                 ogBmp = new Bitmap(ruta);
                 pictureBox1.Image = ogBmp;
-                pictureBox3.Image = ogBmp;
+                edit = new Bitmap(ogBmp);
 
-
+                pictureBox3.Image = edit;
+                zoomed = new Bitmap(edit);
             }
         }
-
 
         private void shades_Scroll(object sender, EventArgs e)
         {
             valuedis.Text = shades.Value.ToString();
-
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.grayscaleShades(bmpGS, shades.Value);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
         }
 
         private void bw_Click(object sender, EventArgs e)
         {
             Bitmap bmpGS = new Bitmap(ogBmp);
-            Bitmap gs = filtro.grayscale(bmpGS);
-            pictureBox3.Image = gs;
-            pictureBox2.Image = gs;
+            edit = filtro.grayscale(bmpGS);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
         }
 
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,6 +80,52 @@ namespace mnrva
             }
         }
 
+        private void ss_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.grayscaleShades(bmpGS, shades.Value);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
 
+        private void print_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.badPrinter(bmpGS, fotocopiaRange.Value);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void fotocopiaRange_Scroll(object sender, EventArgs e)
+        {
+            valueRange.Text = fotocopiaRange.Value.ToString();
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.badPrinter(bmpGS, fotocopiaRange.Value);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void zoomInOg_Click(object sender, EventArgs e)
+        {
+            Bitmap zoomed = new Bitmap(ogBmp, 400, 400);
+            //pictureBox4.Image = zoomed;
+            //label1.Text = pictureBox4.Size.ToString();
+        }
+
+        private void zoomout_Click(object sender, EventArgs e)
+        {
+            int aux = (zoomed.Height <= (ogBmp.Height / 2)) & (zoomed.Width <= (ogBmp.Width / 2)) ? 1 : 2;
+            zoomed = new Bitmap(edit, zoomed.Width / aux, zoomed.Height / aux);
+            pictureBox3.Image = zoomed;
+            label1.Text = zoomed.Size.ToString();
+        }
+
+        private void zoom_Click(object sender, EventArgs e)
+        {
+            int aux = (zoomed.Height >= (ogBmp.Height * 2)) & (zoomed.Width >= (ogBmp.Width * 2)) ? 1 : 2;
+            zoomed = new Bitmap(edit, zoomed.Width * aux, zoomed.Height * aux);
+            pictureBox3.Image = zoomed;
+            label1.Text = zoomed.Size.ToString();
+        }
     }
 }

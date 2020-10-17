@@ -47,6 +47,7 @@
             this.ss = new System.Windows.Forms.Button();
             this.bw = new System.Windows.Forms.Button();
             this.gscale = new System.Windows.Forms.GroupBox();
+            this.valueRange = new System.Windows.Forms.Label();
             this.fotocopiaRange = new System.Windows.Forms.TrackBar();
             this.otrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bordesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,6 +60,9 @@
             this.menu = new System.Windows.Forms.MenuStrip();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.sfd = new System.Windows.Forms.SaveFileDialog();
+            this.zoomout = new System.Windows.Forms.Button();
+            this.zoom = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -99,7 +103,7 @@
             // 
             // zoomOutOg
             // 
-            this.zoomOutOg.Location = new System.Drawing.Point(48, 332);
+            this.zoomOutOg.Location = new System.Drawing.Point(62, 332);
             this.zoomOutOg.Name = "zoomOutOg";
             this.zoomOutOg.Size = new System.Drawing.Size(39, 40);
             this.zoomOutOg.TabIndex = 2;
@@ -108,15 +112,17 @@
             // 
             // zoomInOg
             // 
-            this.zoomInOg.Location = new System.Drawing.Point(3, 332);
+            this.zoomInOg.Location = new System.Drawing.Point(17, 332);
             this.zoomInOg.Name = "zoomInOg";
             this.zoomInOg.Size = new System.Drawing.Size(39, 39);
             this.zoomInOg.TabIndex = 1;
             this.zoomInOg.Text = "button1";
             this.zoomInOg.UseVisualStyleBackColor = true;
+            this.zoomInOg.Click += new System.EventHandler(this.zoomInOg_Click);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Location = new System.Drawing.Point(3, 10);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(521, 316);
@@ -137,16 +143,16 @@
             // 
             // zoomOutNew
             // 
-            this.zoomOutNew.Location = new System.Drawing.Point(3, 330);
+            this.zoomOutNew.Location = new System.Drawing.Point(15, 331);
             this.zoomOutNew.Name = "zoomOutNew";
-            this.zoomOutNew.Size = new System.Drawing.Size(39, 42);
+            this.zoomOutNew.Size = new System.Drawing.Size(39, 40);
             this.zoomOutNew.TabIndex = 4;
             this.zoomOutNew.Text = "button1";
             this.zoomOutNew.UseVisualStyleBackColor = true;
             // 
             // zoomInNew
             // 
-            this.zoomInNew.Location = new System.Drawing.Point(48, 331);
+            this.zoomInNew.Location = new System.Drawing.Point(60, 331);
             this.zoomInNew.Name = "zoomInNew";
             this.zoomInNew.Size = new System.Drawing.Size(39, 40);
             this.zoomInNew.TabIndex = 3;
@@ -155,6 +161,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Location = new System.Drawing.Point(3, 10);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(511, 316);
@@ -164,6 +171,7 @@
             // 
             // panel3
             // 
+            this.panel3.AutoScroll = true;
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Location = new System.Drawing.Point(3, 6);
             this.panel3.Name = "panel3";
@@ -206,13 +214,13 @@
             // shades
             // 
             this.shades.Location = new System.Drawing.Point(8, 119);
-            this.shades.Minimum = 1;
+            this.shades.Minimum = 2;
             this.shades.Name = "shades";
             this.shades.Size = new System.Drawing.Size(138, 45);
             this.shades.TabIndex = 3;
             this.shades.Tag = "shades";
             this.shades.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.shades.Value = 1;
+            this.shades.Value = 2;
             this.shades.Scroll += new System.EventHandler(this.shades_Scroll);
             // 
             // print
@@ -223,6 +231,7 @@
             this.print.TabIndex = 2;
             this.print.Text = "Fotocopia";
             this.print.UseVisualStyleBackColor = true;
+            this.print.Click += new System.EventHandler(this.print_Click);
             // 
             // ss
             // 
@@ -232,6 +241,7 @@
             this.ss.TabIndex = 1;
             this.ss.Text = "Grises";
             this.ss.UseVisualStyleBackColor = true;
+            this.ss.Click += new System.EventHandler(this.ss_Click);
             // 
             // bw
             // 
@@ -245,6 +255,7 @@
             // 
             // gscale
             // 
+            this.gscale.Controls.Add(this.valueRange);
             this.gscale.Controls.Add(this.fotocopiaRange);
             this.gscale.Controls.Add(this.valuedis);
             this.gscale.Controls.Add(this.shades);
@@ -252,23 +263,35 @@
             this.gscale.Controls.Add(this.ss);
             this.gscale.Controls.Add(this.bw);
             this.gscale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gscale.Location = new System.Drawing.Point(1068, 132);
+            this.gscale.Location = new System.Drawing.Point(1078, 58);
             this.gscale.Name = "gscale";
-            this.gscale.Size = new System.Drawing.Size(153, 486);
+            this.gscale.Size = new System.Drawing.Size(153, 482);
             this.gscale.TabIndex = 6;
             this.gscale.TabStop = false;
             this.gscale.Text = "Grayscale";
             // 
+            // valueRange
+            // 
+            this.valueRange.AutoSize = true;
+            this.valueRange.Location = new System.Drawing.Point(8, 306);
+            this.valueRange.Name = "valueRange";
+            this.valueRange.Size = new System.Drawing.Size(51, 20);
+            this.valueRange.TabIndex = 6;
+            this.valueRange.Text = "label1";
+            // 
             // fotocopiaRange
             // 
             this.fotocopiaRange.Location = new System.Drawing.Point(9, 258);
-            this.fotocopiaRange.Minimum = 1;
+            this.fotocopiaRange.Maximum = 255;
+            this.fotocopiaRange.Minimum = 10;
             this.fotocopiaRange.Name = "fotocopiaRange";
             this.fotocopiaRange.Size = new System.Drawing.Size(138, 45);
+            this.fotocopiaRange.SmallChange = 5;
             this.fotocopiaRange.TabIndex = 5;
             this.fotocopiaRange.Tag = "shades";
             this.fotocopiaRange.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.fotocopiaRange.Value = 1;
+            this.fotocopiaRange.Value = 10;
+            this.fotocopiaRange.Scroll += new System.EventHandler(this.fotocopiaRange_Scroll);
             // 
             // otrosToolStripMenuItem
             // 
@@ -336,7 +359,7 @@
             this.filtrosToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(1259, 33);
+            this.menu.Size = new System.Drawing.Size(1234, 33);
             this.menu.TabIndex = 5;
             this.menu.Text = "menuStrip1";
             // 
@@ -344,17 +367,49 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(3, 58);
+            this.tabControl1.Location = new System.Drawing.Point(9, 36);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1067, 508);
             this.tabControl1.TabIndex = 7;
             // 
+            // zoomout
+            // 
+            this.zoomout.Location = new System.Drawing.Point(1090, 36);
+            this.zoomout.Name = "zoomout";
+            this.zoomout.Size = new System.Drawing.Size(38, 23);
+            this.zoomout.TabIndex = 7;
+            this.zoomout.Text = "out";
+            this.zoomout.UseVisualStyleBackColor = true;
+            this.zoomout.Click += new System.EventHandler(this.zoomout_Click);
+            // 
+            // zoom
+            // 
+            this.zoom.Location = new System.Drawing.Point(1134, 36);
+            this.zoom.Name = "zoom";
+            this.zoom.Size = new System.Drawing.Size(38, 23);
+            this.zoom.TabIndex = 8;
+            this.zoom.Text = "zoom";
+            this.zoom.UseVisualStyleBackColor = true;
+            this.zoom.Click += new System.EventHandler(this.zoom_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(214, 547);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1259, 610);
+            this.ClientSize = new System.Drawing.Size(1234, 561);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.zoom);
+            this.Controls.Add(this.zoomout);
             this.Controls.Add(this.gscale);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.tabControl1);
@@ -413,8 +468,12 @@
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menu;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TrackBar fotocopiaRange;
         private System.Windows.Forms.SaveFileDialog sfd;
+        private System.Windows.Forms.Label valueRange;
+        internal System.Windows.Forms.TrackBar fotocopiaRange;
+        private System.Windows.Forms.Button zoomout;
+        private System.Windows.Forms.Button zoom;
+        private System.Windows.Forms.Label label1;
     }
 }
 
