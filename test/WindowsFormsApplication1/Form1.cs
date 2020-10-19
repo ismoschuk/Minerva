@@ -476,7 +476,31 @@ namespace WindowsFormsApplication1
             }
             return crop;
         }
+        public Bitmap grayscaleColor(string ruta)
+        {
+            Bitmap gs;
+            gs = new Bitmap(ruta);
+            h = gs.Height;
+            w = gs.Width;
+            Color c, c2, cf;
+            int rango = 75;
 
+            for (int y = 0; y < h; y++)
+            {
+                for (int x = 0; x < w; x++)
+                {
+                    c = gs.GetPixel(x, y);
+
+                    int pr = (c.R + c.G + c.B) / 3;
+                    c2 = Color.FromArgb(c.A, pr, pr, pr);
+
+                    cf = (c.R < rango) & (c.G < rango) & (c.B > rango) ? c : c2;
+                    gs.SetPixel(x, y, cf);
+                }
+            }
+
+            return gs;
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             bmp = grayscale(ruta);
@@ -529,6 +553,13 @@ namespace WindowsFormsApplication1
         private void button11_Click(object sender, EventArgs e)
         {
             bmp = testin(ruta);
+            pictureBox2.Image = bmp;
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            bmp = grayscaleColor(ruta);
             pictureBox2.Image = bmp;
 
         }
