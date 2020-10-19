@@ -10,8 +10,11 @@ namespace mnrva
     class filtros
     {
         int h, w;
+
+        //GRAYSCALE FILTERS
         public Bitmap grayscale(Bitmap ruta)
         {
+            // Filtro blanco y negro normal (escala de calores de grises)
 
             Bitmap gs;
             gs = new Bitmap(ruta);
@@ -36,6 +39,7 @@ namespace mnrva
 
         public Bitmap grayscaleShades(Bitmap ruta, int s)
         {
+            // Filtro blanco y negro pero solo utiliza un número determinado de grises
             Bitmap gs;
             gs = new Bitmap(ruta);
             h = gs.Height;
@@ -61,6 +65,7 @@ namespace mnrva
 
         public Bitmap badPrinter(Bitmap ruta, int rango)
         {
+            // Usa solo blanco y negro puro dependiendo de la saturación
             Bitmap gs;
             gs = new Bitmap(ruta);
             h = gs.Height;
@@ -85,6 +90,7 @@ namespace mnrva
 
         public Bitmap grayscaleColor(Bitmap ruta, string si, int rango)
         {
+            // Filtro de escala de gfrises pero realta rojo o azul
             Bitmap gs;
             gs = new Bitmap(ruta);
             h = gs.Height;
@@ -115,6 +121,7 @@ namespace mnrva
 
         public Bitmap grayscaleColorRange(Bitmap ruta, int rangoR, int rangoG, int rangoB)
         {
+            // Filtro de escala de gfrises pero realta el color dado
             Bitmap gs;
             gs = new Bitmap(ruta);
             h = gs.Height;
@@ -142,5 +149,12 @@ namespace mnrva
 
             return gs;
         }
+
+
+        //END GRAYSCALE FILTERS
+           //*//
+        //COLOR FILTERS
+        
+
     }
 }
