@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.zoomInNew = new System.Windows.Forms.Button();
+            this.zoomOutNew = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.zoomOutOg = new System.Windows.Forms.Button();
             this.zoomInOg = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.zoomOutNew = new System.Windows.Forms.Button();
-            this.zoomInNew = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -56,6 +57,7 @@
             this.FIlterSelect = new System.Windows.Forms.TabControl();
             this.gscale = new System.Windows.Forms.TabPage();
             this.c = new System.Windows.Forms.Panel();
+            this.crPick = new System.Windows.Forms.Button();
             this.blueRange = new System.Windows.Forms.TrackBar();
             this.greenRange = new System.Windows.Forms.TrackBar();
             this.redRange = new System.Windows.Forms.TrackBar();
@@ -75,13 +77,40 @@
             this.b = new System.Windows.Forms.Panel();
             this.bw = new System.Windows.Forms.Button();
             this.colors = new System.Windows.Forms.TabPage();
+            this.s = new System.Windows.Forms.Panel();
+            this.srnge = new System.Windows.Forms.Label();
+            this.simpleRange = new System.Windows.Forms.TrackBar();
+            this.simple = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cst = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ct = new System.Windows.Forms.Button();
+            this.t = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.blueRange2 = new System.Windows.Forms.TrackBar();
+            this.greenRange2 = new System.Windows.Forms.TrackBar();
+            this.redRange2 = new System.Windows.Forms.TrackBar();
+            this.tint = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.crPick = new System.Windows.Forms.Button();
             this.main = new System.Windows.Forms.Panel();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cl = new System.Windows.Forms.Panel();
+            this.clr = new System.Windows.Forms.Button();
+            this.lRed = new System.Windows.Forms.Button();
+            this.lGreen = new System.Windows.Forms.Button();
+            this.lBlue = new System.Windows.Forms.Button();
+            this.lMag = new System.Windows.Forms.Button();
+            this.lVio = new System.Windows.Forms.Button();
+            this.lOran = new System.Windows.Forms.Button();
+            this.lYell = new System.Windows.Forms.Button();
+            this.lCian = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabPage1.SuspendLayout();
@@ -99,11 +128,17 @@
             this.g.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shades)).BeginInit();
             this.b.SuspendLayout();
+            this.colors.SuspendLayout();
+            this.s.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleRange)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.t.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.blueRange2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.greenRange2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redRange2)).BeginInit();
             this.main.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            this.cl.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -117,59 +152,26 @@
             this.tabPage2.Text = "Comparar";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // zoomOutOg
+            // splitContainer1
             // 
-            this.zoomOutOg.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.zoomOutOg.Location = new System.Drawing.Point(63, 426);
-            this.zoomOutOg.Name = "zoomOutOg";
-            this.zoomOutOg.Size = new System.Drawing.Size(39, 40);
-            this.zoomOutOg.TabIndex = 2;
-            this.zoomOutOg.Text = "button1";
-            this.zoomOutOg.UseVisualStyleBackColor = true;
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer1.Name = "splitContainer1";
             // 
-            // zoomInOg
+            // splitContainer1.Panel1
             // 
-            this.zoomInOg.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.zoomInOg.Location = new System.Drawing.Point(18, 426);
-            this.zoomInOg.Name = "zoomInOg";
-            this.zoomInOg.Size = new System.Drawing.Size(39, 39);
-            this.zoomInOg.TabIndex = 1;
-            this.zoomInOg.Text = "button1";
-            this.zoomInOg.UseVisualStyleBackColor = true;
-            this.zoomInOg.Click += new System.EventHandler(this.zoomInOg_Click);
+            this.splitContainer1.Panel1.Controls.Add(this.pictureBox2);
+            this.splitContainer1.Panel1.Controls.Add(this.zoomInNew);
+            this.splitContainer1.Panel1.Controls.Add(this.zoomOutNew);
             // 
-            // pictureBox1
+            // splitContainer1.Panel2
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(510, 354);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // zoomOutNew
-            // 
-            this.zoomOutNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.zoomOutNew.Location = new System.Drawing.Point(15, 426);
-            this.zoomOutNew.Name = "zoomOutNew";
-            this.zoomOutNew.Size = new System.Drawing.Size(39, 40);
-            this.zoomOutNew.TabIndex = 4;
-            this.zoomOutNew.Text = "button1";
-            this.zoomOutNew.UseVisualStyleBackColor = true;
-            // 
-            // zoomInNew
-            // 
-            this.zoomInNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.zoomInNew.Location = new System.Drawing.Point(60, 426);
-            this.zoomInNew.Name = "zoomInNew";
-            this.zoomInNew.Size = new System.Drawing.Size(39, 40);
-            this.zoomInNew.TabIndex = 3;
-            this.zoomInNew.Text = "button1";
-            this.zoomInNew.UseVisualStyleBackColor = true;
+            this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
+            this.splitContainer1.Panel2.Controls.Add(this.zoomOutOg);
+            this.splitContainer1.Panel2.Controls.Add(this.zoomInOg);
+            this.splitContainer1.Size = new System.Drawing.Size(1056, 486);
+            this.splitContainer1.SplitterDistance = 540;
+            this.splitContainer1.TabIndex = 7;
             // 
             // pictureBox2
             // 
@@ -183,6 +185,63 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            // 
+            // zoomInNew
+            // 
+            this.zoomInNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.zoomInNew.Location = new System.Drawing.Point(60, 426);
+            this.zoomInNew.Name = "zoomInNew";
+            this.zoomInNew.Size = new System.Drawing.Size(39, 40);
+            this.zoomInNew.TabIndex = 3;
+            this.zoomInNew.Text = "button1";
+            this.zoomInNew.UseVisualStyleBackColor = true;
+            // 
+            // zoomOutNew
+            // 
+            this.zoomOutNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.zoomOutNew.Location = new System.Drawing.Point(15, 426);
+            this.zoomOutNew.Name = "zoomOutNew";
+            this.zoomOutNew.Size = new System.Drawing.Size(39, 40);
+            this.zoomOutNew.TabIndex = 4;
+            this.zoomOutNew.Text = "button1";
+            this.zoomOutNew.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(510, 354);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            // 
+            // zoomOutOg
+            // 
+            this.zoomOutOg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.zoomOutOg.Location = new System.Drawing.Point(63, 426);
+            this.zoomOutOg.Name = "zoomOutOg";
+            this.zoomOutOg.Size = new System.Drawing.Size(39, 40);
+            this.zoomOutOg.TabIndex = 2;
+            this.zoomOutOg.Text = "button1";
+            this.zoomOutOg.UseVisualStyleBackColor = true;
+            // 
+            // zoomInOg
+            // 
+            this.zoomInOg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.zoomInOg.Location = new System.Drawing.Point(18, 426);
+            this.zoomInOg.Name = "zoomInOg";
+            this.zoomInOg.Size = new System.Drawing.Size(39, 39);
+            this.zoomInOg.TabIndex = 1;
+            this.zoomInOg.Text = "button1";
+            this.zoomInOg.UseVisualStyleBackColor = true;
+            this.zoomInOg.Click += new System.EventHandler(this.zoomInOg_Click);
             // 
             // panel3
             // 
@@ -376,15 +435,24 @@
             this.c.Dock = System.Windows.Forms.DockStyle.Top;
             this.c.Location = new System.Drawing.Point(3, 368);
             this.c.Name = "c";
-            this.c.Size = new System.Drawing.Size(171, 43);
+            this.c.Size = new System.Drawing.Size(154, 190);
             this.c.TabIndex = 8;
+            // 
+            // crPick
+            // 
+            this.crPick.Location = new System.Drawing.Point(3, 43);
+            this.crPick.Name = "crPick";
+            this.crPick.Size = new System.Drawing.Size(150, 28);
+            this.crPick.TabIndex = 8;
+            this.crPick.Text = "Usar color sleccionado";
+            this.crPick.UseVisualStyleBackColor = true;
+            this.crPick.Click += new System.EventHandler(this.crPick_Click);
             // 
             // blueRange
             // 
             this.blueRange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.blueRange.Location = new System.Drawing.Point(3, 179);
             this.blueRange.Maximum = 255;
-            this.blueRange.Minimum = 10;
             this.blueRange.Name = "blueRange";
             this.blueRange.Size = new System.Drawing.Size(150, 45);
             this.blueRange.TabIndex = 7;
@@ -397,7 +465,6 @@
             this.greenRange.BackColor = System.Drawing.Color.LightGreen;
             this.greenRange.Location = new System.Drawing.Point(3, 128);
             this.greenRange.Maximum = 255;
-            this.greenRange.Minimum = 10;
             this.greenRange.Name = "greenRange";
             this.greenRange.Size = new System.Drawing.Size(150, 45);
             this.greenRange.TabIndex = 6;
@@ -410,7 +477,6 @@
             this.redRange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.redRange.Location = new System.Drawing.Point(4, 77);
             this.redRange.Maximum = 255;
-            this.redRange.Minimum = 10;
             this.redRange.Name = "redRange";
             this.redRange.Size = new System.Drawing.Size(150, 45);
             this.redRange.TabIndex = 5;
@@ -437,7 +503,7 @@
             this.uc.Dock = System.Windows.Forms.DockStyle.Top;
             this.uc.Location = new System.Drawing.Point(3, 276);
             this.uc.Name = "uc";
-            this.uc.Size = new System.Drawing.Size(171, 92);
+            this.uc.Size = new System.Drawing.Size(154, 92);
             this.uc.TabIndex = 7;
             // 
             // blue
@@ -479,7 +545,7 @@
             this.p.Dock = System.Windows.Forms.DockStyle.Top;
             this.p.Location = new System.Drawing.Point(3, 160);
             this.p.Name = "p";
-            this.p.Size = new System.Drawing.Size(171, 116);
+            this.p.Size = new System.Drawing.Size(154, 116);
             this.p.TabIndex = 6;
             // 
             // print
@@ -524,7 +590,7 @@
             this.g.Dock = System.Windows.Forms.DockStyle.Top;
             this.g.Location = new System.Drawing.Point(3, 43);
             this.g.Name = "g";
-            this.g.Size = new System.Drawing.Size(171, 117);
+            this.g.Size = new System.Drawing.Size(154, 117);
             this.g.TabIndex = 5;
             // 
             // ss
@@ -565,7 +631,7 @@
             this.b.Dock = System.Windows.Forms.DockStyle.Top;
             this.b.Location = new System.Drawing.Point(3, 3);
             this.b.Name = "b";
-            this.b.Size = new System.Drawing.Size(171, 40);
+            this.b.Size = new System.Drawing.Size(154, 40);
             this.b.TabIndex = 1;
             // 
             // bw
@@ -580,13 +646,171 @@
             // 
             // colors
             // 
+            this.colors.AutoScroll = true;
+            this.colors.Controls.Add(this.cl);
+            this.colors.Controls.Add(this.s);
+            this.colors.Controls.Add(this.panel2);
+            this.colors.Controls.Add(this.panel1);
+            this.colors.Controls.Add(this.t);
             this.colors.Location = new System.Drawing.Point(4, 22);
             this.colors.Name = "colors";
             this.colors.Padding = new System.Windows.Forms.Padding(3);
-            this.colors.Size = new System.Drawing.Size(179, 540);
+            this.colors.Size = new System.Drawing.Size(177, 502);
             this.colors.TabIndex = 1;
             this.colors.Text = "Colors";
             this.colors.UseVisualStyleBackColor = true;
+            // 
+            // s
+            // 
+            this.s.Controls.Add(this.srnge);
+            this.s.Controls.Add(this.simpleRange);
+            this.s.Controls.Add(this.simple);
+            this.s.Dock = System.Windows.Forms.DockStyle.Top;
+            this.s.Location = new System.Drawing.Point(3, 324);
+            this.s.Name = "s";
+            this.s.Size = new System.Drawing.Size(154, 110);
+            this.s.TabIndex = 13;
+            // 
+            // srnge
+            // 
+            this.srnge.AutoSize = true;
+            this.srnge.Location = new System.Drawing.Point(15, 92);
+            this.srnge.Name = "srnge";
+            this.srnge.Size = new System.Drawing.Size(13, 13);
+            this.srnge.TabIndex = 12;
+            this.srnge.Text = "8";
+            // 
+            // simpleRange
+            // 
+            this.simpleRange.Location = new System.Drawing.Point(7, 44);
+            this.simpleRange.Maximum = 15;
+            this.simpleRange.Minimum = 1;
+            this.simpleRange.Name = "simpleRange";
+            this.simpleRange.Size = new System.Drawing.Size(138, 45);
+            this.simpleRange.TabIndex = 11;
+            this.simpleRange.Tag = "shades";
+            this.simpleRange.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.simpleRange.Value = 8;
+            this.simpleRange.Scroll += new System.EventHandler(this.simpleRange_Scroll);
+            // 
+            // simple
+            // 
+            this.simple.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.simple.Location = new System.Drawing.Point(3, 3);
+            this.simple.Name = "simple";
+            this.simple.Size = new System.Drawing.Size(145, 35);
+            this.simple.TabIndex = 10;
+            this.simple.Text = "Saturado";
+            this.simple.UseVisualStyleBackColor = true;
+            this.simple.Click += new System.EventHandler(this.simple_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.cst);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(3, 278);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(154, 46);
+            this.panel2.TabIndex = 11;
+            // 
+            // cst
+            // 
+            this.cst.Location = new System.Drawing.Point(4, 3);
+            this.cst.Name = "cst";
+            this.cst.Size = new System.Drawing.Size(145, 35);
+            this.cst.TabIndex = 10;
+            this.cst.Text = "Contraste";
+            this.cst.UseVisualStyleBackColor = true;
+            this.cst.Click += new System.EventHandler(this.cst_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.ct);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 235);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(154, 43);
+            this.panel1.TabIndex = 10;
+            // 
+            // ct
+            // 
+            this.ct.Location = new System.Drawing.Point(5, 4);
+            this.ct.Name = "ct";
+            this.ct.Size = new System.Drawing.Size(145, 35);
+            this.ct.TabIndex = 9;
+            this.ct.Text = "Negativo";
+            this.ct.UseVisualStyleBackColor = true;
+            this.ct.Click += new System.EventHandler(this.ct_Click);
+            // 
+            // t
+            // 
+            this.t.Controls.Add(this.button1);
+            this.t.Controls.Add(this.blueRange2);
+            this.t.Controls.Add(this.greenRange2);
+            this.t.Controls.Add(this.redRange2);
+            this.t.Controls.Add(this.tint);
+            this.t.Dock = System.Windows.Forms.DockStyle.Top;
+            this.t.Location = new System.Drawing.Point(3, 3);
+            this.t.Name = "t";
+            this.t.Size = new System.Drawing.Size(154, 232);
+            this.t.TabIndex = 9;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 43);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 28);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Usar color sleccionado";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // blueRange2
+            // 
+            this.blueRange2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.blueRange2.Location = new System.Drawing.Point(3, 179);
+            this.blueRange2.Maximum = 255;
+            this.blueRange2.Name = "blueRange2";
+            this.blueRange2.Size = new System.Drawing.Size(150, 45);
+            this.blueRange2.TabIndex = 7;
+            this.blueRange2.TickFrequency = 10;
+            this.blueRange2.Value = 10;
+            this.blueRange2.Scroll += new System.EventHandler(this.blueRange2_Scroll);
+            // 
+            // greenRange2
+            // 
+            this.greenRange2.BackColor = System.Drawing.Color.LightGreen;
+            this.greenRange2.Location = new System.Drawing.Point(3, 128);
+            this.greenRange2.Maximum = 255;
+            this.greenRange2.Name = "greenRange2";
+            this.greenRange2.Size = new System.Drawing.Size(150, 45);
+            this.greenRange2.TabIndex = 6;
+            this.greenRange2.TickFrequency = 10;
+            this.greenRange2.Value = 10;
+            this.greenRange2.Scroll += new System.EventHandler(this.greenRange2_Scroll);
+            // 
+            // redRange2
+            // 
+            this.redRange2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.redRange2.Location = new System.Drawing.Point(4, 77);
+            this.redRange2.Maximum = 255;
+            this.redRange2.Name = "redRange2";
+            this.redRange2.Size = new System.Drawing.Size(150, 45);
+            this.redRange2.TabIndex = 5;
+            this.redRange2.TickFrequency = 10;
+            this.redRange2.Value = 10;
+            this.redRange2.Scroll += new System.EventHandler(this.redRange2_Scroll);
+            // 
+            // tint
+            // 
+            this.tint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.tint.Location = new System.Drawing.Point(5, 2);
+            this.tint.Name = "tint";
+            this.tint.Size = new System.Drawing.Size(145, 35);
+            this.tint.TabIndex = 4;
+            this.tint.Text = "Tinte";
+            this.tint.UseVisualStyleBackColor = true;
+            this.tint.Click += new System.EventHandler(this.tint_Click);
             // 
             // label2
             // 
@@ -598,16 +822,6 @@
             this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 11;
             this.label2.Text = "label2";
-            // 
-            // crPick
-            // 
-            this.crPick.Location = new System.Drawing.Point(3, 43);
-            this.crPick.Name = "crPick";
-            this.crPick.Size = new System.Drawing.Size(150, 28);
-            this.crPick.TabIndex = 8;
-            this.crPick.Text = "Usar color sleccionado";
-            this.crPick.UseVisualStyleBackColor = true;
-            this.crPick.Click += new System.EventHandler(this.crPick_Click);
             // 
             // main
             // 
@@ -621,32 +835,132 @@
             this.main.Size = new System.Drawing.Size(1254, 528);
             this.main.TabIndex = 12;
             // 
-            // splitContainer1
+            // label3
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer1.Name = "splitContainer1";
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(94, 596);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 20);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "label3";
             // 
-            // splitContainer1.Panel1
+            // cl
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.pictureBox2);
-            this.splitContainer1.Panel1.Controls.Add(this.zoomInNew);
-            this.splitContainer1.Panel1.Controls.Add(this.zoomOutNew);
+            this.cl.Controls.Add(this.lVio);
+            this.cl.Controls.Add(this.lOran);
+            this.cl.Controls.Add(this.lYell);
+            this.cl.Controls.Add(this.lCian);
+            this.cl.Controls.Add(this.lMag);
+            this.cl.Controls.Add(this.lBlue);
+            this.cl.Controls.Add(this.lGreen);
+            this.cl.Controls.Add(this.lRed);
+            this.cl.Controls.Add(this.clr);
+            this.cl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cl.Location = new System.Drawing.Point(3, 434);
+            this.cl.Name = "cl";
+            this.cl.Size = new System.Drawing.Size(154, 110);
+            this.cl.TabIndex = 14;
+            this.cl.Paint += new System.Windows.Forms.PaintEventHandler(this.cl_Paint);
             // 
-            // splitContainer1.Panel2
+            // clr
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
-            this.splitContainer1.Panel2.Controls.Add(this.zoomOutOg);
-            this.splitContainer1.Panel2.Controls.Add(this.zoomInOg);
-            this.splitContainer1.Size = new System.Drawing.Size(1056, 486);
-            this.splitContainer1.SplitterDistance = 540;
-            this.splitContainer1.TabIndex = 7;
+            this.clr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.clr.Location = new System.Drawing.Point(3, 3);
+            this.clr.Name = "clr";
+            this.clr.Size = new System.Drawing.Size(145, 35);
+            this.clr.TabIndex = 10;
+            this.clr.Text = "Lente de Color";
+            this.clr.UseVisualStyleBackColor = true;
+            this.clr.Click += new System.EventHandler(this.clr_Click);
+            // 
+            // lRed
+            // 
+            this.lRed.BackColor = System.Drawing.Color.Red;
+            this.lRed.Location = new System.Drawing.Point(7, 44);
+            this.lRed.Name = "lRed";
+            this.lRed.Size = new System.Drawing.Size(26, 28);
+            this.lRed.TabIndex = 11;
+            this.lRed.UseVisualStyleBackColor = false;
+            this.lRed.Click += new System.EventHandler(this.lRed_Click);
+            // 
+            // lGreen
+            // 
+            this.lGreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lGreen.Location = new System.Drawing.Point(39, 44);
+            this.lGreen.Name = "lGreen";
+            this.lGreen.Size = new System.Drawing.Size(26, 28);
+            this.lGreen.TabIndex = 12;
+            this.lGreen.UseVisualStyleBackColor = false;
+            this.lGreen.Click += new System.EventHandler(this.lGreen_Click);
+            // 
+            // lBlue
+            // 
+            this.lBlue.BackColor = System.Drawing.Color.Blue;
+            this.lBlue.Location = new System.Drawing.Point(71, 44);
+            this.lBlue.Name = "lBlue";
+            this.lBlue.Size = new System.Drawing.Size(26, 28);
+            this.lBlue.TabIndex = 13;
+            this.lBlue.UseVisualStyleBackColor = false;
+            this.lBlue.Click += new System.EventHandler(this.lBlue_Click);
+            // 
+            // lMag
+            // 
+            this.lMag.BackColor = System.Drawing.Color.Fuchsia;
+            this.lMag.Location = new System.Drawing.Point(103, 44);
+            this.lMag.Name = "lMag";
+            this.lMag.Size = new System.Drawing.Size(26, 28);
+            this.lMag.TabIndex = 14;
+            this.lMag.UseVisualStyleBackColor = false;
+            this.lMag.Click += new System.EventHandler(this.lMag_Click);
+            // 
+            // lVio
+            // 
+            this.lVio.BackColor = System.Drawing.Color.Purple;
+            this.lVio.Location = new System.Drawing.Point(103, 76);
+            this.lVio.Name = "lVio";
+            this.lVio.Size = new System.Drawing.Size(26, 28);
+            this.lVio.TabIndex = 18;
+            this.lVio.UseVisualStyleBackColor = false;
+            this.lVio.Click += new System.EventHandler(this.lVio_Click);
+            // 
+            // lOran
+            // 
+            this.lOran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lOran.Location = new System.Drawing.Point(71, 76);
+            this.lOran.Name = "lOran";
+            this.lOran.Size = new System.Drawing.Size(26, 28);
+            this.lOran.TabIndex = 17;
+            this.lOran.UseVisualStyleBackColor = false;
+            this.lOran.Click += new System.EventHandler(this.lOran_Click);
+            // 
+            // lYell
+            // 
+            this.lYell.BackColor = System.Drawing.Color.Yellow;
+            this.lYell.Location = new System.Drawing.Point(39, 76);
+            this.lYell.Name = "lYell";
+            this.lYell.Size = new System.Drawing.Size(26, 28);
+            this.lYell.TabIndex = 16;
+            this.lYell.UseVisualStyleBackColor = false;
+            this.lYell.Click += new System.EventHandler(this.lYell_Click);
+            // 
+            // lCian
+            // 
+            this.lCian.BackColor = System.Drawing.Color.Aqua;
+            this.lCian.Location = new System.Drawing.Point(7, 76);
+            this.lCian.Name = "lCian";
+            this.lCian.Size = new System.Drawing.Size(26, 28);
+            this.lCian.TabIndex = 15;
+            this.lCian.UseVisualStyleBackColor = false;
+            this.lCian.Click += new System.EventHandler(this.lCian_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1315, 638);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -657,8 +971,12 @@
             this.Text = " ";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -681,11 +999,19 @@
             this.g.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shades)).EndInit();
             this.b.ResumeLayout(false);
+            this.colors.ResumeLayout(false);
+            this.s.ResumeLayout(false);
+            this.s.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleRange)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.t.ResumeLayout(false);
+            this.t.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.blueRange2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.greenRange2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redRange2)).EndInit();
             this.main.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            this.cl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -744,6 +1070,31 @@
         private System.Windows.Forms.Button crPick;
         private System.Windows.Forms.Panel main;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Panel t;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TrackBar blueRange2;
+        private System.Windows.Forms.TrackBar greenRange2;
+        private System.Windows.Forms.TrackBar redRange2;
+        private System.Windows.Forms.Button tint;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button ct;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button cst;
+        private System.Windows.Forms.Panel s;
+        private System.Windows.Forms.Label srnge;
+        private System.Windows.Forms.TrackBar simpleRange;
+        private System.Windows.Forms.Button simple;
+        private System.Windows.Forms.Panel cl;
+        private System.Windows.Forms.Button lVio;
+        private System.Windows.Forms.Button lOran;
+        private System.Windows.Forms.Button lYell;
+        private System.Windows.Forms.Button lCian;
+        private System.Windows.Forms.Button lMag;
+        private System.Windows.Forms.Button lBlue;
+        private System.Windows.Forms.Button lGreen;
+        private System.Windows.Forms.Button lRed;
+        private System.Windows.Forms.Button clr;
     }
 }
 

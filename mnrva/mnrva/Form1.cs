@@ -34,6 +34,8 @@ namespace mnrva
             p.Size = new Size(114, 40);
             uc.Size = new Size(114, 40);
             c.Size = new Size(114, 40);
+            t.Size = new Size(114, 40);
+            s.Size = new Size(114, 40);
         }
 
         private void cargarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -44,6 +46,7 @@ namespace mnrva
                 ruta = ofd.FileName;
                 ogBmp = new Bitmap(ruta);
                 pictureBox1.Image = ogBmp;
+                label3.Text = pictureBox1.Image.Size.ToString();
                 edit = new Bitmap(ogBmp);
 
                 pictureBox3.Image = edit;
@@ -190,6 +193,166 @@ namespace mnrva
         {
             currentColor = ogZoomed.GetPixel(e.X, e.Y);
             label2.Text = currentColor.ToString();
+        }
+
+        private void tint_Click(object sender, EventArgs e)
+        {
+            t.Height = (t.Height == 235) ? 40 : 235;
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            redRange.Value = currentColor.R;
+            greenRange.Value = currentColor.G;
+            blueRange.Value = currentColor.B;
+            edit = filtro.Tint(bmpGS, redRange2.Value, greenRange2.Value, blueRange2.Value);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            Bitmap b = new Bitmap(pictureBox1.ClientSize.Width, pictureBox1.Height);
+            pictureBox1.DrawToBitmap(b, pictureBox1.ClientRectangle);
+            currentColor = b.GetPixel(e.X, e.Y);
+            label2.Text = currentColor.ToString() + " - " + e.Location.ToString();
+        }
+
+        private void redRange2_Scroll(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.Tint(bmpGS, redRange2.Value, greenRange2.Value, blueRange2.Value);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void greenRange2_Scroll(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.Tint(bmpGS, redRange2.Value, greenRange2.Value, blueRange2.Value);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void blueRange2_Scroll(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.Tint(bmpGS, redRange2.Value, greenRange2.Value, blueRange2.Value);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void ct_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.invert(bmpGS, 10);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void cst_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.contrast(bmpGS, 99);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void simple_Click(object sender, EventArgs e)
+        {
+            s.Height = (s.Height == 145) ? 40 : 145;
+
+        }
+
+        private void simpleRange_Scroll(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.onlyRGB(bmpGS, simpleRange.Value);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void cl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void clr_Click(object sender, EventArgs e)
+        {
+            // rojo=1, verde=2, azul=3, magenta=4, cian=5, amarillo=6, naranja=7, violeta=8
+            cl.Height = (cl.Height == 145) ? 40 : 145;
+
+        }
+
+        private void lRed_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.oneColor(bmpGS, 1);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void lGreen_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.oneColor(bmpGS, 2);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void lBlue_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.oneColor(bmpGS, 3);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void lMag_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.oneColor(bmpGS, 4);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void lCian_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.oneColor(bmpGS, 5);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void lYell_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.oneColor(bmpGS, 6);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void lOran_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.oneColor(bmpGS, 7);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void lVio_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.oneColor(bmpGS, 8);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
         }
 
         private void crPick_Click(object sender, EventArgs e)
