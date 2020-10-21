@@ -12,9 +12,17 @@ namespace mnrva
         int h, w;
 
 
-
+        //TRUNCATES
         public int truncate(int rgb)
         {
+            rgb = (rgb > 255) ? 255 : rgb;
+            rgb = (rgb < 0) ? 0 : rgb;
+            return rgb;
+        }
+
+        public int truncateS(double pix)
+        {
+            int rgb = Convert.ToInt32(Math.Floor(pix));
             rgb = (rgb > 255) ? 255 : rgb;
             rgb = (rgb < 0) ? 0 : rgb;
             return rgb;
@@ -288,6 +296,7 @@ namespace mnrva
             gs = new Bitmap(ruta);
             h = gs.Height;
             w = gs.Width;
+            int rango = w / 8;
             Color c;
             int r, g, b;
             for (int y = 0; y < h; y++)
@@ -307,6 +316,73 @@ namespace mnrva
             return gs;
         }
 
+        public Bitmap rainbowStripe(Bitmap ruta)
+        {
+            // rojo=1, verde=2, azul=3, magenta=4, cian=5, amarillo=6, naranja=7, violeta=8
+            Bitmap gs;
+            gs = new Bitmap(ruta);
+            h = gs.Height;
+            w = gs.Width;
+            Color c;
+            int rango = w / 7;
+            int r, g, b;
 
+            for (int y = 0; y < h; y++)
+            {
+                for (int x = 0; x < w; x++)
+                {
+                    c = gs.GetPixel(x, y);
+
+                    r = (x < rango * 3) ^ (x > rango * 6) ? c.R : 0;
+                    g = (x > rango * 2) & (x < rango * 5) ? c.G : 0;
+                    b = (x < rango) ^ (x > rango * 4) ? c.B : 0;
+
+                    gs.SetPixel(x, y, Color.FromArgb(c.A, truncate(r), truncate(g), truncate(b)));
+                }
+            }
+
+            return gs;
+        }
+
+
+        public Bitmap rainbow(Bitmap ruta, int colors)
+        {
+            Bitmap gs;
+            gs = new Bitmap(ruta);
+            h = gs.Height;
+            w = gs.Width;
+            Color c;
+            float rango = (w / 9);
+            double r, g, b, aux1, aux2, aux3, aux;
+            aux = 1 / (rango);
+
+            aux1 = 0;
+            aux2 = 0;
+            aux3 = 0;
+            for (int y = 0; y < h; y++)
+            {
+                aux1 = 0;
+                aux2 = 0;
+                aux3 = 0;
+                for (int x = 1; x < w; x++)
+                {
+                    c = gs.GetPixel(x, y);
+                    // uso diferencia co punto máximo para determinar descenso y ascenso de los valores
+
+                    aux1 = (x > 0) & (x <= rango * 2) ? aux1 + aux : (x >= rango * 2) & (x < rango * 6) ? aux1 - aux : 0;
+                    r = (x > 0) & (x < rango * 6) ? c.R * (aux1) : 0;
+
+                    aux2 = (x > rango * 2) & (x < rango * 5) ? aux2 + aux : (x >= rango * 5) & (x < rango * 8) ? aux2 - aux : 0;
+                    g = (x > rango * 2) & (x < rango * 8) ? c.G * (aux2) : 0;
+
+                    aux3 = (x > rango * 4) & (x < rango * 7) ? aux3 + aux : (x >= rango * 7) & (x < rango * 9) ? aux3 - aux : 0;
+                    b = (x > rango * 4) & (x < rango * 9) ? c.B * (aux3) : 0;
+
+                    gs.SetPixel(x, y, Color.FromArgb(c.A, truncateS(r), truncateS(g), truncateS(b)));
+                }
+            }
+
+            return gs;
+        }
     }
 }

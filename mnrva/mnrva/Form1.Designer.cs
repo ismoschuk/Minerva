@@ -77,6 +77,16 @@
             this.b = new System.Windows.Forms.Panel();
             this.bw = new System.Windows.Forms.Button();
             this.colors = new System.Windows.Forms.TabPage();
+            this.cl = new System.Windows.Forms.Panel();
+            this.lVio = new System.Windows.Forms.Button();
+            this.lOran = new System.Windows.Forms.Button();
+            this.lYell = new System.Windows.Forms.Button();
+            this.lCian = new System.Windows.Forms.Button();
+            this.lMag = new System.Windows.Forms.Button();
+            this.lBlue = new System.Windows.Forms.Button();
+            this.lGreen = new System.Windows.Forms.Button();
+            this.lRed = new System.Windows.Forms.Button();
+            this.clr = new System.Windows.Forms.Button();
             this.s = new System.Windows.Forms.Panel();
             this.srnge = new System.Windows.Forms.Label();
             this.simpleRange = new System.Windows.Forms.TrackBar();
@@ -94,16 +104,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.main = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.cl = new System.Windows.Forms.Panel();
-            this.clr = new System.Windows.Forms.Button();
-            this.lRed = new System.Windows.Forms.Button();
-            this.lGreen = new System.Windows.Forms.Button();
-            this.lBlue = new System.Windows.Forms.Button();
-            this.lMag = new System.Windows.Forms.Button();
-            this.lVio = new System.Windows.Forms.Button();
-            this.lOran = new System.Windows.Forms.Button();
-            this.lYell = new System.Windows.Forms.Button();
-            this.lCian = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.rbw = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.rbwg = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -129,6 +133,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.shades)).BeginInit();
             this.b.SuspendLayout();
             this.colors.SuspendLayout();
+            this.cl.SuspendLayout();
             this.s.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.simpleRange)).BeginInit();
             this.panel2.SuspendLayout();
@@ -138,7 +143,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.greenRange2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.redRange2)).BeginInit();
             this.main.SuspendLayout();
-            this.cl.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -647,6 +653,8 @@
             // colors
             // 
             this.colors.AutoScroll = true;
+            this.colors.Controls.Add(this.panel5);
+            this.colors.Controls.Add(this.panel4);
             this.colors.Controls.Add(this.cl);
             this.colors.Controls.Add(this.s);
             this.colors.Controls.Add(this.panel2);
@@ -660,6 +668,115 @@
             this.colors.Text = "Colors";
             this.colors.UseVisualStyleBackColor = true;
             // 
+            // cl
+            // 
+            this.cl.Controls.Add(this.lVio);
+            this.cl.Controls.Add(this.lOran);
+            this.cl.Controls.Add(this.lYell);
+            this.cl.Controls.Add(this.lCian);
+            this.cl.Controls.Add(this.lMag);
+            this.cl.Controls.Add(this.lBlue);
+            this.cl.Controls.Add(this.lGreen);
+            this.cl.Controls.Add(this.lRed);
+            this.cl.Controls.Add(this.clr);
+            this.cl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cl.Location = new System.Drawing.Point(3, 366);
+            this.cl.Name = "cl";
+            this.cl.Size = new System.Drawing.Size(171, 42);
+            this.cl.TabIndex = 14;
+            this.cl.Paint += new System.Windows.Forms.PaintEventHandler(this.cl_Paint);
+            // 
+            // lVio
+            // 
+            this.lVio.BackColor = System.Drawing.Color.Purple;
+            this.lVio.Location = new System.Drawing.Point(103, 76);
+            this.lVio.Name = "lVio";
+            this.lVio.Size = new System.Drawing.Size(26, 28);
+            this.lVio.TabIndex = 18;
+            this.lVio.UseVisualStyleBackColor = false;
+            this.lVio.Click += new System.EventHandler(this.lVio_Click);
+            // 
+            // lOran
+            // 
+            this.lOran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lOran.Location = new System.Drawing.Point(71, 76);
+            this.lOran.Name = "lOran";
+            this.lOran.Size = new System.Drawing.Size(26, 28);
+            this.lOran.TabIndex = 17;
+            this.lOran.UseVisualStyleBackColor = false;
+            this.lOran.Click += new System.EventHandler(this.lOran_Click);
+            // 
+            // lYell
+            // 
+            this.lYell.BackColor = System.Drawing.Color.Yellow;
+            this.lYell.Location = new System.Drawing.Point(39, 76);
+            this.lYell.Name = "lYell";
+            this.lYell.Size = new System.Drawing.Size(26, 28);
+            this.lYell.TabIndex = 16;
+            this.lYell.UseVisualStyleBackColor = false;
+            this.lYell.Click += new System.EventHandler(this.lYell_Click);
+            // 
+            // lCian
+            // 
+            this.lCian.BackColor = System.Drawing.Color.Aqua;
+            this.lCian.Location = new System.Drawing.Point(7, 76);
+            this.lCian.Name = "lCian";
+            this.lCian.Size = new System.Drawing.Size(26, 28);
+            this.lCian.TabIndex = 15;
+            this.lCian.UseVisualStyleBackColor = false;
+            this.lCian.Click += new System.EventHandler(this.lCian_Click);
+            // 
+            // lMag
+            // 
+            this.lMag.BackColor = System.Drawing.Color.Fuchsia;
+            this.lMag.Location = new System.Drawing.Point(103, 44);
+            this.lMag.Name = "lMag";
+            this.lMag.Size = new System.Drawing.Size(26, 28);
+            this.lMag.TabIndex = 14;
+            this.lMag.UseVisualStyleBackColor = false;
+            this.lMag.Click += new System.EventHandler(this.lMag_Click);
+            // 
+            // lBlue
+            // 
+            this.lBlue.BackColor = System.Drawing.Color.Blue;
+            this.lBlue.Location = new System.Drawing.Point(71, 44);
+            this.lBlue.Name = "lBlue";
+            this.lBlue.Size = new System.Drawing.Size(26, 28);
+            this.lBlue.TabIndex = 13;
+            this.lBlue.UseVisualStyleBackColor = false;
+            this.lBlue.Click += new System.EventHandler(this.lBlue_Click);
+            // 
+            // lGreen
+            // 
+            this.lGreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lGreen.Location = new System.Drawing.Point(39, 44);
+            this.lGreen.Name = "lGreen";
+            this.lGreen.Size = new System.Drawing.Size(26, 28);
+            this.lGreen.TabIndex = 12;
+            this.lGreen.UseVisualStyleBackColor = false;
+            this.lGreen.Click += new System.EventHandler(this.lGreen_Click);
+            // 
+            // lRed
+            // 
+            this.lRed.BackColor = System.Drawing.Color.Red;
+            this.lRed.Location = new System.Drawing.Point(7, 44);
+            this.lRed.Name = "lRed";
+            this.lRed.Size = new System.Drawing.Size(26, 28);
+            this.lRed.TabIndex = 11;
+            this.lRed.UseVisualStyleBackColor = false;
+            this.lRed.Click += new System.EventHandler(this.lRed_Click);
+            // 
+            // clr
+            // 
+            this.clr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.clr.Location = new System.Drawing.Point(3, 3);
+            this.clr.Name = "clr";
+            this.clr.Size = new System.Drawing.Size(145, 35);
+            this.clr.TabIndex = 10;
+            this.clr.Text = "Lente de Color";
+            this.clr.UseVisualStyleBackColor = true;
+            this.clr.Click += new System.EventHandler(this.clr_Click);
+            // 
             // s
             // 
             this.s.Controls.Add(this.srnge);
@@ -668,7 +785,7 @@
             this.s.Dock = System.Windows.Forms.DockStyle.Top;
             this.s.Location = new System.Drawing.Point(3, 324);
             this.s.Name = "s";
-            this.s.Size = new System.Drawing.Size(154, 110);
+            this.s.Size = new System.Drawing.Size(171, 42);
             this.s.TabIndex = 13;
             // 
             // srnge
@@ -710,7 +827,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 278);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(154, 46);
+            this.panel2.Size = new System.Drawing.Size(171, 46);
             this.panel2.TabIndex = 11;
             // 
             // cst
@@ -729,7 +846,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 235);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(154, 43);
+            this.panel1.Size = new System.Drawing.Size(171, 43);
             this.panel1.TabIndex = 10;
             // 
             // ct
@@ -752,7 +869,7 @@
             this.t.Dock = System.Windows.Forms.DockStyle.Top;
             this.t.Location = new System.Drawing.Point(3, 3);
             this.t.Name = "t";
-            this.t.Size = new System.Drawing.Size(154, 232);
+            this.t.Size = new System.Drawing.Size(171, 232);
             this.t.TabIndex = 9;
             // 
             // button1
@@ -846,114 +963,43 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "label3";
             // 
-            // cl
+            // panel4
             // 
-            this.cl.Controls.Add(this.lVio);
-            this.cl.Controls.Add(this.lOran);
-            this.cl.Controls.Add(this.lYell);
-            this.cl.Controls.Add(this.lCian);
-            this.cl.Controls.Add(this.lMag);
-            this.cl.Controls.Add(this.lBlue);
-            this.cl.Controls.Add(this.lGreen);
-            this.cl.Controls.Add(this.lRed);
-            this.cl.Controls.Add(this.clr);
-            this.cl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cl.Location = new System.Drawing.Point(3, 434);
-            this.cl.Name = "cl";
-            this.cl.Size = new System.Drawing.Size(154, 110);
-            this.cl.TabIndex = 14;
-            this.cl.Paint += new System.Windows.Forms.PaintEventHandler(this.cl_Paint);
+            this.panel4.Controls.Add(this.rbw);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(3, 408);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(171, 43);
+            this.panel4.TabIndex = 15;
             // 
-            // clr
+            // rbw
             // 
-            this.clr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.clr.Location = new System.Drawing.Point(3, 3);
-            this.clr.Name = "clr";
-            this.clr.Size = new System.Drawing.Size(145, 35);
-            this.clr.TabIndex = 10;
-            this.clr.Text = "Lente de Color";
-            this.clr.UseVisualStyleBackColor = true;
-            this.clr.Click += new System.EventHandler(this.clr_Click);
+            this.rbw.Location = new System.Drawing.Point(5, 4);
+            this.rbw.Name = "rbw";
+            this.rbw.Size = new System.Drawing.Size(145, 35);
+            this.rbw.TabIndex = 9;
+            this.rbw.Text = "Arcoiris";
+            this.rbw.UseVisualStyleBackColor = true;
+            this.rbw.Click += new System.EventHandler(this.rbw_Click);
             // 
-            // lRed
+            // panel5
             // 
-            this.lRed.BackColor = System.Drawing.Color.Red;
-            this.lRed.Location = new System.Drawing.Point(7, 44);
-            this.lRed.Name = "lRed";
-            this.lRed.Size = new System.Drawing.Size(26, 28);
-            this.lRed.TabIndex = 11;
-            this.lRed.UseVisualStyleBackColor = false;
-            this.lRed.Click += new System.EventHandler(this.lRed_Click);
+            this.panel5.Controls.Add(this.rbwg);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(3, 451);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(171, 43);
+            this.panel5.TabIndex = 16;
             // 
-            // lGreen
+            // rbwg
             // 
-            this.lGreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lGreen.Location = new System.Drawing.Point(39, 44);
-            this.lGreen.Name = "lGreen";
-            this.lGreen.Size = new System.Drawing.Size(26, 28);
-            this.lGreen.TabIndex = 12;
-            this.lGreen.UseVisualStyleBackColor = false;
-            this.lGreen.Click += new System.EventHandler(this.lGreen_Click);
-            // 
-            // lBlue
-            // 
-            this.lBlue.BackColor = System.Drawing.Color.Blue;
-            this.lBlue.Location = new System.Drawing.Point(71, 44);
-            this.lBlue.Name = "lBlue";
-            this.lBlue.Size = new System.Drawing.Size(26, 28);
-            this.lBlue.TabIndex = 13;
-            this.lBlue.UseVisualStyleBackColor = false;
-            this.lBlue.Click += new System.EventHandler(this.lBlue_Click);
-            // 
-            // lMag
-            // 
-            this.lMag.BackColor = System.Drawing.Color.Fuchsia;
-            this.lMag.Location = new System.Drawing.Point(103, 44);
-            this.lMag.Name = "lMag";
-            this.lMag.Size = new System.Drawing.Size(26, 28);
-            this.lMag.TabIndex = 14;
-            this.lMag.UseVisualStyleBackColor = false;
-            this.lMag.Click += new System.EventHandler(this.lMag_Click);
-            // 
-            // lVio
-            // 
-            this.lVio.BackColor = System.Drawing.Color.Purple;
-            this.lVio.Location = new System.Drawing.Point(103, 76);
-            this.lVio.Name = "lVio";
-            this.lVio.Size = new System.Drawing.Size(26, 28);
-            this.lVio.TabIndex = 18;
-            this.lVio.UseVisualStyleBackColor = false;
-            this.lVio.Click += new System.EventHandler(this.lVio_Click);
-            // 
-            // lOran
-            // 
-            this.lOran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lOran.Location = new System.Drawing.Point(71, 76);
-            this.lOran.Name = "lOran";
-            this.lOran.Size = new System.Drawing.Size(26, 28);
-            this.lOran.TabIndex = 17;
-            this.lOran.UseVisualStyleBackColor = false;
-            this.lOran.Click += new System.EventHandler(this.lOran_Click);
-            // 
-            // lYell
-            // 
-            this.lYell.BackColor = System.Drawing.Color.Yellow;
-            this.lYell.Location = new System.Drawing.Point(39, 76);
-            this.lYell.Name = "lYell";
-            this.lYell.Size = new System.Drawing.Size(26, 28);
-            this.lYell.TabIndex = 16;
-            this.lYell.UseVisualStyleBackColor = false;
-            this.lYell.Click += new System.EventHandler(this.lYell_Click);
-            // 
-            // lCian
-            // 
-            this.lCian.BackColor = System.Drawing.Color.Aqua;
-            this.lCian.Location = new System.Drawing.Point(7, 76);
-            this.lCian.Name = "lCian";
-            this.lCian.Size = new System.Drawing.Size(26, 28);
-            this.lCian.TabIndex = 15;
-            this.lCian.UseVisualStyleBackColor = false;
-            this.lCian.Click += new System.EventHandler(this.lCian_Click);
+            this.rbwg.Location = new System.Drawing.Point(5, 4);
+            this.rbwg.Name = "rbwg";
+            this.rbwg.Size = new System.Drawing.Size(145, 35);
+            this.rbwg.TabIndex = 9;
+            this.rbwg.Text = "Gradiente";
+            this.rbwg.UseVisualStyleBackColor = true;
+            this.rbwg.Click += new System.EventHandler(this.rbwg_Click);
             // 
             // Form1
             // 
@@ -1000,6 +1046,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.shades)).EndInit();
             this.b.ResumeLayout(false);
             this.colors.ResumeLayout(false);
+            this.cl.ResumeLayout(false);
             this.s.ResumeLayout(false);
             this.s.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.simpleRange)).EndInit();
@@ -1011,7 +1058,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.greenRange2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.redRange2)).EndInit();
             this.main.ResumeLayout(false);
-            this.cl.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1095,6 +1143,10 @@
         private System.Windows.Forms.Button lGreen;
         private System.Windows.Forms.Button lRed;
         private System.Windows.Forms.Button clr;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button rbwg;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button rbw;
     }
 }
 

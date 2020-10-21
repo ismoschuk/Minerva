@@ -41,15 +41,19 @@ namespace WindowsFormsApplication1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            // GUARDAR
-            if (fb.ShowDialog() == DialogResult.OK)
+            // Gurdadno una foto
+            sfd.FileName = "out";
+            sfd.DefaultExt = "jpg";
+            sfd.Filter = "JPG images (*.jpg)|*.jpg";
+
+            if (sfd.ShowDialog() == DialogResult.OK)
             {
-                string sv = fb.SelectedPath;
-                //label1.Text = sv + "/gscale.png";
-                bmp.Save(sv + "/smartCrop2.png");
-                //bmp.Save(sv + "/sovel.png");
-                //bmp.Save(sv + "/shade.png");
-                //bmp.Save(sv + "/gscale.png");
+
+                var fileName = sfd.FileName;
+                if (!System.IO.Path.HasExtension(fileName) || System.IO.Path.GetExtension(fileName) != "jpg")
+                    fileName = fileName + ".jpg";
+
+                bmp.Save(fileName, System.Drawing.Imaging.ImageFormat.Jpeg);
             }
         }
 
@@ -60,9 +64,10 @@ namespace WindowsFormsApplication1
             return rgb;
         }
 
-        public int truncateS(int rgb)
+        public int truncateS(double pix)
         {
             //rgb = (rgb > 780) ? 0 : rgb;
+            int rgb = Convert.ToInt32(Math.Floor(pix));
             rgb = (rgb > 255) ? 255 : rgb;
             rgb = (rgb < 0) ? 0 : rgb;
             return rgb;
@@ -529,6 +534,79 @@ namespace WindowsFormsApplication1
 
             return gs;
         }
+
+
+        public Bitmap rainbowStripe(string ruta, int colors)
+        {
+            // rojo=1, verde=2, azul=3, magenta=4, cian=5, amarillo=6, naranja=7, violeta=8
+            Bitmap gs;
+            gs = new Bitmap(ruta);
+            h = gs.Height;
+            w = gs.Width;
+            Color c;
+            int rango = w / 7;
+            int r, g, b;
+
+            for (int y = 0; y < h; y++)
+            {
+                for (int x = 0; x < w; x++)
+                {
+                    c = gs.GetPixel(x, y);
+
+                    r = (x < rango * 3) ^ (x > rango * 6) ? c.R : 0;
+                    g = (x > rango * 2) & (x < rango * 5) ? c.G : 0;
+                    b = (x < rango) ^ (x > rango * 4) ? c.B : 0;
+
+                    gs.SetPixel(x, y, Color.FromArgb(c.A, truncate(r), truncate(g), truncate(b)));
+                }
+            }
+
+            return gs;
+        }
+
+
+        public Bitmap rainbow(string ruta, int colors)
+        {
+            // rojo=1, verde=2, azul=3, magenta=4, cian=5, amarillo=6, naranja=7, violeta=8
+            Bitmap gs;
+            gs = new Bitmap(ruta);
+            h = gs.Height;
+            w = gs.Width;
+            Color c;
+            float rango = (w / 9);
+            double r, g, b, aux1, aux2,aux3, aux;
+            aux = 1 / (rango );
+            //float rango = (w / 12);
+            //aux = 1 / (rango * 5);
+
+            aux1 = 0;
+            aux2 = 0;
+            aux3 = 0;
+            for (int y = 0; y < h; y++)
+            {
+                aux1 = 0;
+                aux2 = 0;
+                aux3 = 0;
+                for (int x = 1; x < w; x++)
+                {
+                    c = gs.GetPixel(x, y);
+                    // uso diferencia co punto máximo para determinar descenso y ascenso de los valores
+
+                    aux1 = (x > 0) & (x <= rango * 2) ? aux1 + aux : (x >= rango * 2) & (x < rango * 6) ? aux1 - aux : 0;
+                    r = (x > 0) & (x < rango * 6) ? c.R * (aux1) : 0;
+
+                    aux2 = (x > rango * 2) & (x < rango * 5) ? aux2 + aux : (x >= rango * 5) & (x < rango * 8) ? aux2 - aux : 0;
+                    g = (x > rango * 2) & (x < rango * 8) ? c.G * (aux2) : 0;
+
+                    aux3 = (x > rango * 4) & (x < rango * 7) ? aux3 + aux : (x >= rango * 7) & (x < rango * 9) ? aux3 - aux : 0;
+                    b = (x > rango * 4) & (x < rango * 9) ? c.B * (aux3) : 0;
+
+                    gs.SetPixel(x, y, Color.FromArgb(c.A, truncateS(r) , truncateS(g), truncateS(b)));
+                }
+            }
+
+            return gs;
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             bmp = grayscale(ruta);
@@ -596,6 +674,24 @@ namespace WindowsFormsApplication1
         {
             bmp = onlyRGB(ruta);
             pictureBox2.Image = bmp;
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            bmp = rainbowStripe(ruta, 10);
+            pictureBox2.Image = bmp;
+            label1.Text = ((222 * 20) / 100).ToString();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            bmp = rainbow(ruta, 10);
+            pictureBox2.Image = bmp;
+        }
+
+        private void fb_HelpRequest(object sender, EventArgs e)
+        {
+
         }
     }
 

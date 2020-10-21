@@ -355,6 +355,22 @@ namespace mnrva
             pictureBox2.Image = edit;
         }
 
+        private void rbw_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.rainbowStripe(bmpGS);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void rbwg_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.rainbow(bmpGS, 2);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
         private void crPick_Click(object sender, EventArgs e)
         {
             Bitmap bmpGS = new Bitmap(ogBmp);
