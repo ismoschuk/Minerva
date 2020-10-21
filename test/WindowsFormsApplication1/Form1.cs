@@ -567,7 +567,6 @@ namespace WindowsFormsApplication1
 
         public Bitmap rainbow(string ruta, int colors)
         {
-            // rojo=1, verde=2, azul=3, magenta=4, cian=5, amarillo=6, naranja=7, violeta=8
             Bitmap gs;
             gs = new Bitmap(ruta);
             h = gs.Height;
