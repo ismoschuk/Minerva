@@ -13,6 +13,7 @@ namespace mnrva
     public partial class Form1 : Form
     {
         filtros filtro = new filtros();
+        modificar mod = new modificar();
         Bitmap ogBmp, zoomed, edit, ogZoomed; //Bitmap del programa
         string ruta; // Ruta de la imagen seleccionada
         Color currentColor; //Color seleccionado en el gotero
@@ -36,6 +37,7 @@ namespace mnrva
             c.Size = new Size(114, 40);
             t.Size = new Size(114, 40);
             s.Size = new Size(114, 40);
+            tool.Dock = DockStyle.Right;
         }
 
         private void cargarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -371,9 +373,72 @@ namespace mnrva
             pictureBox2.Image = edit;
         }
 
+        private void filtrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FIlterSelect.Visible = true;
+            tool.Dock = DockStyle.None;
+            tool.Visible = false;
+            EditSelect.Dock = DockStyle.None;
+            EditSelect.Visible = false;
+            FIlterSelect.Dock = DockStyle.Right;
+        }
+
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditSelect.Visible = true;
+            tool.Dock = DockStyle.None;
+            tool.Visible = false;
+            FIlterSelect.Dock = DockStyle.None;
+            FIlterSelect.Visible = false;
+            EditSelect.Dock = DockStyle.Right;
+        }
+
+        private void escalaDeGrisesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FIlterSelect.SelectedTab = gscale;
+        }
+
+        private void coloresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FIlterSelect.SelectedTab = colors;
+
+        }
+
+        private void turn90_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(edit);
+            edit = mod.rotate(bmpGS, 90);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void turn270_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(edit);
+            edit = mod.rotate(bmpGS, 270);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void turnside_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(edit);
+            edit = mod.rotate(bmpGS, 360);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void turnup_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(edit);
+            edit = mod.rotate(bmpGS, 180);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
         private void crPick_Click(object sender, EventArgs e)
         {
-            Bitmap bmpGS = new Bitmap(ogBmp);
+            Bitmap bmpGS = new Bitmap(edit);
             redRange.Value = currentColor.R;
             greenRange.Value = currentColor.G;
             blueRange.Value = currentColor.B;

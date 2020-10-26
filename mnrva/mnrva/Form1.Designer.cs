@@ -77,6 +77,10 @@
             this.b = new System.Windows.Forms.Panel();
             this.bw = new System.Windows.Forms.Button();
             this.colors = new System.Windows.Forms.TabPage();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.rbwg = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.rbw = new System.Windows.Forms.Button();
             this.cl = new System.Windows.Forms.Panel();
             this.lVio = new System.Windows.Forms.Button();
             this.lOran = new System.Windows.Forms.Button();
@@ -104,10 +108,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.main = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.rbw = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.rbwg = new System.Windows.Forms.Button();
+            this.crop = new System.Windows.Forms.TabPage();
+            this.spin = new System.Windows.Forms.TabPage();
+            this.EditSelect = new System.Windows.Forms.TabControl();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.turn90 = new System.Windows.Forms.Button();
+            this.turn270 = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.turnside = new System.Windows.Forms.Button();
+            this.turnup = new System.Windows.Forms.Button();
+            this.tool = new System.Windows.Forms.Panel();
+            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.girarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recortarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -133,6 +147,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.shades)).BeginInit();
             this.b.SuspendLayout();
             this.colors.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.cl.SuspendLayout();
             this.s.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.simpleRange)).BeginInit();
@@ -143,8 +159,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.greenRange2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.redRange2)).BeginInit();
             this.main.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.spin.SuspendLayout();
+            this.EditSelect.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.tool.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -153,7 +172,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1062, 492);
+            this.tabPage2.Size = new System.Drawing.Size(1291, 492);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Comparar";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -175,8 +194,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel2.Controls.Add(this.zoomOutOg);
             this.splitContainer1.Panel2.Controls.Add(this.zoomInOg);
-            this.splitContainer1.Size = new System.Drawing.Size(1056, 486);
-            this.splitContainer1.SplitterDistance = 540;
+            this.splitContainer1.Size = new System.Drawing.Size(1285, 486);
+            this.splitContainer1.SplitterDistance = 658;
             this.splitContainer1.TabIndex = 7;
             // 
             // pictureBox2
@@ -187,7 +206,7 @@
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Location = new System.Drawing.Point(3, 32);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(534, 354);
+            this.pictureBox2.Size = new System.Drawing.Size(655, 354);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -221,7 +240,7 @@
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Cross;
             this.pictureBox1.Location = new System.Drawing.Point(-1, 32);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(510, 354);
+            this.pictureBox1.Size = new System.Drawing.Size(623, 354);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -256,7 +275,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1056, 486);
+            this.panel3.Size = new System.Drawing.Size(1103, 486);
             this.panel3.TabIndex = 0;
             // 
             // pictureBox3
@@ -277,7 +296,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1062, 492);
+            this.tabPage1.Size = new System.Drawing.Size(1109, 492);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Editar";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -303,12 +322,14 @@
             this.coloresToolStripMenuItem.Name = "coloresToolStripMenuItem";
             this.coloresToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
             this.coloresToolStripMenuItem.Text = "Colores";
+            this.coloresToolStripMenuItem.Click += new System.EventHandler(this.coloresToolStripMenuItem_Click);
             // 
             // escalaDeGrisesToolStripMenuItem
             // 
             this.escalaDeGrisesToolStripMenuItem.Name = "escalaDeGrisesToolStripMenuItem";
             this.escalaDeGrisesToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
             this.escalaDeGrisesToolStripMenuItem.Text = "Escala de Grises";
+            this.escalaDeGrisesToolStripMenuItem.Click += new System.EventHandler(this.escalaDeGrisesToolStripMenuItem_Click);
             // 
             // filtrosToolStripMenuItem
             // 
@@ -320,6 +341,7 @@
             this.filtrosToolStripMenuItem.Name = "filtrosToolStripMenuItem";
             this.filtrosToolStripMenuItem.Size = new System.Drawing.Size(75, 29);
             this.filtrosToolStripMenuItem.Text = "Filtros";
+            this.filtrosToolStripMenuItem.Click += new System.EventHandler(this.filtrosToolStripMenuItem_Click);
             // 
             // guardarToolStripMenuItem
             // 
@@ -349,10 +371,11 @@
             this.menu.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
-            this.filtrosToolStripMenuItem});
+            this.filtrosToolStripMenuItem,
+            this.editarToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(1315, 33);
+            this.menu.Size = new System.Drawing.Size(1362, 33);
             this.menu.TabIndex = 5;
             this.menu.Text = "menuStrip1";
             // 
@@ -366,13 +389,13 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 7);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1070, 518);
+            this.tabControl1.Size = new System.Drawing.Size(1117, 518);
             this.tabControl1.TabIndex = 7;
             // 
             // zoomout
             // 
             this.zoomout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.zoomout.Location = new System.Drawing.Point(1272, 75);
+            this.zoomout.Location = new System.Drawing.Point(1319, 75);
             this.zoomout.Name = "zoomout";
             this.zoomout.Size = new System.Drawing.Size(35, 32);
             this.zoomout.TabIndex = 7;
@@ -383,7 +406,7 @@
             // zoom
             // 
             this.zoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.zoom.Location = new System.Drawing.Point(1272, 36);
+            this.zoom.Location = new System.Drawing.Point(1319, 36);
             this.zoom.Name = "zoom";
             this.zoom.Size = new System.Drawing.Size(35, 33);
             this.zoom.TabIndex = 8;
@@ -406,13 +429,13 @@
             // 
             this.FIlterSelect.Controls.Add(this.gscale);
             this.FIlterSelect.Controls.Add(this.colors);
-            this.FIlterSelect.Dock = System.Windows.Forms.DockStyle.Right;
             this.FIlterSelect.Enabled = false;
-            this.FIlterSelect.Location = new System.Drawing.Point(1069, 0);
+            this.FIlterSelect.Location = new System.Drawing.Point(754, 0);
             this.FIlterSelect.Name = "FIlterSelect";
             this.FIlterSelect.SelectedIndex = 0;
-            this.FIlterSelect.Size = new System.Drawing.Size(185, 528);
+            this.FIlterSelect.Size = new System.Drawing.Size(175, 530);
             this.FIlterSelect.TabIndex = 10;
+            this.FIlterSelect.Visible = false;
             // 
             // gscale
             // 
@@ -425,7 +448,7 @@
             this.gscale.Location = new System.Drawing.Point(4, 22);
             this.gscale.Name = "gscale";
             this.gscale.Padding = new System.Windows.Forms.Padding(3);
-            this.gscale.Size = new System.Drawing.Size(177, 502);
+            this.gscale.Size = new System.Drawing.Size(167, 504);
             this.gscale.TabIndex = 0;
             this.gscale.Text = "Grayscale";
             this.gscale.UseVisualStyleBackColor = true;
@@ -439,9 +462,9 @@
             this.c.Controls.Add(this.redRange);
             this.c.Controls.Add(this.cr);
             this.c.Dock = System.Windows.Forms.DockStyle.Top;
-            this.c.Location = new System.Drawing.Point(3, 368);
+            this.c.Location = new System.Drawing.Point(3, 175);
             this.c.Name = "c";
-            this.c.Size = new System.Drawing.Size(154, 190);
+            this.c.Size = new System.Drawing.Size(161, 38);
             this.c.TabIndex = 8;
             // 
             // crPick
@@ -497,7 +520,7 @@
             this.cr.Name = "cr";
             this.cr.Size = new System.Drawing.Size(145, 35);
             this.cr.TabIndex = 4;
-            this.cr.Text = "Colores";
+            this.cr.Text = "Colores 🠟";
             this.cr.UseVisualStyleBackColor = true;
             this.cr.Click += new System.EventHandler(this.cr_Click);
             // 
@@ -507,9 +530,9 @@
             this.uc.Controls.Add(this.red);
             this.uc.Controls.Add(this.gc);
             this.uc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.uc.Location = new System.Drawing.Point(3, 276);
+            this.uc.Location = new System.Drawing.Point(3, 131);
             this.uc.Name = "uc";
-            this.uc.Size = new System.Drawing.Size(154, 92);
+            this.uc.Size = new System.Drawing.Size(161, 44);
             this.uc.TabIndex = 7;
             // 
             // blue
@@ -539,7 +562,7 @@
             this.gc.Name = "gc";
             this.gc.Size = new System.Drawing.Size(145, 35);
             this.gc.TabIndex = 0;
-            this.gc.Text = "Rojo o Azul";
+            this.gc.Text = "Rojo o Azul 🠟";
             this.gc.UseVisualStyleBackColor = true;
             this.gc.Click += new System.EventHandler(this.gc_Click);
             // 
@@ -549,9 +572,9 @@
             this.p.Controls.Add(this.valueRange);
             this.p.Controls.Add(this.fotocopiaRange);
             this.p.Dock = System.Windows.Forms.DockStyle.Top;
-            this.p.Location = new System.Drawing.Point(3, 160);
+            this.p.Location = new System.Drawing.Point(3, 87);
             this.p.Name = "p";
-            this.p.Size = new System.Drawing.Size(154, 116);
+            this.p.Size = new System.Drawing.Size(161, 44);
             this.p.TabIndex = 6;
             // 
             // print
@@ -561,7 +584,7 @@
             this.print.Name = "print";
             this.print.Size = new System.Drawing.Size(145, 35);
             this.print.TabIndex = 2;
-            this.print.Text = "Fotocopia";
+            this.print.Text = "Fotocopia 🠟";
             this.print.UseVisualStyleBackColor = true;
             this.print.Click += new System.EventHandler(this.print_Click);
             // 
@@ -596,7 +619,7 @@
             this.g.Dock = System.Windows.Forms.DockStyle.Top;
             this.g.Location = new System.Drawing.Point(3, 43);
             this.g.Name = "g";
-            this.g.Size = new System.Drawing.Size(154, 117);
+            this.g.Size = new System.Drawing.Size(161, 44);
             this.g.TabIndex = 5;
             // 
             // ss
@@ -606,7 +629,7 @@
             this.ss.Name = "ss";
             this.ss.Size = new System.Drawing.Size(145, 35);
             this.ss.TabIndex = 1;
-            this.ss.Text = "Grises";
+            this.ss.Text = "Grises 🠟";
             this.ss.UseVisualStyleBackColor = true;
             this.ss.Click += new System.EventHandler(this.ss_Click_1);
             // 
@@ -637,7 +660,7 @@
             this.b.Dock = System.Windows.Forms.DockStyle.Top;
             this.b.Location = new System.Drawing.Point(3, 3);
             this.b.Name = "b";
-            this.b.Size = new System.Drawing.Size(154, 40);
+            this.b.Size = new System.Drawing.Size(161, 40);
             this.b.TabIndex = 1;
             // 
             // bw
@@ -663,10 +686,48 @@
             this.colors.Location = new System.Drawing.Point(4, 22);
             this.colors.Name = "colors";
             this.colors.Padding = new System.Windows.Forms.Padding(3);
-            this.colors.Size = new System.Drawing.Size(177, 502);
+            this.colors.Size = new System.Drawing.Size(167, 504);
             this.colors.TabIndex = 1;
             this.colors.Text = "Colors";
             this.colors.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.rbwg);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(3, 265);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(161, 43);
+            this.panel5.TabIndex = 16;
+            // 
+            // rbwg
+            // 
+            this.rbwg.Location = new System.Drawing.Point(5, 4);
+            this.rbwg.Name = "rbwg";
+            this.rbwg.Size = new System.Drawing.Size(145, 35);
+            this.rbwg.TabIndex = 9;
+            this.rbwg.Text = "Arcoiris Gradiente";
+            this.rbwg.UseVisualStyleBackColor = true;
+            this.rbwg.Click += new System.EventHandler(this.rbwg_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.rbw);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(3, 222);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(161, 43);
+            this.panel4.TabIndex = 15;
+            // 
+            // rbw
+            // 
+            this.rbw.Location = new System.Drawing.Point(5, 4);
+            this.rbw.Name = "rbw";
+            this.rbw.Size = new System.Drawing.Size(145, 35);
+            this.rbw.TabIndex = 9;
+            this.rbw.Text = "Linea Arcoiris";
+            this.rbw.UseVisualStyleBackColor = true;
+            this.rbw.Click += new System.EventHandler(this.rbw_Click);
             // 
             // cl
             // 
@@ -680,9 +741,9 @@
             this.cl.Controls.Add(this.lRed);
             this.cl.Controls.Add(this.clr);
             this.cl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cl.Location = new System.Drawing.Point(3, 366);
+            this.cl.Location = new System.Drawing.Point(3, 180);
             this.cl.Name = "cl";
-            this.cl.Size = new System.Drawing.Size(171, 42);
+            this.cl.Size = new System.Drawing.Size(161, 42);
             this.cl.TabIndex = 14;
             this.cl.Paint += new System.Windows.Forms.PaintEventHandler(this.cl_Paint);
             // 
@@ -773,7 +834,7 @@
             this.clr.Name = "clr";
             this.clr.Size = new System.Drawing.Size(145, 35);
             this.clr.TabIndex = 10;
-            this.clr.Text = "Lente de Color";
+            this.clr.Text = "Lente de Color 🠟";
             this.clr.UseVisualStyleBackColor = true;
             this.clr.Click += new System.EventHandler(this.clr_Click);
             // 
@@ -783,9 +844,9 @@
             this.s.Controls.Add(this.simpleRange);
             this.s.Controls.Add(this.simple);
             this.s.Dock = System.Windows.Forms.DockStyle.Top;
-            this.s.Location = new System.Drawing.Point(3, 324);
+            this.s.Location = new System.Drawing.Point(3, 138);
             this.s.Name = "s";
-            this.s.Size = new System.Drawing.Size(171, 42);
+            this.s.Size = new System.Drawing.Size(161, 42);
             this.s.TabIndex = 13;
             // 
             // srnge
@@ -817,7 +878,7 @@
             this.simple.Name = "simple";
             this.simple.Size = new System.Drawing.Size(145, 35);
             this.simple.TabIndex = 10;
-            this.simple.Text = "Saturado";
+            this.simple.Text = "Saturado 🠟";
             this.simple.UseVisualStyleBackColor = true;
             this.simple.Click += new System.EventHandler(this.simple_Click);
             // 
@@ -825,9 +886,9 @@
             // 
             this.panel2.Controls.Add(this.cst);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(3, 278);
+            this.panel2.Location = new System.Drawing.Point(3, 92);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(171, 46);
+            this.panel2.Size = new System.Drawing.Size(161, 46);
             this.panel2.TabIndex = 11;
             // 
             // cst
@@ -844,9 +905,9 @@
             // 
             this.panel1.Controls.Add(this.ct);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 235);
+            this.panel1.Location = new System.Drawing.Point(3, 49);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(171, 43);
+            this.panel1.Size = new System.Drawing.Size(161, 43);
             this.panel1.TabIndex = 10;
             // 
             // ct
@@ -869,7 +930,7 @@
             this.t.Dock = System.Windows.Forms.DockStyle.Top;
             this.t.Location = new System.Drawing.Point(3, 3);
             this.t.Name = "t";
-            this.t.Size = new System.Drawing.Size(171, 232);
+            this.t.Size = new System.Drawing.Size(161, 46);
             this.t.TabIndex = 9;
             // 
             // button1
@@ -925,7 +986,7 @@
             this.tint.Name = "tint";
             this.tint.Size = new System.Drawing.Size(145, 35);
             this.tint.TabIndex = 4;
-            this.tint.Text = "Tinte";
+            this.tint.Text = "Tinte 🠟";
             this.tint.UseVisualStyleBackColor = true;
             this.tint.Click += new System.EventHandler(this.tint_Click);
             // 
@@ -945,11 +1006,13 @@
             this.main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.main.Controls.Add(this.tool);
             this.main.Controls.Add(this.FIlterSelect);
+            this.main.Controls.Add(this.EditSelect);
             this.main.Controls.Add(this.tabControl1);
             this.main.Location = new System.Drawing.Point(12, 36);
             this.main.Name = "main";
-            this.main.Size = new System.Drawing.Size(1254, 528);
+            this.main.Size = new System.Drawing.Size(1301, 528);
             this.main.TabIndex = 12;
             // 
             // label3
@@ -963,49 +1026,153 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "label3";
             // 
-            // panel4
+            // crop
             // 
-            this.panel4.Controls.Add(this.rbw);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(3, 408);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(171, 43);
-            this.panel4.TabIndex = 15;
+            this.crop.Location = new System.Drawing.Point(4, 22);
+            this.crop.Name = "crop";
+            this.crop.Size = new System.Drawing.Size(160, 502);
+            this.crop.TabIndex = 0;
+            this.crop.Text = "Recortar";
+            this.crop.UseVisualStyleBackColor = true;
             // 
-            // rbw
+            // spin
             // 
-            this.rbw.Location = new System.Drawing.Point(5, 4);
-            this.rbw.Name = "rbw";
-            this.rbw.Size = new System.Drawing.Size(145, 35);
-            this.rbw.TabIndex = 9;
-            this.rbw.Text = "Arcoiris";
-            this.rbw.UseVisualStyleBackColor = true;
-            this.rbw.Click += new System.EventHandler(this.rbw_Click);
+            this.spin.Controls.Add(this.panel9);
+            this.spin.Controls.Add(this.panel6);
+            this.spin.Location = new System.Drawing.Point(4, 22);
+            this.spin.Name = "spin";
+            this.spin.Size = new System.Drawing.Size(167, 504);
+            this.spin.TabIndex = 0;
+            this.spin.Text = "Girar";
+            this.spin.UseVisualStyleBackColor = true;
             // 
-            // panel5
+            // EditSelect
             // 
-            this.panel5.Controls.Add(this.rbwg);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(3, 451);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(171, 43);
-            this.panel5.TabIndex = 16;
+            this.EditSelect.Controls.Add(this.spin);
+            this.EditSelect.Controls.Add(this.crop);
+            this.EditSelect.Location = new System.Drawing.Point(935, 0);
+            this.EditSelect.Name = "EditSelect";
+            this.EditSelect.SelectedIndex = 0;
+            this.EditSelect.Size = new System.Drawing.Size(175, 530);
+            this.EditSelect.TabIndex = 9;
+            this.EditSelect.Visible = false;
             // 
-            // rbwg
+            // textBox1
             // 
-            this.rbwg.Location = new System.Drawing.Point(5, 4);
-            this.rbwg.Name = "rbwg";
-            this.rbwg.Size = new System.Drawing.Size(145, 35);
-            this.rbwg.TabIndex = 9;
-            this.rbwg.Text = "Gradiente";
-            this.rbwg.UseVisualStyleBackColor = true;
-            this.rbwg.Click += new System.EventHandler(this.rbwg_Click);
+            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.textBox1.Location = new System.Drawing.Point(3, 184);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(175, 91);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "Seleccione una opción para editar";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.turn270);
+            this.panel6.Controls.Add(this.turn90);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(167, 86);
+            this.panel6.TabIndex = 11;
+            // 
+            // turn90
+            // 
+            this.turn90.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.turn90.Location = new System.Drawing.Point(86, 7);
+            this.turn90.Name = "turn90";
+            this.turn90.Size = new System.Drawing.Size(66, 66);
+            this.turn90.TabIndex = 9;
+            this.turn90.Text = "↷";
+            this.turn90.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.turn90.UseVisualStyleBackColor = true;
+            this.turn90.Click += new System.EventHandler(this.turn90_Click);
+            // 
+            // turn270
+            // 
+            this.turn270.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.turn270.Location = new System.Drawing.Point(14, 7);
+            this.turn270.Name = "turn270";
+            this.turn270.Size = new System.Drawing.Size(66, 66);
+            this.turn270.TabIndex = 9;
+            this.turn270.Text = "↶";
+            this.turn270.UseVisualStyleBackColor = true;
+            this.turn270.Click += new System.EventHandler(this.turn270_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.turnup);
+            this.panel9.Controls.Add(this.turnside);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 86);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(167, 83);
+            this.panel9.TabIndex = 13;
+            // 
+            // turnside
+            // 
+            this.turnside.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.turnside.Location = new System.Drawing.Point(14, 4);
+            this.turnside.Name = "turnside";
+            this.turnside.Size = new System.Drawing.Size(66, 66);
+            this.turnside.TabIndex = 9;
+            this.turnside.Text = "⇆";
+            this.turnside.UseVisualStyleBackColor = true;
+            this.turnside.Click += new System.EventHandler(this.turnside_Click);
+            // 
+            // turnup
+            // 
+            this.turnup.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.turnup.Location = new System.Drawing.Point(86, 4);
+            this.turnup.Name = "turnup";
+            this.turnup.Size = new System.Drawing.Size(66, 66);
+            this.turnup.TabIndex = 9;
+            this.turnup.Text = "⇵";
+            this.turnup.UseVisualStyleBackColor = true;
+            this.turnup.Click += new System.EventHandler(this.turnup_Click);
+            // 
+            // tool
+            // 
+            this.tool.AutoScroll = true;
+            this.tool.Controls.Add(this.textBox1);
+            this.tool.Dock = System.Windows.Forms.DockStyle.Right;
+            this.tool.Location = new System.Drawing.Point(1121, 0);
+            this.tool.Name = "tool";
+            this.tool.Size = new System.Drawing.Size(180, 528);
+            this.tool.TabIndex = 10;
+            // 
+            // editarToolStripMenuItem
+            // 
+            this.editarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.girarToolStripMenuItem,
+            this.recortarToolStripMenuItem});
+            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
+            this.editarToolStripMenuItem.Text = "Editar";
+            this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
+            // 
+            // girarToolStripMenuItem
+            // 
+            this.girarToolStripMenuItem.Name = "girarToolStripMenuItem";
+            this.girarToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
+            this.girarToolStripMenuItem.Text = "Girar";
+            // 
+            // recortarToolStripMenuItem
+            // 
+            this.recortarToolStripMenuItem.Name = "recortarToolStripMenuItem";
+            this.recortarToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
+            this.recortarToolStripMenuItem.Text = "Recortar";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1315, 638);
+            this.ClientSize = new System.Drawing.Size(1362, 638);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.label2);
@@ -1046,6 +1213,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.shades)).EndInit();
             this.b.ResumeLayout(false);
             this.colors.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.cl.ResumeLayout(false);
             this.s.ResumeLayout(false);
             this.s.PerformLayout();
@@ -1058,8 +1227,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.greenRange2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.redRange2)).EndInit();
             this.main.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
+            this.spin.ResumeLayout(false);
+            this.EditSelect.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.tool.ResumeLayout(false);
+            this.tool.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1147,6 +1320,20 @@
         private System.Windows.Forms.Button rbwg;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button rbw;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TabControl EditSelect;
+        private System.Windows.Forms.TabPage spin;
+        private System.Windows.Forms.Button turnup;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button turnside;
+        private System.Windows.Forms.Button turn270;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button turn90;
+        private System.Windows.Forms.TabPage crop;
+        private System.Windows.Forms.Panel tool;
+        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem girarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recortarToolStripMenuItem;
     }
 }
 
