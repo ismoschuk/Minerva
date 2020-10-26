@@ -13,6 +13,7 @@ namespace WindowsFormsApplication1
     public partial class Form1 : Form
     {
         Bitmap bmp;
+        Boolean a = false;
         int h;
         int w;
         string ruta;
@@ -691,6 +692,56 @@ namespace WindowsFormsApplication1
         private void fb_HelpRequest(object sender, EventArgs e)
         {
 
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+                     
+            if (a == false)
+            {
+                bmp = new Bitmap(ruta);
+                a = true;
+            }
+            //espejar
+            bmp.RotateFlip(RotateFlipType.RotateNoneFlipX);
+            pictureBox1.Image = bmp;
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            if (a == false)
+            {
+                bmp = new Bitmap(ruta);
+                a = true;
+
+            }
+            bmp.RotateFlip(RotateFlipType.Rotate270FlipNone);
+            pictureBox1.Image = bmp;
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            if (a == false)
+            {
+                bmp = new Bitmap(ruta);
+                a = true;
+
+            }
+            bmp.RotateFlip(RotateFlipType.Rotate90FlipNone);
+            pictureBox1.Image = bmp;
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            if (a == false)
+            {
+                bmp = new Bitmap(ruta);
+                a = true;
+            }
+            //espejar
+            bmp.RotateFlip(RotateFlipType.RotateNoneFlipY);
+            pictureBox1.Image = bmp;
         }
     }
 
