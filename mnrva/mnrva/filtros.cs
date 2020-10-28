@@ -384,5 +384,88 @@ namespace mnrva
 
             return gs;
         }
+
+
+        public Bitmap colorSimple(string ruta)
+        {
+            Bitmap s = new Bitmap(ruta);
+            int r, g, b;
+            h = s.Height;
+            w = s.Width;
+            Color c;
+
+            for (int y = 0; y < h; y++)
+            {
+                for (int x = 0; x < w; x++)
+                {
+                    c = s.GetPixel(x, y);
+
+                    r = (c.R > c.B) & (c.R > c.G) ? 255 : 0;
+                    g = (c.G > c.B) & (c.G > c.R) ? 255 : 0;
+                    b = (c.B > c.R) & (c.R > c.G) ? 255 : 0;
+
+                    s.SetPixel(x, y, Color.FromArgb(c.A, r, g, b));
+
+                }
+            }
+            return s;
+        }
+
+        //OTROS
+
+        public Bitmap blurSize(Bitmap ruta, int sz)
+        {
+            Bitmap s;
+            Bitmap og;
+            int nc, ch, cv, r, g, b;
+            s = new Bitmap(ruta);
+            og = new Bitmap(ruta);
+            List<int> sov = new List<int>();
+
+            h = s.Height;
+            w = s.Width;
+            cv = 0;
+            ch = 0;
+            nc = 0;
+            r = 0;
+            g = 0;
+            b = 0;
+            Color c, c2;
+            for (int y = 0; y < h; y++)
+            {
+                for (int x = 0; x < w; x++)
+                {
+                    c = s.GetPixel(x, y);
+                    ch = (x < (w - sz)) ? (x + sz) : w;
+                    cv = (y < (h - sz)) ? (y + sz) : h;
+                    for (int yy = y; yy < cv; yy++)
+                    {
+                        for (int xx = x; xx < ch; xx++)
+                        {
+                            c2 = s.GetPixel(xx, yy);
+                            r += c2.R;
+                            g += c2.G;
+                            b += c2.B;
+                            nc++;
+                        }
+                    }
+
+                    r = truncate(r / nc);
+                    g = truncate(g / nc);
+                    b = truncate(b / nc);
+
+
+                    s.SetPixel(x, y, Color.FromArgb(c.A, r, g, b));
+
+                    nc = 0;
+                    cv = 0;
+                    ch = 0;
+                    r = 0;
+                    g = 0;
+                    b = 0;
+                }
+            }
+            return s;
+        }
     }
 }

@@ -436,6 +436,38 @@ namespace mnrva
             pictureBox2.Image = edit;
         }
 
+        private void blur_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.blurSize(bmpGS, 9);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void blur2_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.blurSize(bmpGS, 12);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void blur1_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.blurSize(bmpGS, 9);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void blur3_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.blurSize(bmpGS, 24);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
         private void crPick_Click(object sender, EventArgs e)
         {
             Bitmap bmpGS = new Bitmap(edit);

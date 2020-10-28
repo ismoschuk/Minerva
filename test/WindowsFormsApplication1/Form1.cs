@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Drawing.Imaging;
 namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
@@ -17,6 +17,8 @@ namespace WindowsFormsApplication1
         int h;
         int w;
         string ruta;
+        ColorPalette main;
+        
         public Form1()
         {
             InitializeComponent();
@@ -24,20 +26,21 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //List<System.Windows.Media.Color> myPalettecolor = new List<System.Windows.Media.Color>();
             // ABRIR IMÁGEN
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 ruta = ofd.FileName;
                 pictureBox1.Image = Image.FromFile(ruta);
 
-
-
+                //label2.Text = myPalette.Entries[0].ToString();
             }
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            // GRAYSCALE
             label1.Text = "uwu";
+            Bitmap first = new Bitmap(ruta);
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -310,19 +313,22 @@ namespace WindowsFormsApplication1
         public Bitmap blur(string ruta)
         {
             Bitmap s;
-            Bitmap crop;
             Bitmap og;
-            int chkV2, chkV1, chkH2, chkH1, ch, cv, nc;
+            int chkV2, chkV1, chkH2, chkH1, ch, cv, nc, r, g, b;
             s = new Bitmap(ruta);
-            crop = new Bitmap(ruta);
-            og = grayscaleShades(ruta);
+            og = new Bitmap(ruta);
             List<int> sov = new List<int>();
-            int[] box = new int[] { 1, 2, 1, 2, 4, 2, 1, 2, 1 };
+            int[] box = new int[] { 4, 2, 2, 2, 1, 1, 2, 1, 1 };
+            //int[] box = new int[] { 1, 2, 1, 2, 4, 2, 1, 2, 1 };
+            //int[] box = new int[] { 21, 31, 21, 31, 48, 31, 21, 31, 21 };
 
             h = s.Height;
             w = s.Width;
             cv = 0;
             ch = 0;
+            r = 0;
+            g = 0;
+            b = 0;
             Color c;
             for (int y = 0; y < h; y++)
             {
@@ -334,30 +340,48 @@ namespace WindowsFormsApplication1
                     chkV1 = (y < (h - 2)) ? 1 : 0;
                     chkH2 = (x < (w - 3)) ? 1 : 0;
                     chkH1 = (x < (w - 2)) ? 1 : 0;
-                    sov.Add((og.GetPixel(x, y + 2 * chkV2)).R);
-                    sov.Add((og.GetPixel(x + 1 * chkH1, y + 2 * chkV2)).R);
-                    sov.Add((og.GetPixel(x + 2 * chkH2, y + 2 * chkV2)).R);
-                    sov.Add((og.GetPixel(x, y + 1 * chkV1)).R);
-                    sov.Add((og.GetPixel(x + 1 * chkH1, y + 1 * chkV1)).R);
-                    sov.Add((og.GetPixel(x + 2 * chkH2, y + 1 * chkV1)).R);
-                    sov.Add((og.GetPixel(x, y)).R);
-                    sov.Add((og.GetPixel(x + 1 * chkH1, y)).R);
-                    sov.Add((og.GetPixel(x + 2 * chkH2, y)).R);
+                    
+                    r = r + ((og.GetPixel(x, y)).R) * box[0];
+                    g = g + ((og.GetPixel(x, y)).G) * box[0];
+                    b = b + ((og.GetPixel(x, y)).B) * box[0];
+                    r = r + ((og.GetPixel(x + 1 * chkH1, y)).R) * box[1];
+                    g = g + ((og.GetPixel(x + 1 * chkH1, y)).G) * box[1];
+                    b = b + ((og.GetPixel(x + 1 * chkH1, y)).B) * box[1];
+                    r = r + ((og.GetPixel(x + 2 * chkH2, y)).R) * box[2];
+                    g = g + ((og.GetPixel(x + 2 * chkH2, y)).G) * box[2];
+                    b = b + ((og.GetPixel(x + 2 * chkH2, y)).B) * box[2];
+                    r = r + ((og.GetPixel(x, y + 1 * chkV1)).R) * box[3];
+                    g = g + ((og.GetPixel(x, y + 1 * chkV1)).G) * box[3];
+                    b = b + ((og.GetPixel(x, y + 1 * chkV1)).B) * box[3];
+                    r = r + ((og.GetPixel(x + 1 * chkH1, y + 1 * chkV1)).R) * box[4];
+                    g = g + ((og.GetPixel(x + 1 * chkH1, y + 1 * chkV1)).G) * box[4];
+                    b = b + ((og.GetPixel(x + 1 * chkH1, y + 1 * chkV1)).B) * box[4];
+                    r = r + ((og.GetPixel(x + 2 * chkH2, y + 1 * chkV1)).R) * box[5];
+                    g = g + ((og.GetPixel(x + 2 * chkH2, y + 1 * chkV1)).G) * box[5];
+                    b = b + ((og.GetPixel(x + 2 * chkH2, y + 1 * chkV1)).B) * box[5];
+                    r = r + ((og.GetPixel(x, y + 2 * chkV2)).R) * box[6];
+                    g = g + ((og.GetPixel(x, y + 2 * chkV2)).G) * box[6];
+                    b = b + ((og.GetPixel(x, y + 2 * chkV2)).B) * box[6];
+                    r = r + ((og.GetPixel(x + 1 * chkH1, y + 2 * chkV2)).R) * box[7];
+                    g = g + ((og.GetPixel(x + 1 * chkH1, y + 2 * chkV2)).G) * box[7];
+                    b = b + ((og.GetPixel(x + 1 * chkH1, y + 2 * chkV2)).B) * box[7];
+                    r = r + ((og.GetPixel(x + 2 * chkH2, y + 2 * chkV2)).R) * box[8];
+                    g = g + ((og.GetPixel(x + 2 * chkH2, y + 2 * chkV2)).G) * box[8];
+                    b = b + ((og.GetPixel(x + 2 * chkH2, y + 2 * chkV2)).B) * box[8];
 
-                    for (int l = 0; l < 9; l++)
-                    {
-                        cv = cv + sov[l] * box[l];
-                    }
 
-                    nc = cv / 9;
+                    r = truncate(r / 16);
+                    g = truncate(g / 16);
+                    b = truncate(b / 16);
 
-                    nc = truncate(nc);
 
-                    s.SetPixel(x, y, Color.FromArgb(c.A, nc, nc, nc));
+                    s.SetPixel(x, y, Color.FromArgb(c.A, r, g, b));
 
-                    sov.Clear();
                     cv = 0;
                     ch = 0;
+                    r = 0;
+                    g = 0;
+                    b = 0;
                 }
             }
             return s;
@@ -607,6 +631,130 @@ namespace WindowsFormsApplication1
 
             return gs;
         }
+
+
+        
+
+
+        public Bitmap colorCrop(string ruta, Color sel)
+        {
+            Bitmap s = colorSimple(ruta);
+            Bitmap crop = new Bitmap(ruta);
+            h = s.Height;
+            w = s.Width;
+            Color c,c2;
+            // List<int> yV = new List<int>();
+            //List<int> xV = new List<int>();
+            int threshold = 25;
+            bool chck;
+            for (int y = 0; y < h; y++)
+            {
+                for (int x = 0; x < w; x++)
+                {
+                    c = s.GetPixel(x, y);
+                    chck = (c.R >= sel.R - threshold) & (c.G >= sel.G - threshold) & (c.B >= sel.B - threshold) & 
+                    //(c.R <= sel.R) & (c.G <= sel.G) & (c.B <= sel.B) &
+                    (c.R <= sel.R + threshold) & (c.G <= sel.G + threshold) & (c.B <= sel.B + threshold);
+
+                  //  chck = (c == sel);
+                    if (!chck)
+                    {
+                        crop.SetPixel(x, y, Color.FromArgb(0, 0, 0, 0));
+                    }
+                    else
+                    {
+                        c2 = crop.GetPixel(x, y);
+                        crop.SetPixel(x, y, c2);
+                    }
+                }
+            }
+            return crop;
+        }
+
+
+        public Bitmap colorSimple(string ruta)
+        {
+            Bitmap s = new Bitmap(ruta);
+            int r, g, b;
+            h = s.Height;
+            w = s.Width;
+            Color c;
+            // List<int> yV = new List<int>();
+            //List<int> xV = new List<int>();
+            for (int y = 0; y < h; y++)
+            {
+                for (int x = 0; x < w; x++)
+                {
+                    c = s.GetPixel(x, y);
+
+                    r = (c.R > (c.B + 5)) & (c.R > (c.G + 5)) ? 255 : 0;
+                    g = (c.G > (c.B + 5)) & (c.G > (c.R + 5)) ? 255 : 0;
+                    b = (c.B > (c.R + 5)) & (c.R > (c.G + 5)) ? 255 : 0;
+
+                    s.SetPixel(x, y, Color.FromArgb(c.A, r, g, b));
+
+                }
+            }
+            return s;
+        }
+
+        public Bitmap blurSize(string ruta, int sz)
+        {
+            Bitmap s;
+            Bitmap og;
+            int chkV2, chkV1, chkH2, nc, ch, cv, r, g, b;
+            s = new Bitmap(ruta);
+            og = new Bitmap(ruta);
+            List<int> sov = new List<int>();
+            int[] box = new int[] { 4, 2, 2, 2, 1, 1, 2, 1, 1 };
+            //int[] box = new int[] { 1, 2, 1, 2, 4, 2, 1, 2, 1 };
+            //int[] box = new int[] { 21, 31, 21, 31, 48, 31, 21, 31, 21 };
+
+            h = s.Height;
+            w = s.Width;
+            cv = 0;
+            ch = 0;
+            nc = 0;
+            r = 0;
+            g = 0;
+            b = 0;
+            Color c, c2;
+            for (int y = 0; y < h; y++)
+            {
+                for (int x = 0; x < w; x++)
+                {
+                    c = s.GetPixel(x, y);
+                    ch = (x < (w - sz)) ? (x + sz) : w;
+                    cv = (y < (h - sz)) ? (y + sz) : h; 
+                    for (int yy = y; yy < cv; yy++)
+                    {
+                        for (int xx = x; xx < ch; xx++)
+                        {
+                            c2 = s.GetPixel(xx, yy);
+                            r += c2.R;
+                            g += c2.G;
+                            b += c2.B;
+                            nc++;
+                        }
+                    }
+
+                    r = truncate(r / nc);
+                    g = truncate(g / nc);
+                    b = truncate(b / nc);
+
+
+                    s.SetPixel(x, y, Color.FromArgb(c.A, r, g, b));
+
+                    nc = 0;
+                    cv = 0;
+                    ch = 0;
+                    r = 0;
+                    g = 0;
+                    b = 0;
+                }
+            }
+            return s;
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             bmp = grayscale(ruta);
@@ -645,7 +793,7 @@ namespace WindowsFormsApplication1
 
         private void button9_Click(object sender, EventArgs e)
         {
-            bmp = blur(ruta);
+            bmp = blurSize(ruta, 12);
             pictureBox2.Image = bmp;
         }
 
@@ -742,6 +890,19 @@ namespace WindowsFormsApplication1
             //espejar
             bmp.RotateFlip(RotateFlipType.RotateNoneFlipY);
             pictureBox1.Image = bmp;
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            Color c = Color.FromArgb(255, 0, 0, 0);
+            bmp = colorCrop(ruta, c);
+            pictureBox2.Image = bmp;
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            bmp = colorSimple(ruta);
+            pictureBox2.Image = bmp;
         }
     }
 

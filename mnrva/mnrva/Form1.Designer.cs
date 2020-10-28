@@ -49,6 +49,9 @@
             this.cargarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu = new System.Windows.Forms.MenuStrip();
+            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.girarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recortarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.sfd = new System.Windows.Forms.SaveFileDialog();
             this.zoomout = new System.Windows.Forms.Button();
@@ -107,21 +110,24 @@
             this.tint = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.main = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.crop = new System.Windows.Forms.TabPage();
-            this.spin = new System.Windows.Forms.TabPage();
-            this.EditSelect = new System.Windows.Forms.TabControl();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.turn90 = new System.Windows.Forms.Button();
-            this.turn270 = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.turnside = new System.Windows.Forms.Button();
-            this.turnup = new System.Windows.Forms.Button();
             this.tool = new System.Windows.Forms.Panel();
-            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.girarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.recortarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.EditSelect = new System.Windows.Forms.TabControl();
+            this.spin = new System.Windows.Forms.TabPage();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.turnup = new System.Windows.Forms.Button();
+            this.turnside = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.turn270 = new System.Windows.Forms.Button();
+            this.turn90 = new System.Windows.Forms.Button();
+            this.crop = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.other = new System.Windows.Forms.TabPage();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.blur = new System.Windows.Forms.Button();
+            this.blur1 = new System.Windows.Forms.Button();
+            this.blur2 = new System.Windows.Forms.Button();
+            this.blur3 = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -159,11 +165,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.greenRange2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.redRange2)).BeginInit();
             this.main.SuspendLayout();
-            this.spin.SuspendLayout();
-            this.EditSelect.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.tool.SuspendLayout();
+            this.EditSelect.SuspendLayout();
+            this.spin.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.other.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -172,7 +180,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1291, 492);
+            this.tabPage2.Size = new System.Drawing.Size(1109, 492);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Comparar";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -194,8 +202,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel2.Controls.Add(this.zoomOutOg);
             this.splitContainer1.Panel2.Controls.Add(this.zoomInOg);
-            this.splitContainer1.Size = new System.Drawing.Size(1285, 486);
-            this.splitContainer1.SplitterDistance = 658;
+            this.splitContainer1.Size = new System.Drawing.Size(1103, 486);
+            this.splitContainer1.SplitterDistance = 564;
             this.splitContainer1.TabIndex = 7;
             // 
             // pictureBox2
@@ -206,7 +214,7 @@
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Location = new System.Drawing.Point(3, 32);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(655, 354);
+            this.pictureBox2.Size = new System.Drawing.Size(561, 354);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -240,7 +248,7 @@
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Cross;
             this.pictureBox1.Location = new System.Drawing.Point(-1, 32);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(623, 354);
+            this.pictureBox1.Size = new System.Drawing.Size(535, 354);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -379,6 +387,28 @@
             this.menu.TabIndex = 5;
             this.menu.Text = "menuStrip1";
             // 
+            // editarToolStripMenuItem
+            // 
+            this.editarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.girarToolStripMenuItem,
+            this.recortarToolStripMenuItem});
+            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
+            this.editarToolStripMenuItem.Text = "Editar";
+            this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
+            // 
+            // girarToolStripMenuItem
+            // 
+            this.girarToolStripMenuItem.Name = "girarToolStripMenuItem";
+            this.girarToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
+            this.girarToolStripMenuItem.Text = "Girar";
+            // 
+            // recortarToolStripMenuItem
+            // 
+            this.recortarToolStripMenuItem.Name = "recortarToolStripMenuItem";
+            this.recortarToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
+            this.recortarToolStripMenuItem.Text = "Recortar";
+            // 
             // tabControl1
             // 
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -429,6 +459,7 @@
             // 
             this.FIlterSelect.Controls.Add(this.gscale);
             this.FIlterSelect.Controls.Add(this.colors);
+            this.FIlterSelect.Controls.Add(this.other);
             this.FIlterSelect.Enabled = false;
             this.FIlterSelect.Location = new System.Drawing.Point(754, 0);
             this.FIlterSelect.Name = "FIlterSelect";
@@ -1015,47 +1046,15 @@
             this.main.Size = new System.Drawing.Size(1301, 528);
             this.main.TabIndex = 12;
             // 
-            // label3
+            // tool
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(94, 596);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "label3";
-            // 
-            // crop
-            // 
-            this.crop.Location = new System.Drawing.Point(4, 22);
-            this.crop.Name = "crop";
-            this.crop.Size = new System.Drawing.Size(160, 502);
-            this.crop.TabIndex = 0;
-            this.crop.Text = "Recortar";
-            this.crop.UseVisualStyleBackColor = true;
-            // 
-            // spin
-            // 
-            this.spin.Controls.Add(this.panel9);
-            this.spin.Controls.Add(this.panel6);
-            this.spin.Location = new System.Drawing.Point(4, 22);
-            this.spin.Name = "spin";
-            this.spin.Size = new System.Drawing.Size(167, 504);
-            this.spin.TabIndex = 0;
-            this.spin.Text = "Girar";
-            this.spin.UseVisualStyleBackColor = true;
-            // 
-            // EditSelect
-            // 
-            this.EditSelect.Controls.Add(this.spin);
-            this.EditSelect.Controls.Add(this.crop);
-            this.EditSelect.Location = new System.Drawing.Point(935, 0);
-            this.EditSelect.Name = "EditSelect";
-            this.EditSelect.SelectedIndex = 0;
-            this.EditSelect.Size = new System.Drawing.Size(175, 530);
-            this.EditSelect.TabIndex = 9;
-            this.EditSelect.Visible = false;
+            this.tool.AutoScroll = true;
+            this.tool.Controls.Add(this.textBox1);
+            this.tool.Dock = System.Windows.Forms.DockStyle.Right;
+            this.tool.Location = new System.Drawing.Point(1121, 0);
+            this.tool.Name = "tool";
+            this.tool.Size = new System.Drawing.Size(180, 528);
+            this.tool.TabIndex = 10;
             // 
             // textBox1
             // 
@@ -1071,6 +1070,60 @@
             this.textBox1.Text = "Seleccione una opción para editar";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // EditSelect
+            // 
+            this.EditSelect.Controls.Add(this.spin);
+            this.EditSelect.Controls.Add(this.crop);
+            this.EditSelect.Location = new System.Drawing.Point(935, 0);
+            this.EditSelect.Name = "EditSelect";
+            this.EditSelect.SelectedIndex = 0;
+            this.EditSelect.Size = new System.Drawing.Size(175, 530);
+            this.EditSelect.TabIndex = 9;
+            this.EditSelect.Visible = false;
+            // 
+            // spin
+            // 
+            this.spin.Controls.Add(this.panel9);
+            this.spin.Controls.Add(this.panel6);
+            this.spin.Location = new System.Drawing.Point(4, 22);
+            this.spin.Name = "spin";
+            this.spin.Size = new System.Drawing.Size(167, 504);
+            this.spin.TabIndex = 0;
+            this.spin.Text = "Girar";
+            this.spin.UseVisualStyleBackColor = true;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.turnup);
+            this.panel9.Controls.Add(this.turnside);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 86);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(167, 83);
+            this.panel9.TabIndex = 13;
+            // 
+            // turnup
+            // 
+            this.turnup.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.turnup.Location = new System.Drawing.Point(86, 4);
+            this.turnup.Name = "turnup";
+            this.turnup.Size = new System.Drawing.Size(66, 66);
+            this.turnup.TabIndex = 9;
+            this.turnup.Text = "⇵";
+            this.turnup.UseVisualStyleBackColor = true;
+            this.turnup.Click += new System.EventHandler(this.turnup_Click);
+            // 
+            // turnside
+            // 
+            this.turnside.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.turnside.Location = new System.Drawing.Point(14, 4);
+            this.turnside.Name = "turnside";
+            this.turnside.Size = new System.Drawing.Size(66, 66);
+            this.turnside.TabIndex = 9;
+            this.turnside.Text = "⇆";
+            this.turnside.UseVisualStyleBackColor = true;
+            this.turnside.Click += new System.EventHandler(this.turnside_Click);
+            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.turn270);
@@ -1080,6 +1133,17 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(167, 86);
             this.panel6.TabIndex = 11;
+            // 
+            // turn270
+            // 
+            this.turn270.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.turn270.Location = new System.Drawing.Point(14, 7);
+            this.turn270.Name = "turn270";
+            this.turn270.Size = new System.Drawing.Size(66, 66);
+            this.turn270.TabIndex = 9;
+            this.turn270.Text = "↶";
+            this.turn270.UseVisualStyleBackColor = true;
+            this.turn270.Click += new System.EventHandler(this.turn270_Click);
             // 
             // turn90
             // 
@@ -1093,80 +1157,91 @@
             this.turn90.UseVisualStyleBackColor = true;
             this.turn90.Click += new System.EventHandler(this.turn90_Click);
             // 
-            // turn270
+            // crop
             // 
-            this.turn270.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.turn270.Location = new System.Drawing.Point(14, 7);
-            this.turn270.Name = "turn270";
-            this.turn270.Size = new System.Drawing.Size(66, 66);
-            this.turn270.TabIndex = 9;
-            this.turn270.Text = "↶";
-            this.turn270.UseVisualStyleBackColor = true;
-            this.turn270.Click += new System.EventHandler(this.turn270_Click);
+            this.crop.Location = new System.Drawing.Point(4, 22);
+            this.crop.Name = "crop";
+            this.crop.Size = new System.Drawing.Size(167, 504);
+            this.crop.TabIndex = 0;
+            this.crop.Text = "Recortar";
+            this.crop.UseVisualStyleBackColor = true;
             // 
-            // panel9
+            // label3
             // 
-            this.panel9.Controls.Add(this.turnup);
-            this.panel9.Controls.Add(this.turnside);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 86);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(167, 83);
-            this.panel9.TabIndex = 13;
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(94, 596);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 20);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "label3";
             // 
-            // turnside
+            // other
             // 
-            this.turnside.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.turnside.Location = new System.Drawing.Point(14, 4);
-            this.turnside.Name = "turnside";
-            this.turnside.Size = new System.Drawing.Size(66, 66);
-            this.turnside.TabIndex = 9;
-            this.turnside.Text = "⇆";
-            this.turnside.UseVisualStyleBackColor = true;
-            this.turnside.Click += new System.EventHandler(this.turnside_Click);
+            this.other.Controls.Add(this.panel7);
+            this.other.Location = new System.Drawing.Point(4, 22);
+            this.other.Name = "other";
+            this.other.Size = new System.Drawing.Size(167, 504);
+            this.other.TabIndex = 2;
+            this.other.Text = "Otros";
+            this.other.UseVisualStyleBackColor = true;
             // 
-            // turnup
+            // panel7
             // 
-            this.turnup.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.turnup.Location = new System.Drawing.Point(86, 4);
-            this.turnup.Name = "turnup";
-            this.turnup.Size = new System.Drawing.Size(66, 66);
-            this.turnup.TabIndex = 9;
-            this.turnup.Text = "⇵";
-            this.turnup.UseVisualStyleBackColor = true;
-            this.turnup.Click += new System.EventHandler(this.turnup_Click);
+            this.panel7.Controls.Add(this.blur3);
+            this.panel7.Controls.Add(this.blur2);
+            this.panel7.Controls.Add(this.blur1);
+            this.panel7.Controls.Add(this.blur);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(167, 99);
+            this.panel7.TabIndex = 2;
             // 
-            // tool
+            // blur
             // 
-            this.tool.AutoScroll = true;
-            this.tool.Controls.Add(this.textBox1);
-            this.tool.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tool.Location = new System.Drawing.Point(1121, 0);
-            this.tool.Name = "tool";
-            this.tool.Size = new System.Drawing.Size(180, 528);
-            this.tool.TabIndex = 10;
+            this.blur.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.blur.Location = new System.Drawing.Point(3, 3);
+            this.blur.Name = "blur";
+            this.blur.Size = new System.Drawing.Size(161, 35);
+            this.blur.TabIndex = 9;
+            this.blur.Text = "Desenfoque 🠟";
+            this.blur.UseVisualStyleBackColor = true;
+            this.blur.Click += new System.EventHandler(this.blur_Click);
             // 
-            // editarToolStripMenuItem
+            // blur1
             // 
-            this.editarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.girarToolStripMenuItem,
-            this.recortarToolStripMenuItem});
-            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
-            this.editarToolStripMenuItem.Text = "Editar";
-            this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
+            this.blur1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blur1.Location = new System.Drawing.Point(3, 53);
+            this.blur1.Name = "blur1";
+            this.blur1.Size = new System.Drawing.Size(47, 33);
+            this.blur1.TabIndex = 10;
+            this.blur1.Text = "9";
+            this.blur1.UseVisualStyleBackColor = true;
+            this.blur1.Click += new System.EventHandler(this.blur1_Click);
             // 
-            // girarToolStripMenuItem
+            // blur2
             // 
-            this.girarToolStripMenuItem.Name = "girarToolStripMenuItem";
-            this.girarToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
-            this.girarToolStripMenuItem.Text = "Girar";
+            this.blur2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blur2.Location = new System.Drawing.Point(64, 53);
+            this.blur2.Name = "blur2";
+            this.blur2.Size = new System.Drawing.Size(46, 33);
+            this.blur2.TabIndex = 11;
+            this.blur2.Text = "12";
+            this.blur2.UseVisualStyleBackColor = true;
+            this.blur2.Click += new System.EventHandler(this.blur2_Click);
             // 
-            // recortarToolStripMenuItem
+            // blur3
             // 
-            this.recortarToolStripMenuItem.Name = "recortarToolStripMenuItem";
-            this.recortarToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
-            this.recortarToolStripMenuItem.Text = "Recortar";
+            this.blur3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blur3.Location = new System.Drawing.Point(116, 53);
+            this.blur3.Name = "blur3";
+            this.blur3.Size = new System.Drawing.Size(48, 33);
+            this.blur3.TabIndex = 12;
+            this.blur3.Text = "24";
+            this.blur3.UseVisualStyleBackColor = true;
+            this.blur3.Click += new System.EventHandler(this.blur3_Click);
             // 
             // Form1
             // 
@@ -1227,12 +1302,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.greenRange2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.redRange2)).EndInit();
             this.main.ResumeLayout(false);
-            this.spin.ResumeLayout(false);
-            this.EditSelect.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
             this.tool.ResumeLayout(false);
             this.tool.PerformLayout();
+            this.EditSelect.ResumeLayout(false);
+            this.spin.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.other.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1334,6 +1411,12 @@
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem girarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recortarToolStripMenuItem;
+        private System.Windows.Forms.TabPage other;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button blur;
+        private System.Windows.Forms.Button blur3;
+        private System.Windows.Forms.Button blur2;
+        private System.Windows.Forms.Button blur1;
     }
 }
 
