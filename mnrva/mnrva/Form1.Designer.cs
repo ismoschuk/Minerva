@@ -117,7 +117,6 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.bright = new System.Windows.Forms.TrackBar();
             this.panel8 = new System.Windows.Forms.Panel();
             this.edge = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -138,13 +137,14 @@
             this.turn270 = new System.Windows.Forms.Button();
             this.turn90 = new System.Windows.Forms.Button();
             this.crop = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.cropcol = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.colorcr = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.colorcr = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.bright = new System.Windows.Forms.TrackBar();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -187,7 +187,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.redRange2)).BeginInit();
             this.other.SuspendLayout();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bright)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.main.SuspendLayout();
@@ -199,6 +198,7 @@
             this.crop.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bright)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -1118,9 +1118,9 @@
             // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.bright);
             this.panel11.Controls.Add(this.button2);
             this.panel11.Controls.Add(this.label4);
-            this.panel11.Controls.Add(this.bright);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 142);
             this.panel11.Name = "panel11";
@@ -1145,17 +1145,6 @@
             this.label4.Size = new System.Drawing.Size(13, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "8";
-            // 
-            // bright
-            // 
-            this.bright.Location = new System.Drawing.Point(10, 43);
-            this.bright.Minimum = 2;
-            this.bright.Name = "bright";
-            this.bright.Size = new System.Drawing.Size(138, 45);
-            this.bright.TabIndex = 3;
-            this.bright.Tag = "shades";
-            this.bright.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.bright.Value = 8;
             // 
             // panel8
             // 
@@ -1379,17 +1368,6 @@
             this.crop.Text = "Recortar";
             this.crop.UseVisualStyleBackColor = true;
             // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(94, 596);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "label3";
-            // 
             // panel13
             // 
             this.panel13.Controls.Add(this.cropcol);
@@ -1420,15 +1398,15 @@
             this.button6.Text = "Recorte Mágico🠟";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // panel12
             // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Location = new System.Drawing.Point(10, 7);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(150, 35);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Recorte Automático🠟";
-            this.button5.UseVisualStyleBackColor = true;
+            this.panel12.Controls.Add(this.colorcr);
+            this.panel12.Controls.Add(this.button5);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(167, 82);
+            this.panel12.TabIndex = 9;
             // 
             // colorcr
             // 
@@ -1440,15 +1418,38 @@
             this.colorcr.UseVisualStyleBackColor = true;
             this.colorcr.Click += new System.EventHandler(this.colorcr_Click_1);
             // 
-            // panel12
+            // button5
             // 
-            this.panel12.Controls.Add(this.colorcr);
-            this.panel12.Controls.Add(this.button5);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(167, 82);
-            this.panel12.TabIndex = 9;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Location = new System.Drawing.Point(10, 7);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(150, 35);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Recorte Automático🠟";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(94, 596);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 20);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "label3";
+            // 
+            // bright
+            // 
+            this.bright.Location = new System.Drawing.Point(12, 45);
+            this.bright.Maximum = 19;
+            this.bright.Minimum = 2;
+            this.bright.Name = "bright";
+            this.bright.Size = new System.Drawing.Size(138, 45);
+            this.bright.TabIndex = 5;
+            this.bright.Tag = "br";
+            this.bright.Value = 10;
+            this.bright.Scroll += new System.EventHandler(this.bright_Scroll_1);
             // 
             // Form1
             // 
@@ -1516,7 +1517,6 @@
             this.other.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bright)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.main.ResumeLayout(false);
@@ -1529,6 +1529,7 @@
             this.crop.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bright)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1646,13 +1647,13 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TrackBar bright;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Button cropcol;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Button colorcr;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TrackBar bright;
     }
 }
 

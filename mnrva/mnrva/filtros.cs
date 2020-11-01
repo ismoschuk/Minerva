@@ -565,9 +565,9 @@ namespace mnrva
                 {
                     c = s.GetPixel(x, y);
 
-                    r = truncateS(c.R * (1 + aug / 10));
-                    g = truncateS(c.G * (1 + aug / 10));
-                    b = truncateS(c.B * (1 + aug / 10));
+                    r = truncateS(c.R * (aug / 10));
+                    g = truncateS(c.G * (aug / 10));
+                    b = truncateS(c.B * (aug / 10));
 
                     s.SetPixel(x, y, Color.FromArgb(c.A, r, g, b));
 

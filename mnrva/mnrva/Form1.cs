@@ -551,6 +551,19 @@ namespace mnrva
             pictureBox2.Image = edit;
         }
 
+        private void bright_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bright_Scroll_1(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.bright(bmpGS, bright.Value);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
         private void crPick_Click(object sender, EventArgs e)
         {
             Bitmap bmpGS = new Bitmap(edit);
