@@ -25,3 +25,12 @@ C:\Users\ivann\Desktop\minerva\Minerva\test\WindowsFormsApplication1\obj\Debug\W
 C:\Users\ivann\Desktop\minerva\Minerva\test\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
 C:\Users\ivann\Desktop\minerva\Minerva\test\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\ivann\Desktop\minerva\Minerva\test\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\usuario\Desktop\test\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\usuario\Desktop\test\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\usuario\Desktop\test\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\usuario\Desktop\test\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\usuario\Desktop\test\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\usuario\Desktop\test\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Desktop\test\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\usuario\Desktop\test\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\usuario\Desktop\test\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache

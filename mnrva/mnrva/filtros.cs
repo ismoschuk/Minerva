@@ -411,6 +411,30 @@ namespace mnrva
             return s;
         }
 
+
+        public Bitmap colorEnhance(Bitmap ruta, double aug, string color)
+        {
+            Bitmap s = new Bitmap(ruta);
+            int r, g, b;
+            h = s.Height;
+            w = s.Width;
+            Color c;
+            for (int y = 0; y < h; y++)
+            {
+                for (int x = 0; x < w; x++)
+                {
+                    c = s.GetPixel(x, y);
+
+                    r = (color == "r") ? truncateS(c.R * (1 + aug / 10)) : c.R;
+                    g = (color == "g") ? truncateS(c.G * (1 + aug / 10)) : c.G;
+                    b = (color == "b") ? truncateS(c.B * (1 + aug / 10)) : c.B;
+
+                    s.SetPixel(x, y, Color.FromArgb(c.A, r, g, b));
+
+                }
+            }
+            return s;
+        }
         //OTROS
 
         public Bitmap blurSize(Bitmap ruta, int sz)
@@ -467,5 +491,90 @@ namespace mnrva
             }
             return s;
         }
+
+        public Bitmap edgeDetect(Bitmap ruta)
+        {
+            Bitmap s;
+            Bitmap og;
+            int chkV1, chkH1, ch, cv, nc, v, l;
+            s = new Bitmap(ruta);
+            //og = grayscaleShades(ruta, 6);
+            og = grayscale(ruta);
+            og = blurSize(og, 3);
+            List<int> sov = new List<int>();
+
+            //este queda piola
+            int[] sovV = new int[] { 0, -1, 0, -1, 4, -1, 0, -1, 0 };
+            int[] sovH = new int[] { 0, -1, 0, -1, 4, -1, 0, -1, 0 };
+
+            h = s.Height;
+            w = s.Width;
+            cv = 0;
+            ch = 0;
+            v = 0;
+            l = 0;
+            Color c, c2;
+            for (int y = 0; y < h; y++)
+            {
+                for (int x = 0; x < w; x++)
+                {
+                    c = s.GetPixel(x, y);
+                    chkH1 = (x < (w - 3)) ? (x + 3) : w;
+                    chkV1 = (y < (h - 3)) ? (y + 3) : h;
+                    for (int yy = y; yy < chkV1; yy++)
+                    {
+                        l = 0;
+                        for (int xx = x; xx < chkH1; xx++)
+                        {
+                            c2 = og.GetPixel(xx, yy);
+                            cv += c2.R * sovV[v + l];
+                            ch += c2.R * sovH[v + l];
+                            l++;
+                        }
+                        v++;
+                    }
+
+                    
+                    nc = Convert.ToInt32(Math.Pow(cv, 2) + Math.Pow(ch, 2));
+                    nc = Convert.ToInt32(Math.Sqrt(nc));
+
+                    nc = truncate(nc);
+
+                    s.SetPixel(x, y, Color.FromArgb(c.A, nc, nc, nc));
+
+                    sov.Clear();
+                    cv = 0;
+                    ch = 0;
+                    v = 0;
+                    l = 0;
+                }
+            }
+
+            return s;
+        }
+        public Bitmap bright(Bitmap ruta, double aug)
+        {
+            Bitmap s = new Bitmap(ruta);
+            int r, g, b;
+            h = s.Height;
+            w = s.Width;
+            Color c;
+            for (int y = 0; y < h; y++)
+            {
+                for (int x = 0; x < w; x++)
+                {
+                    c = s.GetPixel(x, y);
+
+                    r = truncateS(c.R * (1 + aug / 10));
+                    g = truncateS(c.G * (1 + aug / 10));
+                    b = truncateS(c.B * (1 + aug / 10));
+
+                    s.SetPixel(x, y, Color.FromArgb(c.A, r, g, b));
+
+                }
+            }
+            return s;
+        }
     }
+
 }

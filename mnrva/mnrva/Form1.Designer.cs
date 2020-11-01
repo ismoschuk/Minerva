@@ -80,6 +80,11 @@
             this.b = new System.Windows.Forms.Panel();
             this.bw = new System.Windows.Forms.Button();
             this.colors = new System.Windows.Forms.TabPage();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.blueMore = new System.Windows.Forms.TrackBar();
+            this.greenMore = new System.Windows.Forms.TrackBar();
+            this.redMore = new System.Windows.Forms.TrackBar();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.rbwg = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -108,6 +113,18 @@
             this.greenRange2 = new System.Windows.Forms.TrackBar();
             this.redRange2 = new System.Windows.Forms.TrackBar();
             this.tint = new System.Windows.Forms.Button();
+            this.other = new System.Windows.Forms.TabPage();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.bright = new System.Windows.Forms.TrackBar();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.edge = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.blur3 = new System.Windows.Forms.Button();
+            this.blur2 = new System.Windows.Forms.Button();
+            this.blur1 = new System.Windows.Forms.Button();
+            this.blur = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.main = new System.Windows.Forms.Panel();
             this.tool = new System.Windows.Forms.Panel();
@@ -122,12 +139,12 @@
             this.turn90 = new System.Windows.Forms.Button();
             this.crop = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
-            this.other = new System.Windows.Forms.TabPage();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.blur = new System.Windows.Forms.Button();
-            this.blur1 = new System.Windows.Forms.Button();
-            this.blur2 = new System.Windows.Forms.Button();
-            this.blur3 = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.cropcol = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.colorcr = new System.Windows.Forms.Button();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -153,6 +170,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.shades)).BeginInit();
             this.b.SuspendLayout();
             this.colors.SuspendLayout();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.blueMore)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.greenMore)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redMore)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.cl.SuspendLayout();
@@ -164,14 +185,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.blueRange2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.greenRange2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.redRange2)).BeginInit();
+            this.other.SuspendLayout();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bright)).BeginInit();
+            this.panel8.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.main.SuspendLayout();
             this.tool.SuspendLayout();
             this.EditSelect.SuspendLayout();
             this.spin.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.other.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.crop.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -493,7 +520,7 @@
             this.c.Controls.Add(this.redRange);
             this.c.Controls.Add(this.cr);
             this.c.Dock = System.Windows.Forms.DockStyle.Top;
-            this.c.Location = new System.Drawing.Point(3, 175);
+            this.c.Location = new System.Drawing.Point(3, 174);
             this.c.Name = "c";
             this.c.Size = new System.Drawing.Size(161, 38);
             this.c.TabIndex = 8;
@@ -561,7 +588,7 @@
             this.uc.Controls.Add(this.red);
             this.uc.Controls.Add(this.gc);
             this.uc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.uc.Location = new System.Drawing.Point(3, 131);
+            this.uc.Location = new System.Drawing.Point(3, 130);
             this.uc.Name = "uc";
             this.uc.Size = new System.Drawing.Size(161, 44);
             this.uc.TabIndex = 7;
@@ -603,7 +630,7 @@
             this.p.Controls.Add(this.valueRange);
             this.p.Controls.Add(this.fotocopiaRange);
             this.p.Dock = System.Windows.Forms.DockStyle.Top;
-            this.p.Location = new System.Drawing.Point(3, 87);
+            this.p.Location = new System.Drawing.Point(3, 86);
             this.p.Name = "p";
             this.p.Size = new System.Drawing.Size(161, 44);
             this.p.TabIndex = 6;
@@ -650,7 +677,7 @@
             this.g.Dock = System.Windows.Forms.DockStyle.Top;
             this.g.Location = new System.Drawing.Point(3, 43);
             this.g.Name = "g";
-            this.g.Size = new System.Drawing.Size(161, 44);
+            this.g.Size = new System.Drawing.Size(161, 43);
             this.g.TabIndex = 5;
             // 
             // ss
@@ -707,6 +734,7 @@
             // colors
             // 
             this.colors.AutoScroll = true;
+            this.colors.Controls.Add(this.panel10);
             this.colors.Controls.Add(this.panel5);
             this.colors.Controls.Add(this.panel4);
             this.colors.Controls.Add(this.cl);
@@ -722,13 +750,68 @@
             this.colors.Text = "Colors";
             this.colors.UseVisualStyleBackColor = true;
             // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.blueMore);
+            this.panel10.Controls.Add(this.greenMore);
+            this.panel10.Controls.Add(this.redMore);
+            this.panel10.Controls.Add(this.button3);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(3, 308);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(144, 237);
+            this.panel10.TabIndex = 17;
+            // 
+            // blueMore
+            // 
+            this.blueMore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.blueMore.Location = new System.Drawing.Point(3, 145);
+            this.blueMore.Maximum = 9;
+            this.blueMore.Name = "blueMore";
+            this.blueMore.Size = new System.Drawing.Size(150, 45);
+            this.blueMore.TabIndex = 7;
+            this.blueMore.Value = 2;
+            this.blueMore.Scroll += new System.EventHandler(this.blueMore_Scroll);
+            // 
+            // greenMore
+            // 
+            this.greenMore.BackColor = System.Drawing.Color.LightGreen;
+            this.greenMore.Location = new System.Drawing.Point(3, 94);
+            this.greenMore.Maximum = 9;
+            this.greenMore.Name = "greenMore";
+            this.greenMore.Size = new System.Drawing.Size(150, 45);
+            this.greenMore.TabIndex = 6;
+            this.greenMore.Value = 2;
+            this.greenMore.Scroll += new System.EventHandler(this.greenMore_Scroll);
+            // 
+            // redMore
+            // 
+            this.redMore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.redMore.Location = new System.Drawing.Point(4, 43);
+            this.redMore.Maximum = 9;
+            this.redMore.Name = "redMore";
+            this.redMore.Size = new System.Drawing.Size(150, 45);
+            this.redMore.TabIndex = 5;
+            this.redMore.Value = 2;
+            this.redMore.Scroll += new System.EventHandler(this.trackBar3_Scroll);
+            // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Location = new System.Drawing.Point(5, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(145, 35);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Aumentar 🠟";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.rbwg);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(3, 265);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(161, 43);
+            this.panel5.Size = new System.Drawing.Size(144, 43);
             this.panel5.TabIndex = 16;
             // 
             // rbwg
@@ -747,7 +830,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(3, 222);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(161, 43);
+            this.panel4.Size = new System.Drawing.Size(144, 43);
             this.panel4.TabIndex = 15;
             // 
             // rbw
@@ -774,7 +857,7 @@
             this.cl.Dock = System.Windows.Forms.DockStyle.Top;
             this.cl.Location = new System.Drawing.Point(3, 180);
             this.cl.Name = "cl";
-            this.cl.Size = new System.Drawing.Size(161, 42);
+            this.cl.Size = new System.Drawing.Size(144, 42);
             this.cl.TabIndex = 14;
             this.cl.Paint += new System.Windows.Forms.PaintEventHandler(this.cl_Paint);
             // 
@@ -877,7 +960,7 @@
             this.s.Dock = System.Windows.Forms.DockStyle.Top;
             this.s.Location = new System.Drawing.Point(3, 138);
             this.s.Name = "s";
-            this.s.Size = new System.Drawing.Size(161, 42);
+            this.s.Size = new System.Drawing.Size(144, 42);
             this.s.TabIndex = 13;
             // 
             // srnge
@@ -919,7 +1002,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 92);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(161, 46);
+            this.panel2.Size = new System.Drawing.Size(144, 46);
             this.panel2.TabIndex = 11;
             // 
             // cst
@@ -938,7 +1021,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 49);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(161, 43);
+            this.panel1.Size = new System.Drawing.Size(144, 43);
             this.panel1.TabIndex = 10;
             // 
             // ct
@@ -961,7 +1044,7 @@
             this.t.Dock = System.Windows.Forms.DockStyle.Top;
             this.t.Location = new System.Drawing.Point(3, 3);
             this.t.Name = "t";
-            this.t.Size = new System.Drawing.Size(161, 46);
+            this.t.Size = new System.Drawing.Size(144, 46);
             this.t.TabIndex = 9;
             // 
             // button1
@@ -1020,6 +1103,134 @@
             this.tint.Text = "Tinte 🠟";
             this.tint.UseVisualStyleBackColor = true;
             this.tint.Click += new System.EventHandler(this.tint_Click);
+            // 
+            // other
+            // 
+            this.other.Controls.Add(this.panel11);
+            this.other.Controls.Add(this.panel8);
+            this.other.Controls.Add(this.panel7);
+            this.other.Location = new System.Drawing.Point(4, 22);
+            this.other.Name = "other";
+            this.other.Size = new System.Drawing.Size(167, 504);
+            this.other.TabIndex = 2;
+            this.other.Text = "Otros";
+            this.other.UseVisualStyleBackColor = true;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.button2);
+            this.panel11.Controls.Add(this.label4);
+            this.panel11.Controls.Add(this.bright);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(0, 142);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(167, 111);
+            this.panel11.TabIndex = 12;
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Location = new System.Drawing.Point(5, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(145, 35);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Brillo 🠟";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(4, 91);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(13, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "8";
+            // 
+            // bright
+            // 
+            this.bright.Location = new System.Drawing.Point(10, 43);
+            this.bright.Minimum = 2;
+            this.bright.Name = "bright";
+            this.bright.Size = new System.Drawing.Size(138, 45);
+            this.bright.TabIndex = 3;
+            this.bright.Tag = "shades";
+            this.bright.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.bright.Value = 8;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.edge);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 99);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(167, 43);
+            this.panel8.TabIndex = 11;
+            // 
+            // edge
+            // 
+            this.edge.Location = new System.Drawing.Point(5, 4);
+            this.edge.Name = "edge";
+            this.edge.Size = new System.Drawing.Size(145, 35);
+            this.edge.TabIndex = 9;
+            this.edge.Text = "Bordes";
+            this.edge.UseVisualStyleBackColor = true;
+            this.edge.Click += new System.EventHandler(this.edge_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.blur3);
+            this.panel7.Controls.Add(this.blur2);
+            this.panel7.Controls.Add(this.blur1);
+            this.panel7.Controls.Add(this.blur);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(167, 99);
+            this.panel7.TabIndex = 2;
+            // 
+            // blur3
+            // 
+            this.blur3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blur3.Location = new System.Drawing.Point(116, 53);
+            this.blur3.Name = "blur3";
+            this.blur3.Size = new System.Drawing.Size(48, 33);
+            this.blur3.TabIndex = 12;
+            this.blur3.Text = "24";
+            this.blur3.UseVisualStyleBackColor = true;
+            this.blur3.Click += new System.EventHandler(this.blur3_Click);
+            // 
+            // blur2
+            // 
+            this.blur2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blur2.Location = new System.Drawing.Point(64, 53);
+            this.blur2.Name = "blur2";
+            this.blur2.Size = new System.Drawing.Size(46, 33);
+            this.blur2.TabIndex = 11;
+            this.blur2.Text = "12";
+            this.blur2.UseVisualStyleBackColor = true;
+            this.blur2.Click += new System.EventHandler(this.blur2_Click);
+            // 
+            // blur1
+            // 
+            this.blur1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blur1.Location = new System.Drawing.Point(3, 53);
+            this.blur1.Name = "blur1";
+            this.blur1.Size = new System.Drawing.Size(47, 33);
+            this.blur1.TabIndex = 10;
+            this.blur1.Text = "9";
+            this.blur1.UseVisualStyleBackColor = true;
+            this.blur1.Click += new System.EventHandler(this.blur1_Click);
+            // 
+            // blur
+            // 
+            this.blur.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.blur.Location = new System.Drawing.Point(3, 3);
+            this.blur.Name = "blur";
+            this.blur.Size = new System.Drawing.Size(161, 35);
+            this.blur.TabIndex = 9;
+            this.blur.Text = "Desenfoque 🠟";
+            this.blur.UseVisualStyleBackColor = true;
+            this.blur.Click += new System.EventHandler(this.blur_Click);
             // 
             // label2
             // 
@@ -1159,6 +1370,8 @@
             // 
             // crop
             // 
+            this.crop.Controls.Add(this.panel13);
+            this.crop.Controls.Add(this.panel12);
             this.crop.Location = new System.Drawing.Point(4, 22);
             this.crop.Name = "crop";
             this.crop.Size = new System.Drawing.Size(167, 504);
@@ -1177,71 +1390,65 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "label3";
             // 
-            // other
+            // panel13
             // 
-            this.other.Controls.Add(this.panel7);
-            this.other.Location = new System.Drawing.Point(4, 22);
-            this.other.Name = "other";
-            this.other.Size = new System.Drawing.Size(167, 504);
-            this.other.TabIndex = 2;
-            this.other.Text = "Otros";
-            this.other.UseVisualStyleBackColor = true;
+            this.panel13.Controls.Add(this.cropcol);
+            this.panel13.Controls.Add(this.button6);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 82);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(167, 82);
+            this.panel13.TabIndex = 10;
             // 
-            // panel7
+            // cropcol
             // 
-            this.panel7.Controls.Add(this.blur3);
-            this.panel7.Controls.Add(this.blur2);
-            this.panel7.Controls.Add(this.blur1);
-            this.panel7.Controls.Add(this.blur);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(167, 99);
-            this.panel7.TabIndex = 2;
+            this.cropcol.Location = new System.Drawing.Point(10, 47);
+            this.cropcol.Name = "cropcol";
+            this.cropcol.Size = new System.Drawing.Size(150, 28);
+            this.cropcol.TabIndex = 8;
+            this.cropcol.Text = "Usar color sleccionado";
+            this.cropcol.UseVisualStyleBackColor = true;
+            this.cropcol.Click += new System.EventHandler(this.cropcol_Click);
             // 
-            // blur
+            // button6
             // 
-            this.blur.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.blur.Location = new System.Drawing.Point(3, 3);
-            this.blur.Name = "blur";
-            this.blur.Size = new System.Drawing.Size(161, 35);
-            this.blur.TabIndex = 9;
-            this.blur.Text = "Desenfoque 🠟";
-            this.blur.UseVisualStyleBackColor = true;
-            this.blur.Click += new System.EventHandler(this.blur_Click);
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button6.Location = new System.Drawing.Point(10, 7);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(150, 35);
+            this.button6.TabIndex = 4;
+            this.button6.Text = "Recorte Mágico🠟";
+            this.button6.UseVisualStyleBackColor = true;
             // 
-            // blur1
+            // button5
             // 
-            this.blur1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blur1.Location = new System.Drawing.Point(3, 53);
-            this.blur1.Name = "blur1";
-            this.blur1.Size = new System.Drawing.Size(47, 33);
-            this.blur1.TabIndex = 10;
-            this.blur1.Text = "9";
-            this.blur1.UseVisualStyleBackColor = true;
-            this.blur1.Click += new System.EventHandler(this.blur1_Click);
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Location = new System.Drawing.Point(10, 7);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(150, 35);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Recorte Automático🠟";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // blur2
+            // colorcr
             // 
-            this.blur2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blur2.Location = new System.Drawing.Point(64, 53);
-            this.blur2.Name = "blur2";
-            this.blur2.Size = new System.Drawing.Size(46, 33);
-            this.blur2.TabIndex = 11;
-            this.blur2.Text = "12";
-            this.blur2.UseVisualStyleBackColor = true;
-            this.blur2.Click += new System.EventHandler(this.blur2_Click);
+            this.colorcr.Location = new System.Drawing.Point(10, 47);
+            this.colorcr.Name = "colorcr";
+            this.colorcr.Size = new System.Drawing.Size(150, 28);
+            this.colorcr.TabIndex = 8;
+            this.colorcr.Text = "Usar color sleccionado";
+            this.colorcr.UseVisualStyleBackColor = true;
+            this.colorcr.Click += new System.EventHandler(this.colorcr_Click_1);
             // 
-            // blur3
+            // panel12
             // 
-            this.blur3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blur3.Location = new System.Drawing.Point(116, 53);
-            this.blur3.Name = "blur3";
-            this.blur3.Size = new System.Drawing.Size(48, 33);
-            this.blur3.TabIndex = 12;
-            this.blur3.Text = "24";
-            this.blur3.UseVisualStyleBackColor = true;
-            this.blur3.Click += new System.EventHandler(this.blur3_Click);
+            this.panel12.Controls.Add(this.colorcr);
+            this.panel12.Controls.Add(this.button5);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(167, 82);
+            this.panel12.TabIndex = 9;
             // 
             // Form1
             // 
@@ -1288,6 +1495,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.shades)).EndInit();
             this.b.ResumeLayout(false);
             this.colors.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.blueMore)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.greenMore)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redMore)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.cl.ResumeLayout(false);
@@ -1301,6 +1513,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.blueRange2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.greenRange2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.redRange2)).EndInit();
+            this.other.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bright)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.main.ResumeLayout(false);
             this.tool.ResumeLayout(false);
             this.tool.PerformLayout();
@@ -1308,8 +1526,9 @@
             this.spin.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.other.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
+            this.crop.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1417,6 +1636,23 @@
         private System.Windows.Forms.Button blur3;
         private System.Windows.Forms.Button blur2;
         private System.Windows.Forms.Button blur1;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button edge;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.TrackBar blueMore;
+        private System.Windows.Forms.TrackBar greenMore;
+        private System.Windows.Forms.TrackBar redMore;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TrackBar bright;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Button cropcol;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Button colorcr;
+        private System.Windows.Forms.Button button5;
     }
 }
 

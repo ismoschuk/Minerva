@@ -638,34 +638,40 @@ namespace WindowsFormsApplication1
 
         public Bitmap colorCrop(string ruta, Color sel)
         {
-            Bitmap s = colorSimple(ruta);
+            // Bitmap s = colorSimple(ruta);
             Bitmap crop = new Bitmap(ruta);
+            Bitmap s = badPrinterBump(crop, 130);
             h = s.Height;
             w = s.Width;
             Color c,c2;
             // List<int> yV = new List<int>();
             //List<int> xV = new List<int>();
             int threshold = 25;
-            bool chck;
+            int threshold1 = 60;
+            int ch, chck;
+            chck = 0;
             for (int y = 0; y < h; y++)
             {
                 for (int x = 0; x < w; x++)
                 {
-                    c = s.GetPixel(x, y);
-                    chck = (c.R >= sel.R - threshold) & (c.G >= sel.G - threshold) & (c.B >= sel.B - threshold) & 
-                    //(c.R <= sel.R) & (c.G <= sel.G) & (c.B <= sel.B) &
-                    (c.R <= sel.R + threshold) & (c.G <= sel.G + threshold) & (c.B <= sel.B + threshold);
-
-                  //  chck = (c == sel);
-                    if (!chck)
+                    ch = (x < (w - threshold1)) ? (x + threshold1) : w;
+                    for (int xx = x; xx < ch; xx++)
                     {
-                        crop.SetPixel(x, y, Color.FromArgb(0, 0, 0, 0));
+                        c = s.GetPixel(xx, y);
+                        chck = (sel == c) ? chck + 1 : chck;
                     }
-                    else
+
+                    c2 = s.GetPixel(x, y);
+                    if ((chck > 45) & (c2 == sel))
                     {
                         c2 = crop.GetPixel(x, y);
                         crop.SetPixel(x, y, c2);
                     }
+                    else
+                    {
+                        crop.SetPixel(x, y, Color.FromArgb(0, 0, 0, 0));
+                    }
+                    chck = 0;
                 }
             }
             return crop;
@@ -687,9 +693,9 @@ namespace WindowsFormsApplication1
                 {
                     c = s.GetPixel(x, y);
 
-                    r = (c.R > (c.B + 5)) & (c.R > (c.G + 5)) ? 255 : 0;
-                    g = (c.G > (c.B + 5)) & (c.G > (c.R + 5)) ? 255 : 0;
-                    b = (c.B > (c.R + 5)) & (c.R > (c.G + 5)) ? 255 : 0;
+                    r = (c.R > (c.B)) & (c.R > (c.G)) ? 255 : 0;
+                    g = (c.G > (c.B)) & (c.G > (c.R)) ? 255 : 0;
+                    b = (c.B > (c.R)) & (c.R > (c.G)) ? 255 : 0;
 
                     s.SetPixel(x, y, Color.FromArgb(c.A, r, g, b));
 
@@ -755,6 +761,61 @@ namespace WindowsFormsApplication1
             }
             return s;
         }
+
+        public Bitmap badPrinterBump(Bitmap ruta, int rango)
+        {
+            // Usa solo blanco y negro puro dependiendo de la saturación
+            Bitmap gs;
+            gs = new Bitmap(ruta);
+            h = gs.Height;
+            w = gs.Width;
+            Color c;
+
+            for (int y = 0; y < h; y++)
+            {
+                for (int x = 0; x < w; x++)
+                {
+                    c = gs.GetPixel(x, y);
+
+                    int pr = c.R + c.G + c.B;
+
+                    pr = (c.R < rango) ^ (c.G < rango) ^ (c.B < rango) ? 0 : 255;
+                    gs.SetPixel(x, y, Color.FromArgb(c.A, pr, pr, pr));
+                }
+            }
+
+            return gs;
+        }
+
+        public Bitmap colorEnhance(string ruta)
+        {
+            Bitmap s = new Bitmap(ruta);
+            int r, g, b;
+            h = s.Height;
+            w = s.Width;
+            Color c;
+            // List<int> yV = new List<int>();
+            //List<int> xV = new List<int>();
+            for (int y = 0; y < h; y++)
+            {
+                for (int x = 0; x < w; x++)
+                {
+                    c = s.GetPixel(x, y);
+
+                    //r = (c.R > (c.B)) & (c.R > (c.G)) ? 255 : c.R;
+                    //g = (c.G > (c.B)) & (c.G > (c.R)) ? 255 : c.G;
+                    //b = (c.B > (c.R)) & (c.R > (c.G)) ? 255 : c.B;
+
+                    r = truncateS(c.R * 1.4);
+                    g = /*/ (c.G > (c.B)) & (c.G > (c.R)) ? 255 :/*/  c.G;
+                    b = /*/ (c.B > (c.R)) & (c.R > (c.G)) ? 255 :/*/ c.B;
+
+                    s.SetPixel(x, y, Color.FromArgb(c.A, r, g, b));
+
+                }
+            }
+            return s;
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             bmp = grayscale(ruta);
@@ -793,7 +854,7 @@ namespace WindowsFormsApplication1
 
         private void button9_Click(object sender, EventArgs e)
         {
-            bmp = blurSize(ruta, 12);
+            bmp = blurSize(ruta, 6);
             pictureBox2.Image = bmp;
         }
 
@@ -894,7 +955,7 @@ namespace WindowsFormsApplication1
 
         private void button20_Click(object sender, EventArgs e)
         {
-            Color c = Color.FromArgb(255, 0, 0, 0);
+            Color c = Color.FromArgb(255, 255, 255, 255);
             bmp = colorCrop(ruta, c);
             pictureBox2.Image = bmp;
         }
@@ -902,6 +963,12 @@ namespace WindowsFormsApplication1
         private void button21_Click(object sender, EventArgs e)
         {
             bmp = colorSimple(ruta);
+            pictureBox2.Image = bmp;
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            bmp = colorEnhance(ruta);
             pictureBox2.Image = bmp;
         }
     }

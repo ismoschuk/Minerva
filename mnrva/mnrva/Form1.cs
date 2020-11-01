@@ -60,19 +60,46 @@ namespace mnrva
 
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Gurdadno una foto
+            // Gurdado una foto
             sfd.FileName = "out";
             sfd.DefaultExt = "jpg";
-            sfd.Filter = "JPG images (*.jpg)|*.jpg";
+            sfd.Filter = "Bitmap files (*.bmp)|*.bmp|JPG files (*.jpg)|*.jpg|GIF files (*.gif)|*.gif|PNG files (*.png)|*.png|TIF files (*.tif)|*.tif|All files (*.*)|*.*";
 
             if (sfd.ShowDialog() == DialogResult.OK)
             {
 
                 var fileName = sfd.FileName;
-                if (!System.IO.Path.HasExtension(fileName) || System.IO.Path.GetExtension(fileName) != "jpg")
-                    fileName = fileName + ".jpg";
+                if ((sfd.ShowDialog() == DialogResult.OK))
+                    if (System.IO.Path.GetExtension(sfd.FileName).ToLower() == ".bmp")
+                        edit.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Bmp);
+                    else if (System.IO.Path.GetExtension(sfd.FileName).ToLower() == ".jpg")
+                        edit.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    else if (System.IO.Path.GetExtension(sfd.FileName).ToLower() == ".gif")
+                        edit.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Gif);
+                    else if (System.IO.Path.GetExtension(sfd.FileName).ToLower() == ".png")
+                    {
+                        Bitmap tr = new Bitmap(edit);
+                        tr.MakeTransparent();
+                        tr.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Png);
+                    }
+                    else if (System.IO.Path.GetExtension(sfd.FileName).ToLower() == ".tif")
+                        edit.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Tiff);
+                    else
+                        MessageBox.Show("File Save Error.");
+                //if (!System.IO.Path.HasExtension(fileName) || System.IO.Path.GetExtension(fileName) != "jpg")
+                //{
+                //    fileName = fileName + ".jpg";
+                //    edit.Save(fileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+                //}
 
-                edit.Save(fileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+                //if (!System.IO.Path.HasExtension(fileName) || System.IO.Path.GetExtension(fileName) != "png")
+                //{
+                //    Bitmap tr = new Bitmap(edit);
+                //    tr.MakeTransparent();
+                //    fileName = fileName + ".png";
+                //    tr.Save(fileName, System.Drawing.Imaging.ImageFormat.Png);
+                //}
+
             }
         }
 
@@ -194,7 +221,7 @@ namespace mnrva
         private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
         {
             currentColor = ogZoomed.GetPixel(e.X, e.Y);
-            label2.Text = currentColor.ToString();
+            label2.Text = currentColor.ToString() + " " + e.X.ToString() + " , " + e.Y.ToString() ;
         }
 
         private void tint_Click(object sender, EventArgs e)
@@ -439,7 +466,7 @@ namespace mnrva
         private void blur_Click(object sender, EventArgs e)
         {
             Bitmap bmpGS = new Bitmap(ogBmp);
-            edit = filtro.blurSize(bmpGS, 9);
+            edit = filtro.blurSize(bmpGS, 3);
             pictureBox3.Image = edit;
             pictureBox2.Image = edit;
         }
@@ -447,7 +474,7 @@ namespace mnrva
         private void blur2_Click(object sender, EventArgs e)
         {
             Bitmap bmpGS = new Bitmap(ogBmp);
-            edit = filtro.blurSize(bmpGS, 12);
+            edit = filtro.blurSize(bmpGS, 6);
             pictureBox3.Image = edit;
             pictureBox2.Image = edit;
         }
@@ -455,7 +482,7 @@ namespace mnrva
         private void blur1_Click(object sender, EventArgs e)
         {
             Bitmap bmpGS = new Bitmap(ogBmp);
-            edit = filtro.blurSize(bmpGS, 9);
+            edit = filtro.blurSize(bmpGS, 3);
             pictureBox3.Image = edit;
             pictureBox2.Image = edit;
         }
@@ -463,7 +490,63 @@ namespace mnrva
         private void blur3_Click(object sender, EventArgs e)
         {
             Bitmap bmpGS = new Bitmap(ogBmp);
-            edit = filtro.blurSize(bmpGS, 24);
+            edit = filtro.blurSize(bmpGS, 9);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void edge_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.edgeDetect(bmpGS);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void trackBar3_Scroll(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.colorEnhance(bmpGS, redMore.Value, "r");
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void greenMore_Scroll(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.colorEnhance(bmpGS, greenMore.Value, "g");
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void blueMore_Scroll(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = filtro.colorEnhance(bmpGS, blueMore.Value, "b");
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void colorcr_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = mod.colorCrop(bmpGS, currentColor);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void cropcol_Click(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = mod.colorCropSelect(bmpGS, currentColor);
+            pictureBox3.Image = edit;
+            pictureBox2.Image = edit;
+        }
+
+        private void colorcr_Click_1(object sender, EventArgs e)
+        {
+            Bitmap bmpGS = new Bitmap(ogBmp);
+            edit = mod.colorCrop(bmpGS, currentColor);
             pictureBox3.Image = edit;
             pictureBox2.Image = edit;
         }
