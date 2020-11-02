@@ -138,6 +138,7 @@
             this.turn270 = new System.Windows.Forms.Button();
             this.turn90 = new System.Windows.Forms.Button();
             this.crop = new System.Windows.Forms.TabPage();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.cropcol = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -145,7 +146,22 @@
             this.colorcr = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel14 = new System.Windows.Forms.Panel();
+            this.btm_Recorte_Manual = new System.Windows.Forms.Button();
+            this.btm_Recortar = new System.Windows.Forms.Button();
+            this.txt_Largo = new System.Windows.Forms.TextBox();
+            this.txt_Ancho = new System.Windows.Forms.TextBox();
+            this.txt_Pos_Y = new System.Windows.Forms.TextBox();
+            this.txt_Pos_X = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btm_Largo_Menos = new System.Windows.Forms.Button();
+            this.btm_Ancho_Menos = new System.Windows.Forms.Button();
+            this.btm_Largo_Mas = new System.Windows.Forms.Button();
+            this.btm_Ancho_Mas = new System.Windows.Forms.Button();
+            this.btm_Mover_Abajo = new System.Windows.Forms.Button();
+            this.btm_Mover_Derecha = new System.Windows.Forms.Button();
+            this.btm_Mover_Izquierda = new System.Windows.Forms.Button();
+            this.btm_Mover_Arriba = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -198,6 +214,7 @@
             this.panel9.SuspendLayout();
             this.panel6.SuspendLayout();
             this.crop.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
             this.SuspendLayout();
@@ -1382,6 +1399,30 @@
             this.crop.Text = "Recortar";
             this.crop.UseVisualStyleBackColor = true;
             // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.btm_Recorte_Manual);
+            this.panel14.Controls.Add(this.btm_Recortar);
+            this.panel14.Controls.Add(this.txt_Largo);
+            this.panel14.Controls.Add(this.txt_Ancho);
+            this.panel14.Controls.Add(this.txt_Pos_Y);
+            this.panel14.Controls.Add(this.txt_Pos_X);
+            this.panel14.Controls.Add(this.label5);
+            this.panel14.Controls.Add(this.label6);
+            this.panel14.Controls.Add(this.btm_Largo_Menos);
+            this.panel14.Controls.Add(this.btm_Ancho_Menos);
+            this.panel14.Controls.Add(this.btm_Largo_Mas);
+            this.panel14.Controls.Add(this.btm_Ancho_Mas);
+            this.panel14.Controls.Add(this.btm_Mover_Abajo);
+            this.panel14.Controls.Add(this.btm_Mover_Derecha);
+            this.panel14.Controls.Add(this.btm_Mover_Izquierda);
+            this.panel14.Controls.Add(this.btm_Mover_Arriba);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 164);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(167, 282);
+            this.panel14.TabIndex = 11;
+            // 
             // panel13
             // 
             this.panel13.Controls.Add(this.cropcol);
@@ -1453,13 +1494,156 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "label3";
             // 
-            // panel14
+            // btm_Recorte_Manual
             // 
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel14.Location = new System.Drawing.Point(0, 164);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(167, 100);
-            this.panel14.TabIndex = 11;
+            this.btm_Recorte_Manual.Location = new System.Drawing.Point(9, 7);
+            this.btm_Recorte_Manual.Name = "btm_Recorte_Manual";
+            this.btm_Recorte_Manual.Size = new System.Drawing.Size(150, 28);
+            this.btm_Recorte_Manual.TabIndex = 67;
+            this.btm_Recorte_Manual.Text = "Recorte Manual";
+            this.btm_Recorte_Manual.UseVisualStyleBackColor = true;
+            // 
+            // btm_Recortar
+            // 
+            this.btm_Recortar.Location = new System.Drawing.Point(57, 194);
+            this.btm_Recortar.Margin = new System.Windows.Forms.Padding(2);
+            this.btm_Recortar.Name = "btm_Recortar";
+            this.btm_Recortar.Size = new System.Drawing.Size(59, 31);
+            this.btm_Recortar.TabIndex = 66;
+            this.btm_Recortar.Text = "Recortar";
+            this.btm_Recortar.UseVisualStyleBackColor = true;
+            // 
+            // txt_Largo
+            // 
+            this.txt_Largo.Location = new System.Drawing.Point(103, 250);
+            this.txt_Largo.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Largo.Name = "txt_Largo";
+            this.txt_Largo.Size = new System.Drawing.Size(40, 20);
+            this.txt_Largo.TabIndex = 65;
+            // 
+            // txt_Ancho
+            // 
+            this.txt_Ancho.Location = new System.Drawing.Point(49, 250);
+            this.txt_Ancho.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Ancho.Name = "txt_Ancho";
+            this.txt_Ancho.Size = new System.Drawing.Size(40, 20);
+            this.txt_Ancho.TabIndex = 64;
+            // 
+            // txt_Pos_Y
+            // 
+            this.txt_Pos_Y.Location = new System.Drawing.Point(103, 229);
+            this.txt_Pos_Y.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Pos_Y.Name = "txt_Pos_Y";
+            this.txt_Pos_Y.Size = new System.Drawing.Size(40, 20);
+            this.txt_Pos_Y.TabIndex = 63;
+            // 
+            // txt_Pos_X
+            // 
+            this.txt_Pos_X.Location = new System.Drawing.Point(49, 229);
+            this.txt_Pos_X.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Pos_X.Name = "txt_Pos_X";
+            this.txt_Pos_X.Size = new System.Drawing.Size(40, 20);
+            this.txt_Pos_X.TabIndex = 62;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(15, 171);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(34, 13);
+            this.label5.TabIndex = 61;
+            this.label5.Text = "Largo";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(16, 144);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 13);
+            this.label6.TabIndex = 60;
+            this.label6.Text = "Ancho";
+            // 
+            // btm_Largo_Menos
+            // 
+            this.btm_Largo_Menos.Location = new System.Drawing.Point(103, 166);
+            this.btm_Largo_Menos.Margin = new System.Windows.Forms.Padding(2);
+            this.btm_Largo_Menos.Name = "btm_Largo_Menos";
+            this.btm_Largo_Menos.Size = new System.Drawing.Size(42, 24);
+            this.btm_Largo_Menos.TabIndex = 59;
+            this.btm_Largo_Menos.Text = "-";
+            this.btm_Largo_Menos.UseVisualStyleBackColor = true;
+            // 
+            // btm_Ancho_Menos
+            // 
+            this.btm_Ancho_Menos.Location = new System.Drawing.Point(103, 138);
+            this.btm_Ancho_Menos.Margin = new System.Windows.Forms.Padding(2);
+            this.btm_Ancho_Menos.Name = "btm_Ancho_Menos";
+            this.btm_Ancho_Menos.Size = new System.Drawing.Size(42, 24);
+            this.btm_Ancho_Menos.TabIndex = 58;
+            this.btm_Ancho_Menos.Text = "-";
+            this.btm_Ancho_Menos.UseVisualStyleBackColor = true;
+            // 
+            // btm_Largo_Mas
+            // 
+            this.btm_Largo_Mas.Location = new System.Drawing.Point(58, 166);
+            this.btm_Largo_Mas.Margin = new System.Windows.Forms.Padding(2);
+            this.btm_Largo_Mas.Name = "btm_Largo_Mas";
+            this.btm_Largo_Mas.Size = new System.Drawing.Size(42, 24);
+            this.btm_Largo_Mas.TabIndex = 57;
+            this.btm_Largo_Mas.Text = "+";
+            this.btm_Largo_Mas.UseVisualStyleBackColor = true;
+            // 
+            // btm_Ancho_Mas
+            // 
+            this.btm_Ancho_Mas.Location = new System.Drawing.Point(57, 138);
+            this.btm_Ancho_Mas.Margin = new System.Windows.Forms.Padding(2);
+            this.btm_Ancho_Mas.Name = "btm_Ancho_Mas";
+            this.btm_Ancho_Mas.Size = new System.Drawing.Size(42, 24);
+            this.btm_Ancho_Mas.TabIndex = 56;
+            this.btm_Ancho_Mas.Text = "+";
+            this.btm_Ancho_Mas.UseVisualStyleBackColor = true;
+            // 
+            // btm_Mover_Abajo
+            // 
+            this.btm_Mover_Abajo.Location = new System.Drawing.Point(57, 103);
+            this.btm_Mover_Abajo.Margin = new System.Windows.Forms.Padding(2);
+            this.btm_Mover_Abajo.Name = "btm_Mover_Abajo";
+            this.btm_Mover_Abajo.Size = new System.Drawing.Size(42, 24);
+            this.btm_Mover_Abajo.TabIndex = 55;
+            this.btm_Mover_Abajo.Text = "Abajo";
+            this.btm_Mover_Abajo.UseVisualStyleBackColor = true;
+            // 
+            // btm_Mover_Derecha
+            // 
+            this.btm_Mover_Derecha.Location = new System.Drawing.Point(84, 75);
+            this.btm_Mover_Derecha.Margin = new System.Windows.Forms.Padding(2);
+            this.btm_Mover_Derecha.Name = "btm_Mover_Derecha";
+            this.btm_Mover_Derecha.Size = new System.Drawing.Size(42, 24);
+            this.btm_Mover_Derecha.TabIndex = 54;
+            this.btm_Mover_Derecha.Text = "Derecha";
+            this.btm_Mover_Derecha.UseVisualStyleBackColor = true;
+            // 
+            // btm_Mover_Izquierda
+            // 
+            this.btm_Mover_Izquierda.Location = new System.Drawing.Point(28, 75);
+            this.btm_Mover_Izquierda.Margin = new System.Windows.Forms.Padding(2);
+            this.btm_Mover_Izquierda.Name = "btm_Mover_Izquierda";
+            this.btm_Mover_Izquierda.Size = new System.Drawing.Size(42, 24);
+            this.btm_Mover_Izquierda.TabIndex = 53;
+            this.btm_Mover_Izquierda.Text = "Izquierda";
+            this.btm_Mover_Izquierda.UseVisualStyleBackColor = true;
+            // 
+            // btm_Mover_Arriba
+            // 
+            this.btm_Mover_Arriba.Location = new System.Drawing.Point(57, 47);
+            this.btm_Mover_Arriba.Margin = new System.Windows.Forms.Padding(2);
+            this.btm_Mover_Arriba.Name = "btm_Mover_Arriba";
+            this.btm_Mover_Arriba.Size = new System.Drawing.Size(42, 24);
+            this.btm_Mover_Arriba.TabIndex = 52;
+            this.btm_Mover_Arriba.Text = "Arriba";
+            this.btm_Mover_Arriba.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -1538,6 +1722,8 @@
             this.panel9.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.crop.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -1665,6 +1851,22 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TrackBar bright;
         private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Button btm_Recorte_Manual;
+        private System.Windows.Forms.Button btm_Recortar;
+        private System.Windows.Forms.TextBox txt_Largo;
+        private System.Windows.Forms.TextBox txt_Ancho;
+        private System.Windows.Forms.TextBox txt_Pos_Y;
+        private System.Windows.Forms.TextBox txt_Pos_X;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btm_Largo_Menos;
+        private System.Windows.Forms.Button btm_Ancho_Menos;
+        private System.Windows.Forms.Button btm_Largo_Mas;
+        private System.Windows.Forms.Button btm_Ancho_Mas;
+        private System.Windows.Forms.Button btm_Mover_Abajo;
+        private System.Windows.Forms.Button btm_Mover_Derecha;
+        private System.Windows.Forms.Button btm_Mover_Izquierda;
+        private System.Windows.Forms.Button btm_Mover_Arriba;
     }
 }
 
