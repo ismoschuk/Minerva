@@ -53,6 +53,29 @@
             this.girarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recortarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.cropping = new System.Windows.Forms.TabPage();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.cropPanel = new System.Windows.Forms.Panel();
+            this.posY = new System.Windows.Forms.Label();
+            this.trackY = new System.Windows.Forms.TrackBar();
+            this.posX = new System.Windows.Forms.Label();
+            this.trackX = new System.Windows.Forms.TrackBar();
+            this.btm_Recorte_Manual = new System.Windows.Forms.Button();
+            this.btm_Recortar = new System.Windows.Forms.Button();
+            this.txt_Largo = new System.Windows.Forms.TextBox();
+            this.txt_Ancho = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btm_Largo_Menos = new System.Windows.Forms.Button();
+            this.btm_Ancho_Menos = new System.Windows.Forms.Button();
+            this.btm_Largo_Mas = new System.Windows.Forms.Button();
+            this.btm_Ancho_Mas = new System.Windows.Forms.Button();
+            this.btm_Mover_Abajo = new System.Windows.Forms.Button();
+            this.btm_Mover_Derecha = new System.Windows.Forms.Button();
+            this.btm_Mover_Izquierda = new System.Windows.Forms.Button();
+            this.btm_Mover_Arriba = new System.Windows.Forms.Button();
             this.sfd = new System.Windows.Forms.SaveFileDialog();
             this.zoomout = new System.Windows.Forms.Button();
             this.zoom = new System.Windows.Forms.Button();
@@ -138,7 +161,6 @@
             this.turn270 = new System.Windows.Forms.Button();
             this.turn90 = new System.Windows.Forms.Button();
             this.crop = new System.Windows.Forms.TabPage();
-            this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.cropcol = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -146,22 +168,10 @@
             this.colorcr = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.btm_Recorte_Manual = new System.Windows.Forms.Button();
-            this.btm_Recortar = new System.Windows.Forms.Button();
-            this.txt_Largo = new System.Windows.Forms.TextBox();
-            this.txt_Ancho = new System.Windows.Forms.TextBox();
-            this.txt_Pos_Y = new System.Windows.Forms.TextBox();
-            this.txt_Pos_X = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btm_Largo_Menos = new System.Windows.Forms.Button();
-            this.btm_Ancho_Menos = new System.Windows.Forms.Button();
-            this.btm_Largo_Mas = new System.Windows.Forms.Button();
-            this.btm_Ancho_Mas = new System.Windows.Forms.Button();
-            this.btm_Mover_Abajo = new System.Windows.Forms.Button();
-            this.btm_Mover_Derecha = new System.Windows.Forms.Button();
-            this.btm_Mover_Izquierda = new System.Windows.Forms.Button();
-            this.btm_Mover_Arriba = new System.Windows.Forms.Button();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.colorDis = new System.Windows.Forms.Button();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -174,6 +184,13 @@
             this.tabPage1.SuspendLayout();
             this.menu.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.cropping.SuspendLayout();
+            this.panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel15.SuspendLayout();
+            this.cropPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackX)).BeginInit();
             this.FIlterSelect.SuspendLayout();
             this.gscale.SuspendLayout();
             this.c.SuspendLayout();
@@ -214,9 +231,11 @@
             this.panel9.SuspendLayout();
             this.panel6.SuspendLayout();
             this.crop.SuspendLayout();
-            this.panel14.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
+            this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -225,7 +244,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1109, 492);
+            this.tabPage2.Size = new System.Drawing.Size(1003, 492);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Comparar";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -247,8 +266,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel2.Controls.Add(this.zoomOutOg);
             this.splitContainer1.Panel2.Controls.Add(this.zoomInOg);
-            this.splitContainer1.Size = new System.Drawing.Size(1103, 486);
-            this.splitContainer1.SplitterDistance = 564;
+            this.splitContainer1.Size = new System.Drawing.Size(997, 486);
+            this.splitContainer1.SplitterDistance = 509;
             this.splitContainer1.TabIndex = 7;
             // 
             // pictureBox2
@@ -259,7 +278,7 @@
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Location = new System.Drawing.Point(3, 32);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(561, 354);
+            this.pictureBox2.Size = new System.Drawing.Size(506, 354);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -293,7 +312,7 @@
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Cross;
             this.pictureBox1.Location = new System.Drawing.Point(-1, 32);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(535, 354);
+            this.pictureBox1.Size = new System.Drawing.Size(484, 354);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -328,7 +347,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1103, 486);
+            this.panel3.Size = new System.Drawing.Size(997, 486);
             this.panel3.TabIndex = 0;
             // 
             // pictureBox3
@@ -349,7 +368,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1109, 492);
+            this.tabPage1.Size = new System.Drawing.Size(1003, 492);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Editar";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -418,6 +437,7 @@
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
             this.archivoToolStripMenuItem.Text = "Archivo";
+            this.archivoToolStripMenuItem.Click += new System.EventHandler(this.archivoToolStripMenuItem_Click);
             // 
             // menu
             // 
@@ -428,9 +448,10 @@
             this.editarToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(1362, 33);
+            this.menu.Size = new System.Drawing.Size(1256, 33);
             this.menu.TabIndex = 5;
             this.menu.Text = "menuStrip1";
+            this.menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu_ItemClicked);
             // 
             // editarToolStripMenuItem
             // 
@@ -461,31 +482,288 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.cropping);
             this.tabControl1.Location = new System.Drawing.Point(3, 7);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1117, 518);
+            this.tabControl1.Size = new System.Drawing.Size(1011, 518);
             this.tabControl1.TabIndex = 7;
+            // 
+            // cropping
+            // 
+            this.cropping.AutoScroll = true;
+            this.cropping.Controls.Add(this.panel16);
+            this.cropping.Controls.Add(this.panel15);
+            this.cropping.Location = new System.Drawing.Point(4, 22);
+            this.cropping.Name = "cropping";
+            this.cropping.Size = new System.Drawing.Size(1003, 492);
+            this.cropping.TabIndex = 2;
+            this.cropping.Text = "Recortar Imagen";
+            this.cropping.UseVisualStyleBackColor = true;
+            // 
+            // panel16
+            // 
+            this.panel16.AutoScroll = true;
+            this.panel16.Controls.Add(this.pictureBox4);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel16.Location = new System.Drawing.Point(0, 0);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(792, 492);
+            this.panel16.TabIndex = 2;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.pictureBox4.Location = new System.Drawing.Point(17, 13);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.btm_Recorte_Manual);
+            this.panel15.Controls.Add(this.cropPanel);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel15.Location = new System.Drawing.Point(792, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(211, 492);
+            this.panel15.TabIndex = 1;
+            // 
+            // cropPanel
+            // 
+            this.cropPanel.Controls.Add(this.panel17);
+            this.cropPanel.Controls.Add(this.posY);
+            this.cropPanel.Controls.Add(this.trackY);
+            this.cropPanel.Controls.Add(this.posX);
+            this.cropPanel.Controls.Add(this.trackX);
+            this.cropPanel.Controls.Add(this.btm_Recortar);
+            this.cropPanel.Controls.Add(this.txt_Largo);
+            this.cropPanel.Controls.Add(this.txt_Ancho);
+            this.cropPanel.Controls.Add(this.label5);
+            this.cropPanel.Controls.Add(this.label6);
+            this.cropPanel.Controls.Add(this.btm_Largo_Menos);
+            this.cropPanel.Controls.Add(this.btm_Ancho_Menos);
+            this.cropPanel.Controls.Add(this.btm_Largo_Mas);
+            this.cropPanel.Controls.Add(this.btm_Ancho_Mas);
+            this.cropPanel.Controls.Add(this.btm_Mover_Abajo);
+            this.cropPanel.Controls.Add(this.btm_Mover_Derecha);
+            this.cropPanel.Controls.Add(this.btm_Mover_Izquierda);
+            this.cropPanel.Controls.Add(this.btm_Mover_Arriba);
+            this.cropPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cropPanel.Location = new System.Drawing.Point(0, 0);
+            this.cropPanel.Name = "cropPanel";
+            this.cropPanel.Size = new System.Drawing.Size(211, 492);
+            this.cropPanel.TabIndex = 11;
+            this.cropPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel14_Paint);
+            // 
+            // posY
+            // 
+            this.posY.AutoSize = true;
+            this.posY.Location = new System.Drawing.Point(81, 182);
+            this.posY.Name = "posY";
+            this.posY.Size = new System.Drawing.Size(35, 13);
+            this.posY.TabIndex = 71;
+            this.posY.Text = "label7";
+            // 
+            // trackY
+            // 
+            this.trackY.Location = new System.Drawing.Point(19, 124);
+            this.trackY.Name = "trackY";
+            this.trackY.Size = new System.Drawing.Size(171, 45);
+            this.trackY.TabIndex = 70;
+            this.trackY.TickFrequency = 5;
+            this.trackY.Scroll += new System.EventHandler(this.trackY_Scroll);
+            // 
+            // posX
+            // 
+            this.posX.AutoSize = true;
+            this.posX.Location = new System.Drawing.Point(81, 95);
+            this.posX.Name = "posX";
+            this.posX.Size = new System.Drawing.Size(35, 13);
+            this.posX.TabIndex = 69;
+            this.posX.Text = "label7";
+            // 
+            // trackX
+            // 
+            this.trackX.Location = new System.Drawing.Point(19, 41);
+            this.trackX.Name = "trackX";
+            this.trackX.Size = new System.Drawing.Size(171, 45);
+            this.trackX.TabIndex = 68;
+            this.trackX.TickFrequency = 5;
+            this.trackX.Scroll += new System.EventHandler(this.trackX_Scroll);
+            // 
+            // btm_Recorte_Manual
+            // 
+            this.btm_Recorte_Manual.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btm_Recorte_Manual.Location = new System.Drawing.Point(0, 0);
+            this.btm_Recorte_Manual.Name = "btm_Recorte_Manual";
+            this.btm_Recorte_Manual.Size = new System.Drawing.Size(211, 35);
+            this.btm_Recorte_Manual.TabIndex = 67;
+            this.btm_Recorte_Manual.Text = "Recorte Manual";
+            this.btm_Recorte_Manual.UseVisualStyleBackColor = true;
+            this.btm_Recorte_Manual.Click += new System.EventHandler(this.btm_Recorte_Manual_Click);
+            // 
+            // btm_Recortar
+            // 
+            this.btm_Recortar.Location = new System.Drawing.Point(23, 281);
+            this.btm_Recortar.Margin = new System.Windows.Forms.Padding(2);
+            this.btm_Recortar.Name = "btm_Recortar";
+            this.btm_Recortar.Size = new System.Drawing.Size(59, 31);
+            this.btm_Recortar.TabIndex = 66;
+            this.btm_Recortar.Text = "Recortar";
+            this.btm_Recortar.UseVisualStyleBackColor = true;
+            this.btm_Recortar.Click += new System.EventHandler(this.btm_Recortar_Click_1);
+            // 
+            // txt_Largo
+            // 
+            this.txt_Largo.Enabled = false;
+            this.txt_Largo.Location = new System.Drawing.Point(153, 245);
+            this.txt_Largo.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Largo.Name = "txt_Largo";
+            this.txt_Largo.Size = new System.Drawing.Size(40, 20);
+            this.txt_Largo.TabIndex = 65;
+            // 
+            // txt_Ancho
+            // 
+            this.txt_Ancho.Enabled = false;
+            this.txt_Ancho.Location = new System.Drawing.Point(153, 212);
+            this.txt_Ancho.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Ancho.Name = "txt_Ancho";
+            this.txt_Ancho.Size = new System.Drawing.Size(40, 20);
+            this.txt_Ancho.TabIndex = 64;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(20, 250);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(34, 13);
+            this.label5.TabIndex = 61;
+            this.label5.Text = "Largo";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(19, 214);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 13);
+            this.label6.TabIndex = 60;
+            this.label6.Text = "Ancho";
+            // 
+            // btm_Largo_Menos
+            // 
+            this.btm_Largo_Menos.Location = new System.Drawing.Point(107, 244);
+            this.btm_Largo_Menos.Margin = new System.Windows.Forms.Padding(2);
+            this.btm_Largo_Menos.Name = "btm_Largo_Menos";
+            this.btm_Largo_Menos.Size = new System.Drawing.Size(42, 24);
+            this.btm_Largo_Menos.TabIndex = 59;
+            this.btm_Largo_Menos.Text = "-";
+            this.btm_Largo_Menos.UseVisualStyleBackColor = true;
+            this.btm_Largo_Menos.Click += new System.EventHandler(this.btm_Largo_Menos_Click);
+            // 
+            // btm_Ancho_Menos
+            // 
+            this.btm_Ancho_Menos.Location = new System.Drawing.Point(107, 210);
+            this.btm_Ancho_Menos.Margin = new System.Windows.Forms.Padding(2);
+            this.btm_Ancho_Menos.Name = "btm_Ancho_Menos";
+            this.btm_Ancho_Menos.Size = new System.Drawing.Size(42, 24);
+            this.btm_Ancho_Menos.TabIndex = 58;
+            this.btm_Ancho_Menos.Text = "-";
+            this.btm_Ancho_Menos.UseVisualStyleBackColor = true;
+            this.btm_Ancho_Menos.Click += new System.EventHandler(this.btm_Ancho_Menos_Click);
+            // 
+            // btm_Largo_Mas
+            // 
+            this.btm_Largo_Mas.Location = new System.Drawing.Point(61, 244);
+            this.btm_Largo_Mas.Margin = new System.Windows.Forms.Padding(2);
+            this.btm_Largo_Mas.Name = "btm_Largo_Mas";
+            this.btm_Largo_Mas.Size = new System.Drawing.Size(42, 24);
+            this.btm_Largo_Mas.TabIndex = 57;
+            this.btm_Largo_Mas.Text = "+";
+            this.btm_Largo_Mas.UseVisualStyleBackColor = true;
+            this.btm_Largo_Mas.Click += new System.EventHandler(this.btm_Largo_Mas_Click);
+            // 
+            // btm_Ancho_Mas
+            // 
+            this.btm_Ancho_Mas.Location = new System.Drawing.Point(61, 210);
+            this.btm_Ancho_Mas.Margin = new System.Windows.Forms.Padding(2);
+            this.btm_Ancho_Mas.Name = "btm_Ancho_Mas";
+            this.btm_Ancho_Mas.Size = new System.Drawing.Size(42, 24);
+            this.btm_Ancho_Mas.TabIndex = 56;
+            this.btm_Ancho_Mas.Text = "+";
+            this.btm_Ancho_Mas.UseVisualStyleBackColor = true;
+            this.btm_Ancho_Mas.Click += new System.EventHandler(this.btm_Ancho_Mas_Click);
+            // 
+            // btm_Mover_Abajo
+            // 
+            this.btm_Mover_Abajo.Location = new System.Drawing.Point(148, 176);
+            this.btm_Mover_Abajo.Margin = new System.Windows.Forms.Padding(2);
+            this.btm_Mover_Abajo.Name = "btm_Mover_Abajo";
+            this.btm_Mover_Abajo.Size = new System.Drawing.Size(42, 24);
+            this.btm_Mover_Abajo.TabIndex = 55;
+            this.btm_Mover_Abajo.Text = "Abajo";
+            this.btm_Mover_Abajo.UseVisualStyleBackColor = true;
+            this.btm_Mover_Abajo.Click += new System.EventHandler(this.btm_Mover_Abajo_Click);
+            // 
+            // btm_Mover_Derecha
+            // 
+            this.btm_Mover_Derecha.Location = new System.Drawing.Point(148, 91);
+            this.btm_Mover_Derecha.Margin = new System.Windows.Forms.Padding(2);
+            this.btm_Mover_Derecha.Name = "btm_Mover_Derecha";
+            this.btm_Mover_Derecha.Size = new System.Drawing.Size(42, 24);
+            this.btm_Mover_Derecha.TabIndex = 54;
+            this.btm_Mover_Derecha.Text = "Derecha";
+            this.btm_Mover_Derecha.UseVisualStyleBackColor = true;
+            this.btm_Mover_Derecha.Click += new System.EventHandler(this.btm_Mover_Derecha_Click);
+            // 
+            // btm_Mover_Izquierda
+            // 
+            this.btm_Mover_Izquierda.Location = new System.Drawing.Point(21, 91);
+            this.btm_Mover_Izquierda.Margin = new System.Windows.Forms.Padding(2);
+            this.btm_Mover_Izquierda.Name = "btm_Mover_Izquierda";
+            this.btm_Mover_Izquierda.Size = new System.Drawing.Size(42, 24);
+            this.btm_Mover_Izquierda.TabIndex = 53;
+            this.btm_Mover_Izquierda.Text = "Izquierda";
+            this.btm_Mover_Izquierda.UseVisualStyleBackColor = true;
+            this.btm_Mover_Izquierda.Click += new System.EventHandler(this.btm_Mover_Izquierda_Click);
+            // 
+            // btm_Mover_Arriba
+            // 
+            this.btm_Mover_Arriba.Location = new System.Drawing.Point(19, 176);
+            this.btm_Mover_Arriba.Margin = new System.Windows.Forms.Padding(2);
+            this.btm_Mover_Arriba.Name = "btm_Mover_Arriba";
+            this.btm_Mover_Arriba.Size = new System.Drawing.Size(42, 24);
+            this.btm_Mover_Arriba.TabIndex = 52;
+            this.btm_Mover_Arriba.Text = "Arriba";
+            this.btm_Mover_Arriba.UseVisualStyleBackColor = true;
+            this.btm_Mover_Arriba.Click += new System.EventHandler(this.btm_Mover_Arriba_Click);
             // 
             // zoomout
             // 
             this.zoomout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.zoomout.Location = new System.Drawing.Point(1319, 75);
+            this.zoomout.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zoomout.Location = new System.Drawing.Point(1213, 75);
             this.zoomout.Name = "zoomout";
             this.zoomout.Size = new System.Drawing.Size(35, 32);
             this.zoomout.TabIndex = 7;
-            this.zoomout.Text = "out";
+            this.zoomout.Text = "-";
             this.zoomout.UseVisualStyleBackColor = true;
             this.zoomout.Click += new System.EventHandler(this.zoomout_Click);
             // 
             // zoom
             // 
             this.zoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.zoom.Location = new System.Drawing.Point(1319, 36);
+            this.zoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zoom.Location = new System.Drawing.Point(1213, 36);
             this.zoom.Name = "zoom";
             this.zoom.Size = new System.Drawing.Size(35, 33);
             this.zoom.TabIndex = 8;
-            this.zoom.Text = "zoom";
+            this.zoom.Text = "+";
             this.zoom.UseVisualStyleBackColor = true;
             this.zoom.Click += new System.EventHandler(this.zoom_Click);
             // 
@@ -494,11 +772,12 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 596);
+            this.label1.Location = new System.Drawing.Point(70, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.Size = new System.Drawing.Size(67, 20);
             this.label1.TabIndex = 9;
-            this.label1.Text = "label1";
+            this.label1.Text = "Tamaño";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // FIlterSelect
             // 
@@ -506,7 +785,7 @@
             this.FIlterSelect.Controls.Add(this.colors);
             this.FIlterSelect.Controls.Add(this.other);
             this.FIlterSelect.Enabled = false;
-            this.FIlterSelect.Location = new System.Drawing.Point(754, 0);
+            this.FIlterSelect.Location = new System.Drawing.Point(417, 3);
             this.FIlterSelect.Name = "FIlterSelect";
             this.FIlterSelect.SelectedIndex = 0;
             this.FIlterSelect.Size = new System.Drawing.Size(175, 530);
@@ -1253,10 +1532,10 @@
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 567);
+            this.label2.Location = new System.Drawing.Point(64, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 11;
@@ -1273,7 +1552,7 @@
             this.main.Controls.Add(this.tabControl1);
             this.main.Location = new System.Drawing.Point(12, 36);
             this.main.Name = "main";
-            this.main.Size = new System.Drawing.Size(1301, 528);
+            this.main.Size = new System.Drawing.Size(1195, 528);
             this.main.TabIndex = 12;
             // 
             // tool
@@ -1281,7 +1560,7 @@
             this.tool.AutoScroll = true;
             this.tool.Controls.Add(this.textBox1);
             this.tool.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tool.Location = new System.Drawing.Point(1121, 0);
+            this.tool.Location = new System.Drawing.Point(1015, 0);
             this.tool.Name = "tool";
             this.tool.Size = new System.Drawing.Size(180, 528);
             this.tool.TabIndex = 10;
@@ -1304,7 +1583,7 @@
             // 
             this.EditSelect.Controls.Add(this.spin);
             this.EditSelect.Controls.Add(this.crop);
-            this.EditSelect.Location = new System.Drawing.Point(935, 0);
+            this.EditSelect.Location = new System.Drawing.Point(236, 3);
             this.EditSelect.Name = "EditSelect";
             this.EditSelect.SelectedIndex = 0;
             this.EditSelect.Size = new System.Drawing.Size(175, 530);
@@ -1389,7 +1668,6 @@
             // 
             // crop
             // 
-            this.crop.Controls.Add(this.panel14);
             this.crop.Controls.Add(this.panel13);
             this.crop.Controls.Add(this.panel12);
             this.crop.Location = new System.Drawing.Point(4, 22);
@@ -1398,30 +1676,6 @@
             this.crop.TabIndex = 0;
             this.crop.Text = "Recortar";
             this.crop.UseVisualStyleBackColor = true;
-            // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.btm_Recorte_Manual);
-            this.panel14.Controls.Add(this.btm_Recortar);
-            this.panel14.Controls.Add(this.txt_Largo);
-            this.panel14.Controls.Add(this.txt_Ancho);
-            this.panel14.Controls.Add(this.txt_Pos_Y);
-            this.panel14.Controls.Add(this.txt_Pos_X);
-            this.panel14.Controls.Add(this.label5);
-            this.panel14.Controls.Add(this.label6);
-            this.panel14.Controls.Add(this.btm_Largo_Menos);
-            this.panel14.Controls.Add(this.btm_Ancho_Menos);
-            this.panel14.Controls.Add(this.btm_Largo_Mas);
-            this.panel14.Controls.Add(this.btm_Ancho_Mas);
-            this.panel14.Controls.Add(this.btm_Mover_Abajo);
-            this.panel14.Controls.Add(this.btm_Mover_Derecha);
-            this.panel14.Controls.Add(this.btm_Mover_Izquierda);
-            this.panel14.Controls.Add(this.btm_Mover_Arriba);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel14.Location = new System.Drawing.Point(0, 164);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(167, 282);
-            this.panel14.TabIndex = 11;
             // 
             // panel13
             // 
@@ -1488,172 +1742,58 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(94, 596);
+            this.label3.Location = new System.Drawing.Point(143, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 20);
             this.label3.TabIndex = 13;
             this.label3.Text = "label3";
             // 
-            // btm_Recorte_Manual
+            // panel17
             // 
-            this.btm_Recorte_Manual.Location = new System.Drawing.Point(9, 7);
-            this.btm_Recorte_Manual.Name = "btm_Recorte_Manual";
-            this.btm_Recorte_Manual.Size = new System.Drawing.Size(150, 28);
-            this.btm_Recorte_Manual.TabIndex = 67;
-            this.btm_Recorte_Manual.Text = "Recorte Manual";
-            this.btm_Recorte_Manual.UseVisualStyleBackColor = true;
+            this.panel17.Controls.Add(this.pictureBox5);
+            this.panel17.Location = new System.Drawing.Point(3, 317);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(205, 161);
+            this.panel17.TabIndex = 1;
             // 
-            // btm_Recortar
+            // pictureBox5
             // 
-            this.btm_Recortar.Location = new System.Drawing.Point(57, 194);
-            this.btm_Recortar.Margin = new System.Windows.Forms.Padding(2);
-            this.btm_Recortar.Name = "btm_Recortar";
-            this.btm_Recortar.Size = new System.Drawing.Size(59, 31);
-            this.btm_Recortar.TabIndex = 66;
-            this.btm_Recortar.Text = "Recortar";
-            this.btm_Recortar.UseVisualStyleBackColor = true;
+            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(205, 155);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
             // 
-            // txt_Largo
+            // colorDis
             // 
-            this.txt_Largo.Location = new System.Drawing.Point(103, 250);
-            this.txt_Largo.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_Largo.Name = "txt_Largo";
-            this.txt_Largo.Size = new System.Drawing.Size(40, 20);
-            this.txt_Largo.TabIndex = 65;
+            this.colorDis.BackColor = System.Drawing.Color.White;
+            this.colorDis.Dock = System.Windows.Forms.DockStyle.Left;
+            this.colorDis.Location = new System.Drawing.Point(0, 0);
+            this.colorDis.Name = "colorDis";
+            this.colorDis.Size = new System.Drawing.Size(64, 59);
+            this.colorDis.TabIndex = 14;
+            this.colorDis.UseVisualStyleBackColor = false;
             // 
-            // txt_Ancho
+            // panel14
             // 
-            this.txt_Ancho.Location = new System.Drawing.Point(49, 250);
-            this.txt_Ancho.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_Ancho.Name = "txt_Ancho";
-            this.txt_Ancho.Size = new System.Drawing.Size(40, 20);
-            this.txt_Ancho.TabIndex = 64;
-            // 
-            // txt_Pos_Y
-            // 
-            this.txt_Pos_Y.Location = new System.Drawing.Point(103, 229);
-            this.txt_Pos_Y.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_Pos_Y.Name = "txt_Pos_Y";
-            this.txt_Pos_Y.Size = new System.Drawing.Size(40, 20);
-            this.txt_Pos_Y.TabIndex = 63;
-            // 
-            // txt_Pos_X
-            // 
-            this.txt_Pos_X.Location = new System.Drawing.Point(49, 229);
-            this.txt_Pos_X.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_Pos_X.Name = "txt_Pos_X";
-            this.txt_Pos_X.Size = new System.Drawing.Size(40, 20);
-            this.txt_Pos_X.TabIndex = 62;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 171);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 13);
-            this.label5.TabIndex = 61;
-            this.label5.Text = "Largo";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 144);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 13);
-            this.label6.TabIndex = 60;
-            this.label6.Text = "Ancho";
-            // 
-            // btm_Largo_Menos
-            // 
-            this.btm_Largo_Menos.Location = new System.Drawing.Point(103, 166);
-            this.btm_Largo_Menos.Margin = new System.Windows.Forms.Padding(2);
-            this.btm_Largo_Menos.Name = "btm_Largo_Menos";
-            this.btm_Largo_Menos.Size = new System.Drawing.Size(42, 24);
-            this.btm_Largo_Menos.TabIndex = 59;
-            this.btm_Largo_Menos.Text = "-";
-            this.btm_Largo_Menos.UseVisualStyleBackColor = true;
-            // 
-            // btm_Ancho_Menos
-            // 
-            this.btm_Ancho_Menos.Location = new System.Drawing.Point(103, 138);
-            this.btm_Ancho_Menos.Margin = new System.Windows.Forms.Padding(2);
-            this.btm_Ancho_Menos.Name = "btm_Ancho_Menos";
-            this.btm_Ancho_Menos.Size = new System.Drawing.Size(42, 24);
-            this.btm_Ancho_Menos.TabIndex = 58;
-            this.btm_Ancho_Menos.Text = "-";
-            this.btm_Ancho_Menos.UseVisualStyleBackColor = true;
-            // 
-            // btm_Largo_Mas
-            // 
-            this.btm_Largo_Mas.Location = new System.Drawing.Point(58, 166);
-            this.btm_Largo_Mas.Margin = new System.Windows.Forms.Padding(2);
-            this.btm_Largo_Mas.Name = "btm_Largo_Mas";
-            this.btm_Largo_Mas.Size = new System.Drawing.Size(42, 24);
-            this.btm_Largo_Mas.TabIndex = 57;
-            this.btm_Largo_Mas.Text = "+";
-            this.btm_Largo_Mas.UseVisualStyleBackColor = true;
-            // 
-            // btm_Ancho_Mas
-            // 
-            this.btm_Ancho_Mas.Location = new System.Drawing.Point(57, 138);
-            this.btm_Ancho_Mas.Margin = new System.Windows.Forms.Padding(2);
-            this.btm_Ancho_Mas.Name = "btm_Ancho_Mas";
-            this.btm_Ancho_Mas.Size = new System.Drawing.Size(42, 24);
-            this.btm_Ancho_Mas.TabIndex = 56;
-            this.btm_Ancho_Mas.Text = "+";
-            this.btm_Ancho_Mas.UseVisualStyleBackColor = true;
-            // 
-            // btm_Mover_Abajo
-            // 
-            this.btm_Mover_Abajo.Location = new System.Drawing.Point(57, 103);
-            this.btm_Mover_Abajo.Margin = new System.Windows.Forms.Padding(2);
-            this.btm_Mover_Abajo.Name = "btm_Mover_Abajo";
-            this.btm_Mover_Abajo.Size = new System.Drawing.Size(42, 24);
-            this.btm_Mover_Abajo.TabIndex = 55;
-            this.btm_Mover_Abajo.Text = "Abajo";
-            this.btm_Mover_Abajo.UseVisualStyleBackColor = true;
-            // 
-            // btm_Mover_Derecha
-            // 
-            this.btm_Mover_Derecha.Location = new System.Drawing.Point(84, 75);
-            this.btm_Mover_Derecha.Margin = new System.Windows.Forms.Padding(2);
-            this.btm_Mover_Derecha.Name = "btm_Mover_Derecha";
-            this.btm_Mover_Derecha.Size = new System.Drawing.Size(42, 24);
-            this.btm_Mover_Derecha.TabIndex = 54;
-            this.btm_Mover_Derecha.Text = "Derecha";
-            this.btm_Mover_Derecha.UseVisualStyleBackColor = true;
-            // 
-            // btm_Mover_Izquierda
-            // 
-            this.btm_Mover_Izquierda.Location = new System.Drawing.Point(28, 75);
-            this.btm_Mover_Izquierda.Margin = new System.Windows.Forms.Padding(2);
-            this.btm_Mover_Izquierda.Name = "btm_Mover_Izquierda";
-            this.btm_Mover_Izquierda.Size = new System.Drawing.Size(42, 24);
-            this.btm_Mover_Izquierda.TabIndex = 53;
-            this.btm_Mover_Izquierda.Text = "Izquierda";
-            this.btm_Mover_Izquierda.UseVisualStyleBackColor = true;
-            // 
-            // btm_Mover_Arriba
-            // 
-            this.btm_Mover_Arriba.Location = new System.Drawing.Point(57, 47);
-            this.btm_Mover_Arriba.Margin = new System.Windows.Forms.Padding(2);
-            this.btm_Mover_Arriba.Name = "btm_Mover_Arriba";
-            this.btm_Mover_Arriba.Size = new System.Drawing.Size(42, 24);
-            this.btm_Mover_Arriba.TabIndex = 52;
-            this.btm_Mover_Arriba.Text = "Arriba";
-            this.btm_Mover_Arriba.UseVisualStyleBackColor = true;
+            this.panel14.Controls.Add(this.label2);
+            this.panel14.Controls.Add(this.label3);
+            this.panel14.Controls.Add(this.colorDis);
+            this.panel14.Controls.Add(this.label1);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel14.Location = new System.Drawing.Point(0, 579);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(1256, 59);
+            this.panel14.TabIndex = 15;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 638);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(1256, 638);
+            this.Controls.Add(this.panel14);
             this.Controls.Add(this.menu);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.main);
             this.Controls.Add(this.zoom);
             this.Controls.Add(this.zoomout);
@@ -1674,6 +1814,15 @@
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.cropping.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel15.ResumeLayout(false);
+            this.cropPanel.ResumeLayout(false);
+            this.cropPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackX)).EndInit();
             this.FIlterSelect.ResumeLayout(false);
             this.gscale.ResumeLayout(false);
             this.c.ResumeLayout(false);
@@ -1722,10 +1871,12 @@
             this.panel9.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.crop.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1850,13 +2001,11 @@
         private System.Windows.Forms.Button colorcr;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TrackBar bright;
-        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel cropPanel;
         private System.Windows.Forms.Button btm_Recorte_Manual;
         private System.Windows.Forms.Button btm_Recortar;
         private System.Windows.Forms.TextBox txt_Largo;
         private System.Windows.Forms.TextBox txt_Ancho;
-        private System.Windows.Forms.TextBox txt_Pos_Y;
-        private System.Windows.Forms.TextBox txt_Pos_X;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btm_Largo_Menos;
@@ -1867,6 +2016,18 @@
         private System.Windows.Forms.Button btm_Mover_Derecha;
         private System.Windows.Forms.Button btm_Mover_Izquierda;
         private System.Windows.Forms.Button btm_Mover_Arriba;
+        private System.Windows.Forms.TabPage cropping;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Label posX;
+        private System.Windows.Forms.TrackBar trackX;
+        private System.Windows.Forms.Label posY;
+        private System.Windows.Forms.TrackBar trackY;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button colorDis;
+        private System.Windows.Forms.Panel panel14;
     }
 }
 

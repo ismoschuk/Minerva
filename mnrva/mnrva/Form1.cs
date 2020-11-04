@@ -14,8 +14,9 @@ namespace mnrva
     {
         filtros filtro = new filtros();
         modificar mod = new modificar();
-        Bitmap ogBmp, zoomed, edit, ogZoomed; //Bitmap del programa
+        Bitmap ogBmp, zoomed, edit, ogZoomed, cropBmp; //Bitmap del programa
         string ruta; // Ruta de la imagen seleccionada
+        recortar objRecorte = new recortar();
         Color currentColor; //Color seleccionado en el gotero
        // Size coso = new Size(155, 114);
         public Form1()
@@ -38,6 +39,8 @@ namespace mnrva
             t.Size = new Size(114, 40);
             s.Size = new Size(114, 40);
             tool.Dock = DockStyle.Right;
+            cropPanel.Enabled = false;
+            currentColor = Color.FromArgb(255, 255, 255, 255);
         }
 
         private void cargarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -53,8 +56,18 @@ namespace mnrva
 
                 pictureBox3.Image = edit;
                 zoomed = new Bitmap(edit);
+                cropBmp = new Bitmap(edit);
                 ogZoomed = new Bitmap(ogBmp);
                 FIlterSelect.Enabled = true;
+                pictureBox4.Image = cropBmp;
+
+                trackX.Maximum = cropBmp.Width;
+                trackX.Value = cropBmp.Width / 2;
+                posX.Text = trackX.Value.ToString();
+
+                trackY.Maximum = cropBmp.Height;
+                trackY.Value = cropBmp.Height / 2;
+                posY.Text = trackY.Value.ToString();
             }
         }
 
@@ -222,6 +235,7 @@ namespace mnrva
         {
             currentColor = ogZoomed.GetPixel(e.X, e.Y);
             label2.Text = currentColor.ToString() + " " + e.X.ToString() + " , " + e.Y.ToString() ;
+            colorDis.BackColor = currentColor;
         }
 
         private void tint_Click(object sender, EventArgs e)
@@ -405,9 +419,10 @@ namespace mnrva
             FIlterSelect.Visible = true;
             tool.Dock = DockStyle.None;
             tool.Visible = false;
+            FIlterSelect.Dock = DockStyle.Right;
             EditSelect.Dock = DockStyle.None;
             EditSelect.Visible = false;
-            FIlterSelect.Dock = DockStyle.Right;
+            tool.Visible = false;
         }
 
         private void editarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -562,6 +577,131 @@ namespace mnrva
             edit = filtro.bright(bmpGS, bright.Value);
             pictureBox3.Image = edit;
             pictureBox2.Image = edit;
+        }
+
+        private void btm_Recorte_Manual_Click(object sender, EventArgs e)
+        {
+            objRecorte.AbrirImagen(pictureBox4, ruta);
+            txt_Ancho.Text = objRecorte.Ancho.ToString();
+            txt_Largo.Text = objRecorte.Largo.ToString();
+            trackX.Value = 0;
+            trackY.Value = 0;
+            cropPanel.Enabled = true;
+        }
+
+        private void btm_Mover_Arriba_Click(object sender, EventArgs e)
+        {
+            objRecorte.Arriba(pictureBox4);
+            posY.Text = objRecorte.PosY.ToString();
+        }
+
+        private void btm_Mover_Izquierda_Click(object sender, EventArgs e)
+        {
+            objRecorte.Izquierda(pictureBox4);
+            posX.Text = objRecorte.PosX.ToString();
+        }
+
+        private void btm_Mover_Abajo_Click(object sender, EventArgs e)
+        {
+            objRecorte.Abajo(pictureBox4);
+            posY.Text = objRecorte.PosY.ToString();
+        }
+
+        private void btm_Mover_Derecha_Click(object sender, EventArgs e)
+        {
+            objRecorte.Derecha(pictureBox4);
+            posX.Text = objRecorte.PosX.ToString();
+        }
+
+        private void btm_Ancho_Mas_Click(object sender, EventArgs e)
+        {
+            objRecorte.AnchoMas(pictureBox4);
+            txt_Ancho.Text = objRecorte.Ancho.ToString();
+        }
+
+        private void btm_Ancho_Menos_Click(object sender, EventArgs e)
+        {
+            objRecorte.AnchoMenos(pictureBox4);
+            txt_Ancho.Text = objRecorte.Ancho.ToString();
+        }
+
+        private void btm_Largo_Mas_Click(object sender, EventArgs e)
+        {
+            objRecorte.LargoMas(pictureBox4);
+            txt_Largo.Text = objRecorte.Largo.ToString();
+        }
+
+        private void btm_Largo_Menos_Click(object sender, EventArgs e)
+        {
+            objRecorte.LargoMenos(pictureBox4);
+            txt_Largo.Text = objRecorte.Largo.ToString();
+        }
+
+        private void btm_Recortar_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btm_Recortar_Click_1(object sender, EventArgs e)
+        {
+            objRecorte.Recortes(pictureBox4, pictureBox3);
+            edit = new Bitmap(pictureBox5.Image);
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trackX_Scroll(object sender, EventArgs e)
+        {
+            if (trackX.Value < (cropBmp.Width / 2))
+            {
+                objRecorte.IzquierdaSlide(pictureBox4, trackX.Value);
+                objRecorte.Recortes(pictureBox4, pictureBox5);
+
+            }
+            else
+            {
+                objRecorte.DerechaSlide(pictureBox4, trackX.Value);
+                objRecorte.Recortes(pictureBox4, pictureBox5);
+            }
+            posX.Text = trackX.Value.ToString();
+        }
+
+        private void trackY_Scroll(object sender, EventArgs e)
+        {
+            if (trackY.Value < (cropBmp.Height / 2))
+            {
+                objRecorte.ArribaSlide(pictureBox4, trackY.Value);
+                objRecorte.Recortes(pictureBox4, pictureBox5);
+            }
+            else
+            {
+                objRecorte.AbajoSlide(pictureBox4, trackY.Value);
+                objRecorte.Recortes(pictureBox4, pictureBox5);
+            }
+            posY.Text = trackY.Value.ToString();
+        }
+
+        private void panel14_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
 
         private void crPick_Click(object sender, EventArgs e)
