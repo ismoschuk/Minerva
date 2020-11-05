@@ -594,48 +594,56 @@ namespace mnrva
         {
             objRecorte.Arriba(pictureBox4);
             posY.Text = objRecorte.PosY.ToString();
+            objRecorte.Recortes(pictureBox4, pictureBox5);
         }
 
         private void btm_Mover_Izquierda_Click(object sender, EventArgs e)
         {
             objRecorte.Izquierda(pictureBox4);
             posX.Text = objRecorte.PosX.ToString();
+            objRecorte.Recortes(pictureBox4, pictureBox5);
         }
 
         private void btm_Mover_Abajo_Click(object sender, EventArgs e)
         {
             objRecorte.Abajo(pictureBox4);
             posY.Text = objRecorte.PosY.ToString();
+            objRecorte.Recortes(pictureBox4, pictureBox5);
         }
 
         private void btm_Mover_Derecha_Click(object sender, EventArgs e)
         {
             objRecorte.Derecha(pictureBox4);
             posX.Text = objRecorte.PosX.ToString();
+            objRecorte.Recortes(pictureBox4, pictureBox5);
         }
 
         private void btm_Ancho_Mas_Click(object sender, EventArgs e)
         {
             objRecorte.AnchoMas(pictureBox4);
             txt_Ancho.Text = objRecorte.Ancho.ToString();
+            objRecorte.Recortes(pictureBox4, pictureBox5);
         }
 
         private void btm_Ancho_Menos_Click(object sender, EventArgs e)
         {
             objRecorte.AnchoMenos(pictureBox4);
             txt_Ancho.Text = objRecorte.Ancho.ToString();
+            objRecorte.Recortes(pictureBox4, pictureBox5);
         }
 
         private void btm_Largo_Mas_Click(object sender, EventArgs e)
         {
             objRecorte.LargoMas(pictureBox4);
             txt_Largo.Text = objRecorte.Largo.ToString();
+            objRecorte.Recortes(pictureBox4, pictureBox5);
         }
 
         private void btm_Largo_Menos_Click(object sender, EventArgs e)
         {
             objRecorte.LargoMenos(pictureBox4);
             txt_Largo.Text = objRecorte.Largo.ToString();
+            objRecorte.Recortes(pictureBox4, pictureBox5);
         }
 
         private void btm_Recortar_Click(object sender, EventArgs e)
@@ -646,6 +654,7 @@ namespace mnrva
         {
             objRecorte.Recortes(pictureBox4, pictureBox3);
             edit = new Bitmap(pictureBox5.Image);
+            pictureBox2.Image = edit;
 
         }
 
@@ -717,6 +726,12 @@ namespace mnrva
             pictureBox2.Image = ogBmp;
             pictureBox3.Image = ogBmp;
             pictureBox4.Image = ogBmp;
+        }
+
+        private void brnEnhance_Click(object sender, EventArgs e)
+        {
+            edit = objRecorte.RecortesAgrandar(pictureBox4, pictureBox3);
+            pictureBox2.Image = edit;
         }
 
         private void menu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

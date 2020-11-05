@@ -575,6 +575,36 @@ namespace mnrva
             }
             return s;
         }
+
+
+        public Bitmap zoome(Bitmap ruta, int z)
+        {
+            Bitmap s = new Bitmap(ruta);
+            Bitmap sz = new Bitmap(ruta.Width * z, ruta.Height * z);
+            h = sz.Height;
+            w = sz.Width;
+            Color c;
+         
+            for (int y = 0; y < h; y += z)
+            {
+                for (int x = 0; x < w; x += z)
+                {
+                    c = s.GetPixel(x / z, y / z);
+
+                    sz.SetPixel(x, y, c);
+
+                    for (int yy = 0; yy < z; yy++)
+                    {
+                        for (int xx = 0; xx < z; xx++)
+                        {
+                            sz.SetPixel(x + xx, y + yy, c);
+                        }
+                    }
+                }
+            }
+
+            return sz;
+        }
     }
 
 }

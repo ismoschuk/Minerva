@@ -175,6 +175,7 @@
             this.goBack = new System.Windows.Forms.Button();
             this.savePic = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.brnEnhance = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -548,6 +549,7 @@
             // 
             // cropPanel
             // 
+            this.cropPanel.Controls.Add(this.brnEnhance);
             this.cropPanel.Controls.Add(this.panel17);
             this.cropPanel.Controls.Add(this.posY);
             this.cropPanel.Controls.Add(this.trackY);
@@ -628,7 +630,7 @@
             // 
             // btm_Recortar
             // 
-            this.btm_Recortar.Location = new System.Drawing.Point(23, 281);
+            this.btm_Recortar.Location = new System.Drawing.Point(19, 281);
             this.btm_Recortar.Margin = new System.Windows.Forms.Padding(2);
             this.btm_Recortar.Name = "btm_Recortar";
             this.btm_Recortar.Size = new System.Drawing.Size(59, 31);
@@ -1822,6 +1824,17 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "label7";
             // 
+            // brnEnhance
+            // 
+            this.brnEnhance.Location = new System.Drawing.Point(84, 281);
+            this.brnEnhance.Margin = new System.Windows.Forms.Padding(2);
+            this.brnEnhance.Name = "brnEnhance";
+            this.brnEnhance.Size = new System.Drawing.Size(118, 31);
+            this.brnEnhance.TabIndex = 72;
+            this.brnEnhance.Text = "Recortar y Agrandar";
+            this.brnEnhance.UseVisualStyleBackColor = true;
+            this.brnEnhance.Click += new System.EventHandler(this.brnEnhance_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2065,6 +2078,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button goBack;
         private System.Windows.Forms.Button savePic;
+        private System.Windows.Forms.Button brnEnhance;
     }
 }
 
