@@ -14,7 +14,7 @@ namespace mnrva
     {
         filtros filtro = new filtros();
         modificar mod = new modificar();
-        Bitmap ogBmp, zoomed, edit, ogZoomed, cropBmp; //Bitmap del programa
+        Bitmap ogBmp, zoomed, edit, ogZoomed, firstBmp; //Bitmap del programa
         string ruta; // Ruta de la imagen seleccionada
         recortar objRecorte = new recortar();
         Color currentColor; //Color seleccionado en el gotero
@@ -41,6 +41,7 @@ namespace mnrva
             tool.Dock = DockStyle.Right;
             cropPanel.Enabled = false;
             currentColor = Color.FromArgb(255, 255, 255, 255);
+            label7.Text = tabControl1.Size.ToString() + this.Size.ToString();
         }
 
         private void cargarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -56,17 +57,17 @@ namespace mnrva
 
                 pictureBox3.Image = edit;
                 zoomed = new Bitmap(edit);
-                cropBmp = new Bitmap(edit);
+                firstBmp = new Bitmap(ogBmp);
                 ogZoomed = new Bitmap(ogBmp);
+                pictureBox4.Image = firstBmp;
                 FIlterSelect.Enabled = true;
-                pictureBox4.Image = cropBmp;
 
-                trackX.Maximum = cropBmp.Width;
-                trackX.Value = cropBmp.Width / 2;
+                trackX.Maximum = firstBmp.Width;
+                trackX.Value = firstBmp.Width / 2;
                 posX.Text = trackX.Value.ToString();
 
-                trackY.Maximum = cropBmp.Height;
-                trackY.Value = cropBmp.Height / 2;
+                trackY.Maximum = firstBmp.Height;
+                trackY.Value = firstBmp.Height / 2;
                 posY.Text = trackY.Value.ToString();
             }
         }
@@ -660,7 +661,7 @@ namespace mnrva
 
         private void trackX_Scroll(object sender, EventArgs e)
         {
-            if (trackX.Value < (cropBmp.Width / 2))
+            if (trackX.Value < (ogBmp.Width / 2))
             {
                 objRecorte.IzquierdaSlide(pictureBox4, trackX.Value);
                 objRecorte.Recortes(pictureBox4, pictureBox5);
@@ -676,7 +677,7 @@ namespace mnrva
 
         private void trackY_Scroll(object sender, EventArgs e)
         {
-            if (trackY.Value < (cropBmp.Height / 2))
+            if (trackY.Value < (ogBmp.Height / 2))
             {
                 objRecorte.ArribaSlide(pictureBox4, trackY.Value);
                 objRecorte.Recortes(pictureBox4, pictureBox5);
@@ -697,6 +698,25 @@ namespace mnrva
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void savePic_Click(object sender, EventArgs e)
+        {
+            ogBmp = edit;
+            zoomed = new Bitmap(edit);
+            ogZoomed = new Bitmap(ogBmp);
+            pictureBox4.Image = ogBmp;
+        }
+
+        private void goBack_Click(object sender, EventArgs e)
+        {
+            ogBmp = firstBmp;
+            zoomed = new Bitmap(edit);
+            edit = ogBmp;
+            ogZoomed = new Bitmap(ogBmp);
+            pictureBox2.Image = ogBmp;
+            pictureBox3.Image = ogBmp;
+            pictureBox4.Image = ogBmp;
         }
 
         private void menu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

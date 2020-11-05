@@ -57,12 +57,14 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.btm_Recorte_Manual = new System.Windows.Forms.Button();
             this.cropPanel = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.posY = new System.Windows.Forms.Label();
             this.trackY = new System.Windows.Forms.TrackBar();
             this.posX = new System.Windows.Forms.Label();
             this.trackX = new System.Windows.Forms.TrackBar();
-            this.btm_Recorte_Manual = new System.Windows.Forms.Button();
             this.btm_Recortar = new System.Windows.Forms.Button();
             this.txt_Largo = new System.Windows.Forms.TextBox();
             this.txt_Ancho = new System.Windows.Forms.TextBox();
@@ -168,10 +170,11 @@
             this.colorcr = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.colorDis = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.goBack = new System.Windows.Forms.Button();
+            this.savePic = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -189,6 +192,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel15.SuspendLayout();
             this.cropPanel.SuspendLayout();
+            this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackX)).BeginInit();
             this.FIlterSelect.SuspendLayout();
@@ -233,8 +238,6 @@
             this.crop.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
-            this.panel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -532,6 +535,17 @@
             this.panel15.Size = new System.Drawing.Size(211, 492);
             this.panel15.TabIndex = 1;
             // 
+            // btm_Recorte_Manual
+            // 
+            this.btm_Recorte_Manual.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btm_Recorte_Manual.Location = new System.Drawing.Point(0, 0);
+            this.btm_Recorte_Manual.Name = "btm_Recorte_Manual";
+            this.btm_Recorte_Manual.Size = new System.Drawing.Size(211, 35);
+            this.btm_Recorte_Manual.TabIndex = 67;
+            this.btm_Recorte_Manual.Text = "Recorte Manual";
+            this.btm_Recorte_Manual.UseVisualStyleBackColor = true;
+            this.btm_Recorte_Manual.Click += new System.EventHandler(this.btm_Recorte_Manual_Click);
+            // 
             // cropPanel
             // 
             this.cropPanel.Controls.Add(this.panel17);
@@ -558,6 +572,23 @@
             this.cropPanel.Size = new System.Drawing.Size(211, 492);
             this.cropPanel.TabIndex = 11;
             this.cropPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel14_Paint);
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.pictureBox5);
+            this.panel17.Location = new System.Drawing.Point(3, 317);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(205, 161);
+            this.panel17.TabIndex = 1;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(205, 155);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
             // 
             // posY
             // 
@@ -594,17 +625,6 @@
             this.trackX.TabIndex = 68;
             this.trackX.TickFrequency = 5;
             this.trackX.Scroll += new System.EventHandler(this.trackX_Scroll);
-            // 
-            // btm_Recorte_Manual
-            // 
-            this.btm_Recorte_Manual.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btm_Recorte_Manual.Location = new System.Drawing.Point(0, 0);
-            this.btm_Recorte_Manual.Name = "btm_Recorte_Manual";
-            this.btm_Recorte_Manual.Size = new System.Drawing.Size(211, 35);
-            this.btm_Recorte_Manual.TabIndex = 67;
-            this.btm_Recorte_Manual.Text = "Recorte Manual";
-            this.btm_Recorte_Manual.UseVisualStyleBackColor = true;
-            this.btm_Recorte_Manual.Click += new System.EventHandler(this.btm_Recorte_Manual_Click);
             // 
             // btm_Recortar
             // 
@@ -1748,23 +1768,6 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "label3";
             // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.pictureBox5);
-            this.panel17.Location = new System.Drawing.Point(3, 317);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(205, 161);
-            this.panel17.TabIndex = 1;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(205, 155);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
-            // 
             // colorDis
             // 
             this.colorDis.BackColor = System.Drawing.Color.White;
@@ -1777,6 +1780,9 @@
             // 
             // panel14
             // 
+            this.panel14.Controls.Add(this.goBack);
+            this.panel14.Controls.Add(this.savePic);
+            this.panel14.Controls.Add(this.label7);
             this.panel14.Controls.Add(this.label2);
             this.panel14.Controls.Add(this.label3);
             this.panel14.Controls.Add(this.colorDis);
@@ -1787,10 +1793,38 @@
             this.panel14.Size = new System.Drawing.Size(1256, 59);
             this.panel14.TabIndex = 15;
             // 
+            // goBack
+            // 
+            this.goBack.Location = new System.Drawing.Point(529, 31);
+            this.goBack.Name = "goBack";
+            this.goBack.Size = new System.Drawing.Size(75, 23);
+            this.goBack.TabIndex = 17;
+            this.goBack.Text = "Reiniciar";
+            this.goBack.UseVisualStyleBackColor = true;
+            this.goBack.Click += new System.EventHandler(this.goBack_Click);
+            // 
+            // savePic
+            // 
+            this.savePic.Location = new System.Drawing.Point(529, 4);
+            this.savePic.Name = "savePic";
+            this.savePic.Size = new System.Drawing.Size(75, 23);
+            this.savePic.TabIndex = 16;
+            this.savePic.Text = "Editar esto";
+            this.savePic.UseVisualStyleBackColor = true;
+            this.savePic.Click += new System.EventHandler(this.savePic_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(295, 30);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "label7";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1256, 638);
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.menu);
@@ -1821,6 +1855,8 @@
             this.panel15.ResumeLayout(false);
             this.cropPanel.ResumeLayout(false);
             this.cropPanel.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackX)).EndInit();
             this.FIlterSelect.ResumeLayout(false);
@@ -1873,8 +1909,6 @@
             this.crop.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.ResumeLayout(false);
@@ -2028,6 +2062,9 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button colorDis;
         private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button goBack;
+        private System.Windows.Forms.Button savePic;
     }
 }
 
