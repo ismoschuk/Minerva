@@ -816,6 +816,34 @@ namespace WindowsFormsApplication1
             }
             return s;
         }
+
+        public Bitmap sticker(string ruta, int posX, int posY, Bitmap st)
+        {
+            // Usa solo blanco y negro puro dependiendo de la saturación
+            Bitmap gs;
+            gs = new Bitmap(ruta);
+            h = gs.Height;
+            w = gs.Width;
+            Color c;
+            int alpha;
+
+            for (int y = posY; y < (posX + 300); y++)
+            {
+                for (int x = posX; x < (posX + 300) ; x++)
+                {
+                    c = st.GetPixel(x - posX, y - posY);
+
+                    // gs.SetPixel(x, y, Color.FromArgb(c.A, 0, 255, 0));
+                    if (c.A > 0)
+                    {
+                        gs.SetPixel(x, y, Color.FromArgb(c.A, c.R, c.G, c.B));
+                    }
+
+                }
+            }
+
+            return gs;
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             bmp = grayscale(ruta);
@@ -969,6 +997,15 @@ namespace WindowsFormsApplication1
         private void button22_Click(object sender, EventArgs e)
         {
             bmp = colorEnhance(ruta);
+            pictureBox2.Image = bmp;
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+             //Bitmap st = new Bitmap(WindowsFormsApplication1.Properties.Resources.eye);
+            Bitmap st = new Bitmap(button23.BackgroundImage);
+            st.MakeTransparent();
+            bmp = sticker(ruta, 200, 200, st);
             pictureBox2.Image = bmp;
         }
     }

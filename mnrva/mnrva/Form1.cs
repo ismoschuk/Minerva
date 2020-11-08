@@ -18,6 +18,7 @@ namespace mnrva
         string ruta; // Ruta de la imagen seleccionada
         recortar objRecorte = new recortar();
         Color currentColor; //Color seleccionado en el gotero
+        bool stickin;
        // Size coso = new Size(155, 114);
         public Form1()
         {
@@ -234,9 +235,21 @@ namespace mnrva
 
         private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
         {
-            currentColor = ogZoomed.GetPixel(e.X, e.Y);
-            label2.Text = currentColor.ToString() + " " + e.X.ToString() + " , " + e.Y.ToString() ;
-            colorDis.BackColor = currentColor;
+            if (stickin)
+            {
+                Bitmap st = new Bitmap(stk.Image);
+                st.MakeTransparent();
+                //edit = mod.sticker(edit, 220, 200, st);
+                edit = mod.sticker(edit, e.X, e.Y, st);
+                pictureBox3.Image = edit;
+                pictureBox2.Image = edit;
+            }
+            else
+            {
+                currentColor = ogZoomed.GetPixel(e.X, e.Y);
+                label2.Text = currentColor.ToString() + " " + e.X.ToString() + " , " + e.Y.ToString() ;
+                colorDis.BackColor = currentColor;
+            }
         }
 
         private void tint_Click(object sender, EventArgs e)
@@ -732,6 +745,15 @@ namespace mnrva
         {
             edit = objRecorte.RecortesAgrandar(pictureBox4, pictureBox3);
             pictureBox2.Image = edit;
+        }
+
+        private void stk_Click(object sender, EventArgs e)
+        {
+            if (!stickin)
+                stickin = true;
+            else
+                stickin = false;
+
         }
 
         private void menu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

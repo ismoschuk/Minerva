@@ -59,6 +59,7 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.btm_Recorte_Manual = new System.Windows.Forms.Button();
             this.cropPanel = new System.Windows.Forms.Panel();
+            this.brnEnhance = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.posY = new System.Windows.Forms.Label();
@@ -175,7 +176,9 @@
             this.goBack = new System.Windows.Forms.Button();
             this.savePic = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.brnEnhance = new System.Windows.Forms.Button();
+            this.stick = new System.Windows.Forms.TabPage();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.stk = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -240,6 +243,8 @@
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel14.SuspendLayout();
+            this.stick.SuspendLayout();
+            this.panel18.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -574,6 +579,17 @@
             this.cropPanel.Size = new System.Drawing.Size(211, 492);
             this.cropPanel.TabIndex = 11;
             this.cropPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel14_Paint);
+            // 
+            // brnEnhance
+            // 
+            this.brnEnhance.Location = new System.Drawing.Point(84, 281);
+            this.brnEnhance.Margin = new System.Windows.Forms.Padding(2);
+            this.brnEnhance.Name = "brnEnhance";
+            this.brnEnhance.Size = new System.Drawing.Size(118, 31);
+            this.brnEnhance.TabIndex = 72;
+            this.brnEnhance.Text = "Recortar y Agrandar";
+            this.brnEnhance.UseVisualStyleBackColor = true;
+            this.brnEnhance.Click += new System.EventHandler(this.brnEnhance_Click);
             // 
             // panel17
             // 
@@ -1605,6 +1621,7 @@
             // 
             this.EditSelect.Controls.Add(this.spin);
             this.EditSelect.Controls.Add(this.crop);
+            this.EditSelect.Controls.Add(this.stick);
             this.EditSelect.Location = new System.Drawing.Point(236, 3);
             this.EditSelect.Name = "EditSelect";
             this.EditSelect.SelectedIndex = 0;
@@ -1824,16 +1841,35 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "label7";
             // 
-            // brnEnhance
+            // stick
             // 
-            this.brnEnhance.Location = new System.Drawing.Point(84, 281);
-            this.brnEnhance.Margin = new System.Windows.Forms.Padding(2);
-            this.brnEnhance.Name = "brnEnhance";
-            this.brnEnhance.Size = new System.Drawing.Size(118, 31);
-            this.brnEnhance.TabIndex = 72;
-            this.brnEnhance.Text = "Recortar y Agrandar";
-            this.brnEnhance.UseVisualStyleBackColor = true;
-            this.brnEnhance.Click += new System.EventHandler(this.brnEnhance_Click);
+            this.stick.Controls.Add(this.panel18);
+            this.stick.Location = new System.Drawing.Point(4, 22);
+            this.stick.Name = "stick";
+            this.stick.Size = new System.Drawing.Size(167, 504);
+            this.stick.TabIndex = 1;
+            this.stick.Text = "Stickers";
+            this.stick.UseVisualStyleBackColor = true;
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.stk);
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel18.Location = new System.Drawing.Point(0, 0);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(167, 86);
+            this.panel18.TabIndex = 2;
+            // 
+            // stk
+            // 
+            this.stk.Image = global::mnrva.Properties.Resources.heart1;
+            this.stk.Location = new System.Drawing.Point(3, 3);
+            this.stk.Name = "stk";
+            this.stk.Size = new System.Drawing.Size(161, 39);
+            this.stk.TabIndex = 9;
+            this.stk.Text = "Stickers";
+            this.stk.UseVisualStyleBackColor = true;
+            this.stk.Click += new System.EventHandler(this.stk_Click);
             // 
             // Form1
             // 
@@ -1924,6 +1960,8 @@
             this.panel12.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
+            this.stick.ResumeLayout(false);
+            this.panel18.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2079,6 +2117,9 @@
         private System.Windows.Forms.Button goBack;
         private System.Windows.Forms.Button savePic;
         private System.Windows.Forms.Button brnEnhance;
+        private System.Windows.Forms.TabPage stick;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Button stk;
     }
 }
 

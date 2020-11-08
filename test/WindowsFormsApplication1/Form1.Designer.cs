@@ -33,6 +33,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button22 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
@@ -58,7 +59,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.sfd = new System.Windows.Forms.SaveFileDialog();
             this.label2 = new System.Windows.Forms.Label();
-            this.button22 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -103,6 +104,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button23);
             this.groupBox1.Controls.Add(this.button22);
             this.groupBox1.Controls.Add(this.button21);
             this.groupBox1.Controls.Add(this.button20);
@@ -128,6 +130,17 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // button22
+            // 
+            this.button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button22.Location = new System.Drawing.Point(214, 95);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(55, 56);
+            this.button22.TabIndex = 17;
+            this.button22.Text = "aumentar";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // button21
             // 
@@ -379,16 +392,17 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "label2";
             // 
-            // button22
+            // button23
             // 
-            this.button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button22.Location = new System.Drawing.Point(214, 95);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(55, 56);
-            this.button22.TabIndex = 17;
-            this.button22.Text = "aumentar";
-            this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
+            this.button23.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.eye;
+            this.button23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button23.Location = new System.Drawing.Point(214, 157);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(55, 56);
+            this.button23.TabIndex = 18;
+            this.button23.Text = "stick";
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
             // Form1
             // 
@@ -447,6 +461,7 @@
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button button23;
     }
 }
 

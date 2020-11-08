@@ -108,5 +108,36 @@ namespace mnrva
             }
             return crop;
         }
+
+        public Bitmap sticker(Bitmap ruta, int posX, int posY, Bitmap st)
+        {
+            // Usa solo blanco y negro puro dependiendo de la saturación
+            Bitmap gs;
+            gs = new Bitmap(ruta);
+            h = gs.Height;
+            w = gs.Width;
+            Color c;
+            int fx, fy;
+
+            fx = (posX + st.Width < w) ? posX + st.Width : w;
+            fy = (posY + st.Height < h) ? posY + st.Height : h;
+
+            for (int y = posY; y < (fy); y++)
+            {
+                for (int x = posX; x < (fx); x++)
+                {
+                    c = st.GetPixel(x - posX, y - posY);
+
+                    // gs.SetPixel(x, y, Color.FromArgb(c.A, 0, 255, 0));
+                    if (c.A > 0)
+                    {
+                        gs.SetPixel(x, y, Color.FromArgb(c.A, c.R, c.G, c.B));
+                    }
+
+                }
+            }
+
+            return gs;
+        }
     }
 }
