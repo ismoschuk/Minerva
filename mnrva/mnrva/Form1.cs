@@ -19,7 +19,10 @@ namespace mnrva
         recortar objRecorte = new recortar();
         Color currentColor; //Color seleccionado en el gotero
         bool stickin;
-       // Size coso = new Size(155, 114);
+        Pen blackPen = new Pen(Color.FromArgb(255, 150, 150, 150), 3);
+        Graphics graph;
+
+        // Size coso = new Size(155, 114);
         public Form1()
         {
             InitializeComponent();
@@ -43,6 +46,7 @@ namespace mnrva
             cropPanel.Enabled = false;
             currentColor = Color.FromArgb(255, 255, 255, 255);
             label7.Text = tabControl1.Size.ToString() + this.Size.ToString();
+            //img.BackColor = Color.FromArgb(0, 0, 0, 0);
         }
 
         private void cargarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -750,16 +754,54 @@ namespace mnrva
         private void stk_Click(object sender, EventArgs e)
         {
             if (!stickin)
+            {
                 stickin = true;
+                zoom.Enabled = false;
+                zoomout.Enabled = false;
+                zoomed = new Bitmap(edit, edit.Width, edit.Height);
+                ogZoomed = new Bitmap(ogBmp, edit.Width, edit.Height);
+            }
+
             else
+            {
                 stickin = false;
+                zoom.Enabled = true;
+                zoomout.Enabled = true;
+            }
 
         }
 
-        private void menu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+
+
+        private void pictureBox3_MouseMove(object sender, MouseEventArgs e)
         {
+            if (stickin)
+            {
+                //img.Visible = true;
+                //img.Location = new Point(e.X, e.Y);
+                pictureBox3.Refresh();
+                graph = pictureBox3.CreateGraphics();
+                graph.DrawRectangle(blackPen, e.X, e.Y, 134, 114);
+
+
+            }
+            else
+                pictureBox3.Refresh();
 
         }
+
+        private void EditSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            stickin = false;
+
+        }
+
+        private void EditSelect_TabIndexChanged(object sender, EventArgs e)
+        {
+            stickin = false;
+
+        }
+
 
         private void crPick_Click(object sender, EventArgs e)
         {

@@ -170,15 +170,15 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.colorcr = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.stick = new System.Windows.Forms.TabPage();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.stk = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.colorDis = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
             this.goBack = new System.Windows.Forms.Button();
             this.savePic = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.stick = new System.Windows.Forms.TabPage();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.stk = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -242,9 +242,9 @@
             this.crop.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
-            this.panel14.SuspendLayout();
             this.stick.SuspendLayout();
             this.panel18.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -370,6 +370,7 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             this.pictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseDown);
+            this.pictureBox3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseMove);
             // 
             // tabPage1
             // 
@@ -460,7 +461,6 @@
             this.menu.Size = new System.Drawing.Size(1256, 33);
             this.menu.TabIndex = 5;
             this.menu.Text = "menuStrip1";
-            this.menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu_ItemClicked);
             // 
             // editarToolStripMenuItem
             // 
@@ -1628,6 +1628,8 @@
             this.EditSelect.Size = new System.Drawing.Size(175, 530);
             this.EditSelect.TabIndex = 9;
             this.EditSelect.Visible = false;
+            this.EditSelect.SelectedIndexChanged += new System.EventHandler(this.EditSelect_SelectedIndexChanged);
+            this.EditSelect.TabIndexChanged += new System.EventHandler(this.EditSelect_TabIndexChanged);
             // 
             // spin
             // 
@@ -1776,6 +1778,36 @@
             this.button5.Text = "Recorte Automático🠟";
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // stick
+            // 
+            this.stick.Controls.Add(this.panel18);
+            this.stick.Location = new System.Drawing.Point(4, 22);
+            this.stick.Name = "stick";
+            this.stick.Size = new System.Drawing.Size(167, 504);
+            this.stick.TabIndex = 1;
+            this.stick.Text = "Stickers";
+            this.stick.UseVisualStyleBackColor = true;
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.stk);
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel18.Location = new System.Drawing.Point(0, 0);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(167, 86);
+            this.panel18.TabIndex = 2;
+            // 
+            // stk
+            // 
+            this.stk.Image = global::mnrva.Properties.Resources.heart1;
+            this.stk.Location = new System.Drawing.Point(3, 3);
+            this.stk.Name = "stk";
+            this.stk.Size = new System.Drawing.Size(161, 39);
+            this.stk.TabIndex = 9;
+            this.stk.Text = "Stickers";
+            this.stk.UseVisualStyleBackColor = true;
+            this.stk.Click += new System.EventHandler(this.stk_Click);
+            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -1840,36 +1872,6 @@
             this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 15;
             this.label7.Text = "label7";
-            // 
-            // stick
-            // 
-            this.stick.Controls.Add(this.panel18);
-            this.stick.Location = new System.Drawing.Point(4, 22);
-            this.stick.Name = "stick";
-            this.stick.Size = new System.Drawing.Size(167, 504);
-            this.stick.TabIndex = 1;
-            this.stick.Text = "Stickers";
-            this.stick.UseVisualStyleBackColor = true;
-            // 
-            // panel18
-            // 
-            this.panel18.Controls.Add(this.stk);
-            this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel18.Location = new System.Drawing.Point(0, 0);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(167, 86);
-            this.panel18.TabIndex = 2;
-            // 
-            // stk
-            // 
-            this.stk.Image = global::mnrva.Properties.Resources.heart1;
-            this.stk.Location = new System.Drawing.Point(3, 3);
-            this.stk.Name = "stk";
-            this.stk.Size = new System.Drawing.Size(161, 39);
-            this.stk.TabIndex = 9;
-            this.stk.Text = "Stickers";
-            this.stk.UseVisualStyleBackColor = true;
-            this.stk.Click += new System.EventHandler(this.stk_Click);
             // 
             // Form1
             // 
@@ -1958,10 +1960,10 @@
             this.crop.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
             this.stick.ResumeLayout(false);
             this.panel18.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
