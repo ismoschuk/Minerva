@@ -102,6 +102,7 @@ namespace mnrva
         {
             picimg.Refresh();
             g = picimg.CreateGraphics();
+            check = (np > 0) ? np : posY;
             g.DrawRectangle(lapicito, posX, posY = np, anch, larg);
         }
         public void AbajoSlide(PictureBox picimg, int np)

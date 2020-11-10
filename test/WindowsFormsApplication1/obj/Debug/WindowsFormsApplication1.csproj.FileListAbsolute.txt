@@ -34,3 +34,6 @@ C:\Users\usuario\Desktop\test\WindowsFormsApplication1\obj\Debug\WindowsFormsApp
 C:\Users\usuario\Desktop\test\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
 C:\Users\usuario\Desktop\test\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\usuario\Desktop\test\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\ivann\Desktop\minervatp\Minerva\test\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\ivann\Desktop\minervatp\Minerva\test\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\ivann\Desktop\minervatp\Minerva\test\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb

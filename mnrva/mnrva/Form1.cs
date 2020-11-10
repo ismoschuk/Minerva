@@ -89,22 +89,29 @@ namespace mnrva
             if (sfd.ShowDialog() == DialogResult.OK)
             {
 
+                //var fileName = sfd.FileName;
+                //if (!System.IO.Path.HasExtension(fileName) || System.IO.Path.GetExtension(fileName) != "jpg")
+                //    fileName = fileName + ".jpg";
+
+                //bmp.Save(fileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+
+
                 var fileName = sfd.FileName;
-                if ((sfd.ShowDialog() == DialogResult.OK))
+
                     if (System.IO.Path.GetExtension(sfd.FileName).ToLower() == ".bmp")
-                        edit.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Bmp);
+                        edit.Save(fileName, System.Drawing.Imaging.ImageFormat.Bmp);
                     else if (System.IO.Path.GetExtension(sfd.FileName).ToLower() == ".jpg")
-                        edit.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        edit.Save(fileName, System.Drawing.Imaging.ImageFormat.Jpeg);
                     else if (System.IO.Path.GetExtension(sfd.FileName).ToLower() == ".gif")
-                        edit.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Gif);
+                        edit.Save(fileName, System.Drawing.Imaging.ImageFormat.Gif);
                     else if (System.IO.Path.GetExtension(sfd.FileName).ToLower() == ".png")
                     {
                         Bitmap tr = new Bitmap(edit);
                         tr.MakeTransparent();
-                        tr.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Png);
+                        tr.Save(fileName, System.Drawing.Imaging.ImageFormat.Png);
                     }
                     else if (System.IO.Path.GetExtension(sfd.FileName).ToLower() == ".tif")
-                        edit.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Tiff);
+                        edit.Save(fileName, System.Drawing.Imaging.ImageFormat.Tiff);
                     else
                         MessageBox.Show("File Save Error.");
                 //if (!System.IO.Path.HasExtension(fileName) || System.IO.Path.GetExtension(fileName) != "jpg")
