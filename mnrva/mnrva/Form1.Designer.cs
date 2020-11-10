@@ -30,11 +30,14 @@
         {
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.zoomInNew = new System.Windows.Forms.Button();
             this.zoomOutNew = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.zoomOutOg = new System.Windows.Forms.Button();
             this.zoomInOg = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.ofd = new System.Windows.Forms.OpenFileDialog();
             this.otrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,11 +55,13 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.cropping = new System.Windows.Forms.TabPage();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel15 = new System.Windows.Forms.Panel();
             this.btm_Recorte_Manual = new System.Windows.Forms.Button();
             this.cropPanel = new System.Windows.Forms.Panel();
             this.brnEnhance = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.posY = new System.Windows.Forms.Label();
             this.trackY = new System.Windows.Forms.TrackBar();
             this.posX = new System.Windows.Forms.Label();
@@ -167,13 +172,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.stick = new System.Windows.Forms.TabPage();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.colorDis = new System.Windows.Forms.Button();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.goBack = new System.Windows.Forms.Button();
-            this.savePic = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.stickerSize = new System.Windows.Forms.TrackBar();
             this.stSp = new System.Windows.Forms.Button();
             this.stFlf = new System.Windows.Forms.Button();
             this.stFla = new System.Windows.Forms.Button();
@@ -181,26 +179,36 @@
             this.stHo = new System.Windows.Forms.Button();
             this.stGo = new System.Windows.Forms.Button();
             this.stLi = new System.Windows.Forms.Button();
+            this.stickerSize = new System.Windows.Forms.TrackBar();
             this.stk = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.colorDis = new System.Windows.Forms.Button();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.goBack = new System.Windows.Forms.Button();
+            this.savePic = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.imp = new System.Windows.Forms.Panel();
+            this.selSt = new System.Windows.Forms.Button();
+            this.impS = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.menu.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.cropping.SuspendLayout();
             this.panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel15.SuspendLayout();
             this.cropPanel.SuspendLayout();
             this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackX)).BeginInit();
             this.FIlterSelect.SuspendLayout();
@@ -247,13 +255,9 @@
             this.panel12.SuspendLayout();
             this.stick.SuspendLayout();
             this.panel18.SuspendLayout();
-            this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stickerSize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel14.SuspendLayout();
+            this.imp.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -288,6 +292,19 @@
             this.splitContainer1.SplitterDistance = 509;
             this.splitContainer1.TabIndex = 7;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 32);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(506, 354);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // zoomInNew
             // 
             this.zoomInNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -307,6 +324,22 @@
             this.zoomOutNew.TabIndex = 4;
             this.zoomOutNew.Text = "button1";
             this.zoomOutNew.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(484, 354);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // zoomOutOg
             // 
@@ -338,6 +371,19 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(997, 486);
             this.panel3.TabIndex = 0;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.pictureBox3.Location = new System.Drawing.Point(13, 10);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseDown);
+            this.pictureBox3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseMove);
             // 
             // tabPage1
             // 
@@ -487,6 +533,17 @@
             this.panel16.Size = new System.Drawing.Size(792, 492);
             this.panel16.TabIndex = 2;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.pictureBox4.Location = new System.Drawing.Point(17, 13);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // panel15
             // 
             this.panel15.Controls.Add(this.btm_Recorte_Manual);
@@ -554,6 +611,15 @@
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(205, 161);
             this.panel17.TabIndex = 1;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(205, 155);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
             // 
             // posY
             // 
@@ -1727,7 +1793,9 @@
             // 
             // stick
             // 
+            this.stick.Controls.Add(this.imp);
             this.stick.Controls.Add(this.panel18);
+            this.stick.Controls.Add(this.stickerSize);
             this.stick.Location = new System.Drawing.Point(4, 22);
             this.stick.Name = "stick";
             this.stick.Size = new System.Drawing.Size(174, 504);
@@ -1745,13 +1813,122 @@
             this.panel18.Controls.Add(this.stHo);
             this.panel18.Controls.Add(this.stGo);
             this.panel18.Controls.Add(this.stLi);
-            this.panel18.Controls.Add(this.stickerSize);
             this.panel18.Controls.Add(this.stk);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel18.Location = new System.Drawing.Point(0, 0);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(174, 432);
+            this.panel18.Size = new System.Drawing.Size(174, 245);
             this.panel18.TabIndex = 2;
+            // 
+            // stSp
+            // 
+            this.stSp.BackColor = System.Drawing.Color.White;
+            this.stSp.BackgroundImage = global::mnrva.Properties.Resources.chispa;
+            this.stSp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.stSp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.stSp.Location = new System.Drawing.Point(7, 271);
+            this.stSp.Name = "stSp";
+            this.stSp.Size = new System.Drawing.Size(63, 68);
+            this.stSp.TabIndex = 17;
+            this.stSp.UseVisualStyleBackColor = false;
+            this.stSp.Click += new System.EventHandler(this.stSp_Click);
+            // 
+            // stFlf
+            // 
+            this.stFlf.BackColor = System.Drawing.Color.White;
+            this.stFlf.BackgroundImage = global::mnrva.Properties.Resources.florF;
+            this.stFlf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.stFlf.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.stFlf.Location = new System.Drawing.Point(77, 197);
+            this.stFlf.Name = "stFlf";
+            this.stFlf.Size = new System.Drawing.Size(63, 68);
+            this.stFlf.TabIndex = 16;
+            this.stFlf.UseVisualStyleBackColor = false;
+            this.stFlf.Click += new System.EventHandler(this.stFlf_Click);
+            // 
+            // stFla
+            // 
+            this.stFla.BackColor = System.Drawing.Color.White;
+            this.stFla.BackgroundImage = global::mnrva.Properties.Resources.florA;
+            this.stFla.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.stFla.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.stFla.Location = new System.Drawing.Point(8, 197);
+            this.stFla.Name = "stFla";
+            this.stFla.Size = new System.Drawing.Size(63, 68);
+            this.stFla.TabIndex = 15;
+            this.stFla.UseVisualStyleBackColor = false;
+            this.stFla.Click += new System.EventHandler(this.stFla_Click);
+            // 
+            // stTor
+            // 
+            this.stTor.BackColor = System.Drawing.Color.White;
+            this.stTor.BackgroundImage = global::mnrva.Properties.Resources.storm;
+            this.stTor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.stTor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.stTor.Location = new System.Drawing.Point(77, 124);
+            this.stTor.Name = "stTor";
+            this.stTor.Size = new System.Drawing.Size(63, 68);
+            this.stTor.TabIndex = 14;
+            this.stTor.UseVisualStyleBackColor = false;
+            this.stTor.Click += new System.EventHandler(this.stTor_Click);
+            // 
+            // stHo
+            // 
+            this.stHo.BackColor = System.Drawing.Color.White;
+            this.stHo.BackgroundImage = global::mnrva.Properties.Resources.hoja;
+            this.stHo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.stHo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.stHo.Location = new System.Drawing.Point(7, 123);
+            this.stHo.Name = "stHo";
+            this.stHo.Size = new System.Drawing.Size(63, 68);
+            this.stHo.TabIndex = 13;
+            this.stHo.UseVisualStyleBackColor = false;
+            this.stHo.Click += new System.EventHandler(this.stHo_Click);
+            // 
+            // stGo
+            // 
+            this.stGo.BackColor = System.Drawing.Color.White;
+            this.stGo.BackgroundImage = global::mnrva.Properties.Resources.gota;
+            this.stGo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.stGo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.stGo.Location = new System.Drawing.Point(77, 51);
+            this.stGo.Name = "stGo";
+            this.stGo.Size = new System.Drawing.Size(63, 68);
+            this.stGo.TabIndex = 12;
+            this.stGo.UseVisualStyleBackColor = false;
+            this.stGo.Click += new System.EventHandler(this.stGo_Click);
+            // 
+            // stLi
+            // 
+            this.stLi.BackColor = System.Drawing.Color.White;
+            this.stLi.BackgroundImage = global::mnrva.Properties.Resources.raio;
+            this.stLi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.stLi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.stLi.Location = new System.Drawing.Point(7, 50);
+            this.stLi.Name = "stLi";
+            this.stLi.Size = new System.Drawing.Size(63, 68);
+            this.stLi.TabIndex = 11;
+            this.stLi.UseVisualStyleBackColor = false;
+            this.stLi.Click += new System.EventHandler(this.stLi_Click);
+            // 
+            // stickerSize
+            // 
+            this.stickerSize.Location = new System.Drawing.Point(10, 419);
+            this.stickerSize.Minimum = 1;
+            this.stickerSize.Name = "stickerSize";
+            this.stickerSize.Size = new System.Drawing.Size(147, 45);
+            this.stickerSize.TabIndex = 10;
+            this.stickerSize.Value = 1;
+            // 
+            // stk
+            // 
+            this.stk.Location = new System.Drawing.Point(3, 3);
+            this.stk.Name = "stk";
+            this.stk.Size = new System.Drawing.Size(147, 39);
+            this.stk.TabIndex = 9;
+            this.stk.Text = "Stickers";
+            this.stk.UseVisualStyleBackColor = true;
+            this.stk.Click += new System.EventHandler(this.stk_Click);
             // 
             // label3
             // 
@@ -1818,178 +1995,40 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "label7";
             // 
-            // stickerSize
+            // imp
             // 
-            this.stickerSize.Location = new System.Drawing.Point(3, 48);
-            this.stickerSize.Minimum = 1;
-            this.stickerSize.Name = "stickerSize";
-            this.stickerSize.Size = new System.Drawing.Size(147, 45);
-            this.stickerSize.TabIndex = 10;
-            this.stickerSize.Value = 1;
+            this.imp.Controls.Add(this.selSt);
+            this.imp.Controls.Add(this.impS);
+            this.imp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.imp.Location = new System.Drawing.Point(0, 245);
+            this.imp.Name = "imp";
+            this.imp.Size = new System.Drawing.Size(174, 168);
+            this.imp.TabIndex = 10;
             // 
-            // stSp
+            // selSt
             // 
-            this.stSp.BackColor = System.Drawing.Color.White;
-            this.stSp.BackgroundImage = global::mnrva.Properties.Resources.chispa;
-            this.stSp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.stSp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.stSp.Location = new System.Drawing.Point(7, 319);
-            this.stSp.Name = "stSp";
-            this.stSp.Size = new System.Drawing.Size(63, 68);
-            this.stSp.TabIndex = 17;
-            this.stSp.UseVisualStyleBackColor = false;
-            this.stSp.Click += new System.EventHandler(this.stSp_Click);
+            this.selSt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.selSt.Enabled = false;
+            this.selSt.Location = new System.Drawing.Point(10, 57);
+            this.selSt.Name = "selSt";
+            this.selSt.Size = new System.Drawing.Size(150, 96);
+            this.selSt.TabIndex = 8;
+            this.selSt.Text = "Seleccionar imagen";
+            this.selSt.UseVisualStyleBackColor = true;
+            this.selSt.Click += new System.EventHandler(this.selSt_Click);
             // 
-            // stFlf
+            // impS
             // 
-            this.stFlf.BackColor = System.Drawing.Color.White;
-            this.stFlf.BackgroundImage = global::mnrva.Properties.Resources.florF;
-            this.stFlf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.stFlf.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.stFlf.Location = new System.Drawing.Point(77, 245);
-            this.stFlf.Name = "stFlf";
-            this.stFlf.Size = new System.Drawing.Size(63, 68);
-            this.stFlf.TabIndex = 16;
-            this.stFlf.UseVisualStyleBackColor = false;
-            this.stFlf.Click += new System.EventHandler(this.stFlf_Click);
-            // 
-            // stFla
-            // 
-            this.stFla.BackColor = System.Drawing.Color.White;
-            this.stFla.BackgroundImage = global::mnrva.Properties.Resources.florA;
-            this.stFla.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.stFla.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.stFla.Location = new System.Drawing.Point(8, 245);
-            this.stFla.Name = "stFla";
-            this.stFla.Size = new System.Drawing.Size(63, 68);
-            this.stFla.TabIndex = 15;
-            this.stFla.UseVisualStyleBackColor = false;
-            this.stFla.Click += new System.EventHandler(this.stFla_Click);
-            // 
-            // stTor
-            // 
-            this.stTor.BackColor = System.Drawing.Color.White;
-            this.stTor.BackgroundImage = global::mnrva.Properties.Resources.storm;
-            this.stTor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.stTor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.stTor.Location = new System.Drawing.Point(77, 172);
-            this.stTor.Name = "stTor";
-            this.stTor.Size = new System.Drawing.Size(63, 68);
-            this.stTor.TabIndex = 14;
-            this.stTor.UseVisualStyleBackColor = false;
-            this.stTor.Click += new System.EventHandler(this.stTor_Click);
-            // 
-            // stHo
-            // 
-            this.stHo.BackColor = System.Drawing.Color.White;
-            this.stHo.BackgroundImage = global::mnrva.Properties.Resources.hoja;
-            this.stHo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.stHo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.stHo.Location = new System.Drawing.Point(7, 171);
-            this.stHo.Name = "stHo";
-            this.stHo.Size = new System.Drawing.Size(63, 68);
-            this.stHo.TabIndex = 13;
-            this.stHo.UseVisualStyleBackColor = false;
-            this.stHo.Click += new System.EventHandler(this.stHo_Click);
-            // 
-            // stGo
-            // 
-            this.stGo.BackColor = System.Drawing.Color.White;
-            this.stGo.BackgroundImage = global::mnrva.Properties.Resources.gota;
-            this.stGo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.stGo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.stGo.Location = new System.Drawing.Point(77, 99);
-            this.stGo.Name = "stGo";
-            this.stGo.Size = new System.Drawing.Size(63, 68);
-            this.stGo.TabIndex = 12;
-            this.stGo.UseVisualStyleBackColor = false;
-            this.stGo.Click += new System.EventHandler(this.stGo_Click);
-            // 
-            // stLi
-            // 
-            this.stLi.BackColor = System.Drawing.Color.White;
-            this.stLi.BackgroundImage = global::mnrva.Properties.Resources.raio;
-            this.stLi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.stLi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.stLi.Location = new System.Drawing.Point(7, 98);
-            this.stLi.Name = "stLi";
-            this.stLi.Size = new System.Drawing.Size(63, 68);
-            this.stLi.TabIndex = 11;
-            this.stLi.UseVisualStyleBackColor = false;
-            this.stLi.Click += new System.EventHandler(this.stLi_Click);
-            // 
-            // stk
-            // 
-            this.stk.Image = global::mnrva.Properties.Resources.heart1;
-            this.stk.Location = new System.Drawing.Point(3, 3);
-            this.stk.Name = "stk";
-            this.stk.Size = new System.Drawing.Size(147, 39);
-            this.stk.TabIndex = 9;
-            this.stk.Text = "Stickers";
-            this.stk.UseVisualStyleBackColor = true;
-            this.stk.Click += new System.EventHandler(this.stk_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.pictureBox3.Location = new System.Drawing.Point(13, 10);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            this.pictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseDown);
-            this.pictureBox3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseMove);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 32);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(506, 354);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(484, 354);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.pictureBox4.Location = new System.Drawing.Point(17, 13);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(205, 155);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
+            this.impS.BackColor = System.Drawing.Color.White;
+            this.impS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.impS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.impS.Location = new System.Drawing.Point(10, 7);
+            this.impS.Name = "impS";
+            this.impS.Size = new System.Drawing.Size(150, 35);
+            this.impS.TabIndex = 4;
+            this.impS.Text = "Importar Sticker 🠟";
+            this.impS.UseVisualStyleBackColor = false;
+            this.impS.Click += new System.EventHandler(this.impS_Click);
             // 
             // Form1
             // 
@@ -2008,8 +2047,11 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
@@ -2017,10 +2059,12 @@
             this.cropping.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel15.ResumeLayout(false);
             this.cropPanel.ResumeLayout(false);
             this.cropPanel.PerformLayout();
             this.panel17.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackX)).EndInit();
             this.FIlterSelect.ResumeLayout(false);
@@ -2074,16 +2118,12 @@
             this.panel13.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.stick.ResumeLayout(false);
+            this.stick.PerformLayout();
             this.panel18.ResumeLayout(false);
-            this.panel18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.stickerSize)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.stickerSize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.imp.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2250,6 +2290,9 @@
         private System.Windows.Forms.Button stSp;
         private System.Windows.Forms.Button stFlf;
         private System.Windows.Forms.Button stFla;
+        private System.Windows.Forms.Panel imp;
+        private System.Windows.Forms.Button selSt;
+        private System.Windows.Forms.Button impS;
     }
 }
 

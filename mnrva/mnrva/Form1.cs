@@ -14,11 +14,11 @@ namespace mnrva
     {
         filtros filtro = new filtros();
         modificar mod = new modificar();
-        Bitmap ogBmp, zoomed, edit, ogZoomed, firstBmp; //Bitmap del programa
-        string ruta, stickerChoice; // Ruta de la imagen seleccionada
+        Bitmap ogBmp, zoomed, edit, ogZoomed, firstBmp, impSt; //Bitmap del programa
+        string ruta, stickerChoice, stickerImport; // Ruta de la imagen seleccionada
         recortar objRecorte = new recortar();
         Color currentColor; //Color seleccionado en el gotero
-        bool stickin;
+        bool stickin, collage;
         Pen blackPen = new Pen(Color.FromArgb(255, 150, 150, 150), 3);
         Graphics graph;
 
@@ -47,6 +47,7 @@ namespace mnrva
             currentColor = Color.FromArgb(255, 255, 255, 255);
             label7.Text = tabControl1.Size.ToString() + this.Size.ToString();
             stickerChoice = "raio";
+            impSt = new Bitmap(100, 100);
             //img.BackColor = Color.FromArgb(0, 0, 0, 0);
         }
 
@@ -242,9 +243,13 @@ namespace mnrva
         {
             if (stickin)
             {
-                string getRuta = "stick/" + stickerChoice + ".png";
+                string getRuta = (collage) ? stickerImport : "stick/" + stickerChoice + ".png";
                 Bitmap st = new Bitmap (getRuta);
-                st = new Bitmap(st, stickerSize.Value * 10, stickerSize.Value * 10);
+
+                int sizeX = (collage) ? (st.Width * stickerSize.Value) / 100 : stickerSize.Value * 10;
+                int sizeY = (collage) ? (st.Height * stickerSize.Value) / 100 : stickerSize.Value * 10;
+
+                st = new Bitmap(st, sizeX, sizeY);
                 st.MakeTransparent();
                 //edit = mod.sticker(edit, 220, 200, st);
                 edit = mod.sticker(edit, e.X, e.Y, st);
@@ -763,6 +768,7 @@ namespace mnrva
                 zoomout.Enabled = false;
                 zoomed = new Bitmap(edit, edit.Width, edit.Height);
                 ogZoomed = new Bitmap(ogBmp, edit.Width, edit.Height);
+                imp.Enabled = true;
             }
 
             else
@@ -770,6 +776,7 @@ namespace mnrva
                 stickin = false;
                 zoom.Enabled = true;
                 zoomout.Enabled = true;
+                imp.Enabled = false;
             }
 
         }
@@ -782,9 +789,11 @@ namespace mnrva
             {
                 //img.Visible = true;
                 //img.Location = new Point(e.X, e.Y);
+                int sizeX = (collage) ? (impSt.Width * stickerSize.Value) / 100 : stickerSize.Value * 10;
+                int sizeY = (collage) ? (impSt.Height * stickerSize.Value) / 100 : stickerSize.Value * 10;
                 pictureBox3.Refresh();
                 graph = pictureBox3.CreateGraphics();
-                graph.DrawRectangle(blackPen, e.X, e.Y, stickerSize.Value * 10, stickerSize.Value * 10);
+                graph.DrawRectangle(blackPen, e.X, e.Y, sizeX, sizeY);
 
 
             }
@@ -804,6 +813,9 @@ namespace mnrva
                 stFla.BackColor = Color.White;
                 stFlf.BackColor = Color.White;
                 stSp.BackColor = Color.White;
+                impS.BackColor = Color.White;
+                selSt.Enabled = false;
+                collage = false;
                 stickerChoice = "raio";
             }
             else
@@ -823,6 +835,9 @@ namespace mnrva
                 stFla.BackColor = Color.White;
                 stFlf.BackColor = Color.White;
                 stSp.BackColor = Color.White;
+                impS.BackColor = Color.White;
+                selSt.Enabled = false;
+                collage = false;
                 stickerChoice = "gota";
             }
             else
@@ -840,6 +855,9 @@ namespace mnrva
                 stFla.BackColor = Color.White;
                 stFlf.BackColor = Color.White;
                 stSp.BackColor = Color.White;
+                impS.BackColor = Color.White;
+                selSt.Enabled = false;
+                collage = false;
                 stickerChoice = "hoja";
             }
             else
@@ -857,6 +875,9 @@ namespace mnrva
                 stFla.BackColor = Color.White;
                 stFlf.BackColor = Color.White;
                 stSp.BackColor = Color.White;
+                impS.BackColor = Color.White;
+                selSt.Enabled = false;
+                collage = false;
                 stickerChoice = "storm";
             }
             else
@@ -874,6 +895,9 @@ namespace mnrva
                 stFla.BackColor = Color.LightBlue;
                 stFlf.BackColor = Color.White;
                 stSp.BackColor = Color.White;
+                impS.BackColor = Color.White;
+                selSt.Enabled = false;
+                collage = false;
                 stickerChoice = "florA";
             }
             else
@@ -891,6 +915,9 @@ namespace mnrva
                 stFla.BackColor = Color.White;
                 stFlf.BackColor = Color.LightBlue;
                 stSp.BackColor = Color.White;
+                impS.BackColor = Color.White;
+                selSt.Enabled = false;
+                collage = false;
                 stickerChoice = "florF";
             }
             else
@@ -908,15 +935,53 @@ namespace mnrva
                 stFla.BackColor = Color.White;
                 stFlf.BackColor = Color.White;
                 stSp.BackColor = Color.LightBlue;
+                impS.BackColor = Color.White;
+                selSt.Enabled = false;
+                collage = false;
                 stickerChoice = "chispa";
             }
             else
                 stSp.BackColor = Color.White;
         }
 
+        private void selSt_Click(object sender, EventArgs e)
+        {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    string rutaSt = ofd.FileName;
+                    impSt = new Bitmap(rutaSt);
+                    selSt.BackgroundImage = impSt;
+                    collage = true;
+                    stickerImport = rutaSt;
+                    selSt.Text = "";
+
+                }
+            
+
+
+        }
+
+        private void impS_Click(object sender, EventArgs e)
+        {
+            collage = collage ? true : false;
+            if (!collage)
+            {
+                selSt.Enabled = true;
+                impS.BackColor = Color.LightBlue;
+                collage = true;
+            }
+            else
+            {
+                selSt.Enabled = false;
+                impS.BackColor = Color.White;
+                collage = false;
+            }
+        }
+
         private void EditSelect_SelectedIndexChanged(object sender, EventArgs e)
         {
             stickin = false;
+            imp.Enabled = false;
 
         }
 
