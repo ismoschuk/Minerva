@@ -15,7 +15,7 @@ namespace mnrva
         filtros filtro = new filtros();
         modificar mod = new modificar();
         Bitmap ogBmp, zoomed, edit, ogZoomed, firstBmp; //Bitmap del programa
-        string ruta; // Ruta de la imagen seleccionada
+        string ruta, stickerChoice; // Ruta de la imagen seleccionada
         recortar objRecorte = new recortar();
         Color currentColor; //Color seleccionado en el gotero
         bool stickin;
@@ -46,6 +46,7 @@ namespace mnrva
             cropPanel.Enabled = false;
             currentColor = Color.FromArgb(255, 255, 255, 255);
             label7.Text = tabControl1.Size.ToString() + this.Size.ToString();
+            stickerChoice = "raio";
             //img.BackColor = Color.FromArgb(0, 0, 0, 0);
         }
 
@@ -241,7 +242,9 @@ namespace mnrva
         {
             if (stickin)
             {
-                Bitmap st = new Bitmap(stk.Image);
+                string getRuta = "stick/" + stickerChoice + ".png";
+                Bitmap st = new Bitmap (getRuta);
+                st = new Bitmap(st, stickerSize.Value * 10, stickerSize.Value * 10);
                 st.MakeTransparent();
                 //edit = mod.sticker(edit, 220, 200, st);
                 edit = mod.sticker(edit, e.X, e.Y, st);
@@ -781,13 +784,134 @@ namespace mnrva
                 //img.Location = new Point(e.X, e.Y);
                 pictureBox3.Refresh();
                 graph = pictureBox3.CreateGraphics();
-                graph.DrawRectangle(blackPen, e.X, e.Y, 134, 114);
+                graph.DrawRectangle(blackPen, e.X, e.Y, stickerSize.Value * 10, stickerSize.Value * 10);
 
 
             }
             else
                 pictureBox3.Refresh();
 
+        }
+
+        private void stLi_Click(object sender, EventArgs e)
+        {
+            if (stLi.BackColor == Color.White)
+            {
+                stLi.BackColor = Color.LightBlue;
+                stGo.BackColor = Color.White;
+                stHo.BackColor = Color.White;
+                stTor.BackColor = Color.White;
+                stFla.BackColor = Color.White;
+                stFlf.BackColor = Color.White;
+                stSp.BackColor = Color.White;
+                stickerChoice = "raio";
+            }
+            else
+                stLi.BackColor = Color.White;
+
+
+        }
+
+        private void stGo_Click(object sender, EventArgs e)
+        {
+            if (stGo.BackColor == Color.White)
+            {
+                stLi.BackColor = Color.White;
+                stGo.BackColor = Color.LightBlue;
+                stHo.BackColor = Color.White;
+                stTor.BackColor = Color.White;
+                stFla.BackColor = Color.White;
+                stFlf.BackColor = Color.White;
+                stSp.BackColor = Color.White;
+                stickerChoice = "gota";
+            }
+            else
+                stGo.BackColor = Color.White;
+        }
+
+        private void stHo_Click(object sender, EventArgs e)
+        {
+            if (stHo.BackColor == Color.White)
+            {
+                stLi.BackColor = Color.White;
+                stGo.BackColor = Color.White;
+                stHo.BackColor = Color.LightBlue;
+                stTor.BackColor = Color.White;
+                stFla.BackColor = Color.White;
+                stFlf.BackColor = Color.White;
+                stSp.BackColor = Color.White;
+                stickerChoice = "hoja";
+            }
+            else
+                stHo.BackColor = Color.White;
+        }
+
+        private void stTor_Click(object sender, EventArgs e)
+        {
+            if (stTor.BackColor == Color.White)
+            {
+                stLi.BackColor = Color.White;
+                stGo.BackColor = Color.White;
+                stHo.BackColor = Color.White;
+                stTor.BackColor = Color.LightBlue;
+                stFla.BackColor = Color.White;
+                stFlf.BackColor = Color.White;
+                stSp.BackColor = Color.White;
+                stickerChoice = "storm";
+            }
+            else
+                stTor.BackColor = Color.White;
+        }
+
+        private void stFla_Click(object sender, EventArgs e)
+        {
+            if (stFla.BackColor == Color.White)
+            { 
+                stLi.BackColor = Color.White;
+                stGo.BackColor = Color.White;
+                stHo.BackColor = Color.White;
+                stTor.BackColor = Color.White;
+                stFla.BackColor = Color.LightBlue;
+                stFlf.BackColor = Color.White;
+                stSp.BackColor = Color.White;
+                stickerChoice = "florA";
+            }
+            else
+                stFla.BackColor = Color.White;
+        }
+
+        private void stFlf_Click(object sender, EventArgs e)
+        {
+            if (stFlf.BackColor == Color.White)
+            {
+                stLi.BackColor = Color.White;
+                stGo.BackColor = Color.White;
+                stHo.BackColor = Color.White;
+                stTor.BackColor = Color.White;
+                stFla.BackColor = Color.White;
+                stFlf.BackColor = Color.LightBlue;
+                stSp.BackColor = Color.White;
+                stickerChoice = "florF";
+            }
+            else
+                stFlf.BackColor = Color.White;
+        }
+
+        private void stSp_Click(object sender, EventArgs e)
+        {
+            if (stSp.BackColor == Color.White)
+            {
+                stLi.BackColor = Color.White;
+                stGo.BackColor = Color.White;
+                stHo.BackColor = Color.White;
+                stTor.BackColor = Color.White;
+                stFla.BackColor = Color.White;
+                stFlf.BackColor = Color.White;
+                stSp.BackColor = Color.LightBlue;
+                stickerChoice = "chispa";
+            }
+            else
+                stSp.BackColor = Color.White;
         }
 
         private void EditSelect_SelectedIndexChanged(object sender, EventArgs e)

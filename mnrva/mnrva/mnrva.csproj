@@ -86,6 +86,27 @@
   <ItemGroup>
     <None Include="Resources\heart1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\stick\raio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\stick\gota.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\stick\hoja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\stick\storm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\stick\florA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\stick\florF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\stick\chispa.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
