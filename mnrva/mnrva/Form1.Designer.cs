@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label7 = new System.Windows.Forms.Label();
@@ -1829,7 +1830,7 @@
             // stSp
             // 
             this.stSp.BackColor = System.Drawing.Color.White;
-            this.stSp.BackgroundImage = global::mnrva.Properties.Resources.chispa;
+            this.stSp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("stSp.BackgroundImage")));
             this.stSp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.stSp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.stSp.Location = new System.Drawing.Point(12, 271);
@@ -1842,7 +1843,7 @@
             // stFlf
             // 
             this.stFlf.BackColor = System.Drawing.Color.White;
-            this.stFlf.BackgroundImage = global::mnrva.Properties.Resources.florF;
+            this.stFlf.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("stFlf.BackgroundImage")));
             this.stFlf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.stFlf.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.stFlf.Location = new System.Drawing.Point(85, 197);
@@ -1855,7 +1856,7 @@
             // stFla
             // 
             this.stFla.BackColor = System.Drawing.Color.White;
-            this.stFla.BackgroundImage = global::mnrva.Properties.Resources.florA;
+            this.stFla.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("stFla.BackgroundImage")));
             this.stFla.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.stFla.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.stFla.Location = new System.Drawing.Point(13, 197);
@@ -1868,7 +1869,7 @@
             // stTor
             // 
             this.stTor.BackColor = System.Drawing.Color.White;
-            this.stTor.BackgroundImage = global::mnrva.Properties.Resources.storm;
+            this.stTor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("stTor.BackgroundImage")));
             this.stTor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.stTor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.stTor.Location = new System.Drawing.Point(85, 124);
@@ -1881,7 +1882,7 @@
             // stHo
             // 
             this.stHo.BackColor = System.Drawing.Color.White;
-            this.stHo.BackgroundImage = global::mnrva.Properties.Resources.hoja;
+            this.stHo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("stHo.BackgroundImage")));
             this.stHo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.stHo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.stHo.Location = new System.Drawing.Point(12, 123);
@@ -1894,7 +1895,7 @@
             // stGo
             // 
             this.stGo.BackColor = System.Drawing.Color.White;
-            this.stGo.BackgroundImage = global::mnrva.Properties.Resources.gota;
+            this.stGo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("stGo.BackgroundImage")));
             this.stGo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.stGo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.stGo.Location = new System.Drawing.Point(85, 51);
@@ -1907,7 +1908,7 @@
             // stLi
             // 
             this.stLi.BackColor = System.Drawing.Color.White;
-            this.stLi.BackgroundImage = global::mnrva.Properties.Resources.raio;
+            this.stLi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("stLi.BackgroundImage")));
             this.stLi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.stLi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.stLi.Location = new System.Drawing.Point(12, 50);

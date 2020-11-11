@@ -103,16 +103,6 @@ namespace mnrva.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap heart1 {
-            get {
-                object obj = ResourceManager.GetObject("heart1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap hoja {
             get {
                 object obj = ResourceManager.GetObject("hoja", resourceCulture);
