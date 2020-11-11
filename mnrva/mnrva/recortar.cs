@@ -163,7 +163,7 @@ namespace mnrva
         {
             picimg.Refresh();
             g = picimg.CreateGraphics();
-            g.DrawRectangle(lapicito, posX, posY, anch -= 5, larg);
+            g.DrawRectangle(lapicito, posX, posY, anch, larg -= 5);
         }
         public void Recortes(PictureBox img1, PictureBox img2)
         {

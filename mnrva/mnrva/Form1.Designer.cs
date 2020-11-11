@@ -805,7 +805,7 @@
             this.FIlterSelect.Controls.Add(this.colors);
             this.FIlterSelect.Controls.Add(this.other);
             this.FIlterSelect.Enabled = false;
-            this.FIlterSelect.Location = new System.Drawing.Point(664, 0);
+            this.FIlterSelect.Location = new System.Drawing.Point(633, 0);
             this.FIlterSelect.Name = "FIlterSelect";
             this.FIlterSelect.SelectedIndex = 0;
             this.FIlterSelect.Size = new System.Drawing.Size(189, 530);
@@ -839,7 +839,7 @@
             this.c.Dock = System.Windows.Forms.DockStyle.Top;
             this.c.Location = new System.Drawing.Point(3, 174);
             this.c.Name = "c";
-            this.c.Size = new System.Drawing.Size(175, 79);
+            this.c.Size = new System.Drawing.Size(175, 38);
             this.c.TabIndex = 8;
             // 
             // crPick
