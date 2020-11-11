@@ -839,7 +839,7 @@
             this.c.Dock = System.Windows.Forms.DockStyle.Top;
             this.c.Location = new System.Drawing.Point(3, 174);
             this.c.Name = "c";
-            this.c.Size = new System.Drawing.Size(175, 38);
+            this.c.Size = new System.Drawing.Size(175, 79);
             this.c.TabIndex = 8;
             // 
             // crPick

@@ -1048,10 +1048,10 @@ namespace mnrva
         private void crPick_Click(object sender, EventArgs e)
         {
             Bitmap bmpGS = new Bitmap(edit);
+            edit = filtro.grayscaleColorRange(bmpGS, currentColor.R, currentColor.G, currentColor.B);
             redRange.Value = currentColor.R;
             greenRange.Value = currentColor.G;
             blueRange.Value = currentColor.B;
-            edit = filtro.grayscaleColorRange(bmpGS, redRange.Value, greenRange.Value, blueRange.Value);
             pictureBox3.Image = edit;
             pictureBox2.Image = edit;
         }
