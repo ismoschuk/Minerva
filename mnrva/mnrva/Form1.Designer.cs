@@ -37,7 +37,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.ofd = new System.Windows.Forms.OpenFileDialog();
             this.otrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bordesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.coloresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.escalaDeGrisesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filtrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -186,6 +185,7 @@
             this.goBack = new System.Windows.Forms.Button();
             this.savePic = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.stickerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -357,12 +357,7 @@
             this.otrosToolStripMenuItem.Name = "otrosToolStripMenuItem";
             this.otrosToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
             this.otrosToolStripMenuItem.Text = "Otros";
-            // 
-            // bordesToolStripMenuItem
-            // 
-            this.bordesToolStripMenuItem.Name = "bordesToolStripMenuItem";
-            this.bordesToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
-            this.bordesToolStripMenuItem.Text = "Bordes";
+            this.otrosToolStripMenuItem.Click += new System.EventHandler(this.otrosToolStripMenuItem_Click);
             // 
             // coloresToolStripMenuItem
             // 
@@ -383,7 +378,6 @@
             this.filtrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.escalaDeGrisesToolStripMenuItem,
             this.coloresToolStripMenuItem,
-            this.bordesToolStripMenuItem,
             this.otrosToolStripMenuItem});
             this.filtrosToolStripMenuItem.Name = "filtrosToolStripMenuItem";
             this.filtrosToolStripMenuItem.Size = new System.Drawing.Size(75, 29);
@@ -432,7 +426,8 @@
             // 
             this.editarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.girarToolStripMenuItem,
-            this.recortarToolStripMenuItem});
+            this.recortarToolStripMenuItem,
+            this.stickerToolStripMenuItem});
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
             this.editarToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
             this.editarToolStripMenuItem.Text = "Editar";
@@ -443,12 +438,14 @@
             this.girarToolStripMenuItem.Name = "girarToolStripMenuItem";
             this.girarToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
             this.girarToolStripMenuItem.Text = "Girar";
+            this.girarToolStripMenuItem.Click += new System.EventHandler(this.girarToolStripMenuItem_Click);
             // 
             // recortarToolStripMenuItem
             // 
             this.recortarToolStripMenuItem.Name = "recortarToolStripMenuItem";
             this.recortarToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
             this.recortarToolStripMenuItem.Text = "Recortar";
+            this.recortarToolStripMenuItem.Click += new System.EventHandler(this.recortarToolStripMenuItem_Click);
             // 
             // tabControl1
             // 
@@ -790,7 +787,7 @@
             this.FIlterSelect.Controls.Add(this.colors);
             this.FIlterSelect.Controls.Add(this.other);
             this.FIlterSelect.Enabled = false;
-            this.FIlterSelect.Location = new System.Drawing.Point(792, 3);
+            this.FIlterSelect.Location = new System.Drawing.Point(664, 0);
             this.FIlterSelect.Name = "FIlterSelect";
             this.FIlterSelect.SelectedIndex = 0;
             this.FIlterSelect.Size = new System.Drawing.Size(189, 530);
@@ -1682,7 +1679,7 @@
             this.crop.Controls.Add(this.panel12);
             this.crop.Location = new System.Drawing.Point(4, 22);
             this.crop.Name = "crop";
-            this.crop.Size = new System.Drawing.Size(174, 504);
+            this.crop.Size = new System.Drawing.Size(180, 504);
             this.crop.TabIndex = 0;
             this.crop.Text = "Recortar";
             this.crop.UseVisualStyleBackColor = true;
@@ -1694,7 +1691,7 @@
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(0, 82);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(174, 82);
+            this.panel13.Size = new System.Drawing.Size(180, 82);
             this.panel13.TabIndex = 10;
             // 
             // cropcol
@@ -1724,7 +1721,7 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(174, 82);
+            this.panel12.Size = new System.Drawing.Size(180, 82);
             this.panel12.TabIndex = 9;
             // 
             // colorcr
@@ -1987,6 +1984,13 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "label7";
             // 
+            // stickerToolStripMenuItem
+            // 
+            this.stickerToolStripMenuItem.Name = "stickerToolStripMenuItem";
+            this.stickerToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
+            this.stickerToolStripMenuItem.Text = "Sticker";
+            this.stickerToolStripMenuItem.Click += new System.EventHandler(this.stickerToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2097,7 +2101,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.OpenFileDialog ofd;
         private System.Windows.Forms.ToolStripMenuItem otrosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bordesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem coloresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem escalaDeGrisesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filtrosToolStripMenuItem;
@@ -2247,6 +2250,7 @@
         private System.Windows.Forms.Button selSt;
         private System.Windows.Forms.Button impS;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ToolStripMenuItem stickerToolStripMenuItem;
     }
 }
 

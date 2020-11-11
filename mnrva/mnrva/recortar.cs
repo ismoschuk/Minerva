@@ -73,11 +73,11 @@ namespace mnrva
             }
         }
 
-        public void AbrirImagen(PictureBox picimg, string ruta2)
+        public void AbrirImagen(PictureBox picimg, Bitmap ruta2)
         {
 
 
-            picimg.Image = Bitmap.FromFile(ruta2);
+            picimg.Image = ruta2;
             picimg.Refresh();
             g = picimg.CreateGraphics();
             g.DrawRectangle(lapicito, posX, posY, anch = 100, larg = 100);

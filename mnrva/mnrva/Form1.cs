@@ -614,7 +614,7 @@ namespace mnrva
 
         private void btm_Recorte_Manual_Click(object sender, EventArgs e)
         {
-            objRecorte.AbrirImagen(pictureBox4, ruta);
+            objRecorte.AbrirImagen(pictureBox4, edit);
             txt_Ancho.Text = objRecorte.Ancho.ToString();
             txt_Largo.Text = objRecorte.Largo.ToString();
             trackX.Value = 0;
@@ -945,6 +945,30 @@ namespace mnrva
         private void aug_Click(object sender, EventArgs e)
         {
             ac.Height = (ac.Height == 235) ? 40 : 235;
+
+        }
+
+        private void otrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FIlterSelect.SelectedTab = other;
+
+        }
+
+        private void girarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditSelect.SelectedTab = spin;
+
+        }
+
+        private void recortarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditSelect.SelectedTab = crop;
+
+        }
+
+        private void stickerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditSelect.SelectedTab = stick;
 
         }
 
