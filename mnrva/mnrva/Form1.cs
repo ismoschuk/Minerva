@@ -42,10 +42,12 @@ namespace mnrva
             c.Size = new Size(114, 40);
             t.Size = new Size(114, 40);
             s.Size = new Size(114, 40);
+            br.Size = new Size(114, 40);
+            bl.Size = new Size(114, 40);
+            ac.Size = new Size(114, 40);
             tool.Dock = DockStyle.Right;
             cropPanel.Enabled = false;
             currentColor = Color.FromArgb(255, 255, 255, 255);
-            label7.Text = tabControl1.Size.ToString() + this.Size.ToString();
             stickerChoice = "raio";
             impSt = new Bitmap(100, 100);
             //img.BackColor = Color.FromArgb(0, 0, 0, 0);
@@ -513,10 +515,8 @@ namespace mnrva
 
         private void blur_Click(object sender, EventArgs e)
         {
-            Bitmap bmpGS = new Bitmap(ogBmp);
-            edit = filtro.blurSize(bmpGS, 3);
-            pictureBox3.Image = edit;
-            pictureBox2.Image = edit;
+            bl.Height = (bl.Height == 99) ? 40 : 99;
+
         }
 
         private void blur2_Click(object sender, EventArgs e)
@@ -929,6 +929,23 @@ namespace mnrva
             }
             else
                 stFlf.BackColor = Color.White;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            br.Height = (br.Height == 99) ? 40 : 99;
+
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            label7.Text = (edit == null) ? "No hay ediciones" : edit.Size.ToString();
+        }
+
+        private void aug_Click(object sender, EventArgs e)
+        {
+            ac.Height = (ac.Height == 235) ? 40 : 235;
+
         }
 
         private void stSp_Click(object sender, EventArgs e)

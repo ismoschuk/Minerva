@@ -31,11 +31,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.zoomInNew = new System.Windows.Forms.Button();
-            this.zoomOutNew = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.zoomOutOg = new System.Windows.Forms.Button();
-            this.zoomInOg = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -106,11 +102,11 @@
             this.b = new System.Windows.Forms.Panel();
             this.bw = new System.Windows.Forms.Button();
             this.colors = new System.Windows.Forms.TabPage();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.ac = new System.Windows.Forms.Panel();
             this.blueMore = new System.Windows.Forms.TrackBar();
             this.greenMore = new System.Windows.Forms.TrackBar();
             this.redMore = new System.Windows.Forms.TrackBar();
-            this.button3 = new System.Windows.Forms.Button();
+            this.aug = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.rbwg = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -140,13 +136,13 @@
             this.redRange2 = new System.Windows.Forms.TrackBar();
             this.tint = new System.Windows.Forms.Button();
             this.other = new System.Windows.Forms.TabPage();
-            this.panel11 = new System.Windows.Forms.Panel();
+            this.br = new System.Windows.Forms.Panel();
             this.bright = new System.Windows.Forms.TrackBar();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.edge = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.bl = new System.Windows.Forms.Panel();
             this.blur3 = new System.Windows.Forms.Button();
             this.blur2 = new System.Windows.Forms.Button();
             this.blur1 = new System.Windows.Forms.Button();
@@ -224,7 +220,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.shades)).BeginInit();
             this.b.SuspendLayout();
             this.colors.SuspendLayout();
-            this.panel10.SuspendLayout();
+            this.ac.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.blueMore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.greenMore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.redMore)).BeginInit();
@@ -240,10 +236,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.greenRange2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.redRange2)).BeginInit();
             this.other.SuspendLayout();
-            this.panel11.SuspendLayout();
+            this.br.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bright)).BeginInit();
             this.panel8.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.bl.SuspendLayout();
             this.main.SuspendLayout();
             this.tool.SuspendLayout();
             this.EditSelect.SuspendLayout();
@@ -263,10 +259,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.splitContainer1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1003, 485);
+            this.tabPage2.Size = new System.Drawing.Size(1003, 492);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Comparar";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -279,16 +275,13 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.label7);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox2);
-            this.splitContainer1.Panel1.Controls.Add(this.zoomInNew);
-            this.splitContainer1.Panel1.Controls.Add(this.zoomOutNew);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
-            this.splitContainer1.Panel2.Controls.Add(this.zoomOutOg);
-            this.splitContainer1.Panel2.Controls.Add(this.zoomInOg);
-            this.splitContainer1.Size = new System.Drawing.Size(997, 479);
+            this.splitContainer1.Size = new System.Drawing.Size(997, 486);
             this.splitContainer1.SplitterDistance = 509;
             this.splitContainer1.TabIndex = 7;
             // 
@@ -300,30 +293,10 @@
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Location = new System.Drawing.Point(3, 32);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(506, 347);
+            this.pictureBox2.Size = new System.Drawing.Size(506, 354);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            // 
-            // zoomInNew
-            // 
-            this.zoomInNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.zoomInNew.Location = new System.Drawing.Point(60, 419);
-            this.zoomInNew.Name = "zoomInNew";
-            this.zoomInNew.Size = new System.Drawing.Size(39, 40);
-            this.zoomInNew.TabIndex = 3;
-            this.zoomInNew.Text = "button1";
-            this.zoomInNew.UseVisualStyleBackColor = true;
-            // 
-            // zoomOutNew
-            // 
-            this.zoomOutNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.zoomOutNew.Location = new System.Drawing.Point(15, 419);
-            this.zoomOutNew.Name = "zoomOutNew";
-            this.zoomOutNew.Size = new System.Drawing.Size(39, 40);
-            this.zoomOutNew.TabIndex = 4;
-            this.zoomOutNew.Text = "button1";
-            this.zoomOutNew.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -334,33 +307,12 @@
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Cross;
             this.pictureBox1.Location = new System.Drawing.Point(-1, 32);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(484, 347);
+            this.pictureBox1.Size = new System.Drawing.Size(484, 354);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            // 
-            // zoomOutOg
-            // 
-            this.zoomOutOg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.zoomOutOg.Location = new System.Drawing.Point(63, 419);
-            this.zoomOutOg.Name = "zoomOutOg";
-            this.zoomOutOg.Size = new System.Drawing.Size(39, 40);
-            this.zoomOutOg.TabIndex = 2;
-            this.zoomOutOg.Text = "button1";
-            this.zoomOutOg.UseVisualStyleBackColor = true;
-            // 
-            // zoomInOg
-            // 
-            this.zoomInOg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.zoomInOg.Location = new System.Drawing.Point(18, 419);
-            this.zoomInOg.Name = "zoomInOg";
-            this.zoomInOg.Size = new System.Drawing.Size(39, 39);
-            this.zoomInOg.TabIndex = 1;
-            this.zoomInOg.Text = "button1";
-            this.zoomInOg.UseVisualStyleBackColor = true;
-            this.zoomInOg.Click += new System.EventHandler(this.zoomInOg_Click);
             // 
             // panel3
             // 
@@ -369,7 +321,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(997, 479);
+            this.panel3.Size = new System.Drawing.Size(997, 486);
             this.panel3.TabIndex = 0;
             // 
             // pictureBox3
@@ -388,10 +340,10 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.panel3);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1003, 485);
+            this.tabPage1.Size = new System.Drawing.Size(1003, 492);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Editar";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -403,26 +355,26 @@
             // otrosToolStripMenuItem
             // 
             this.otrosToolStripMenuItem.Name = "otrosToolStripMenuItem";
-            this.otrosToolStripMenuItem.Size = new System.Drawing.Size(307, 44);
+            this.otrosToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
             this.otrosToolStripMenuItem.Text = "Otros";
             // 
             // bordesToolStripMenuItem
             // 
             this.bordesToolStripMenuItem.Name = "bordesToolStripMenuItem";
-            this.bordesToolStripMenuItem.Size = new System.Drawing.Size(307, 44);
+            this.bordesToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
             this.bordesToolStripMenuItem.Text = "Bordes";
             // 
             // coloresToolStripMenuItem
             // 
             this.coloresToolStripMenuItem.Name = "coloresToolStripMenuItem";
-            this.coloresToolStripMenuItem.Size = new System.Drawing.Size(307, 44);
+            this.coloresToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
             this.coloresToolStripMenuItem.Text = "Colores";
             this.coloresToolStripMenuItem.Click += new System.EventHandler(this.coloresToolStripMenuItem_Click);
             // 
             // escalaDeGrisesToolStripMenuItem
             // 
             this.escalaDeGrisesToolStripMenuItem.Name = "escalaDeGrisesToolStripMenuItem";
-            this.escalaDeGrisesToolStripMenuItem.Size = new System.Drawing.Size(307, 44);
+            this.escalaDeGrisesToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
             this.escalaDeGrisesToolStripMenuItem.Text = "Escala de Grises";
             this.escalaDeGrisesToolStripMenuItem.Click += new System.EventHandler(this.escalaDeGrisesToolStripMenuItem_Click);
             // 
@@ -434,21 +386,21 @@
             this.bordesToolStripMenuItem,
             this.otrosToolStripMenuItem});
             this.filtrosToolStripMenuItem.Name = "filtrosToolStripMenuItem";
-            this.filtrosToolStripMenuItem.Size = new System.Drawing.Size(106, 44);
+            this.filtrosToolStripMenuItem.Size = new System.Drawing.Size(75, 29);
             this.filtrosToolStripMenuItem.Text = "Filtros";
             this.filtrosToolStripMenuItem.Click += new System.EventHandler(this.filtrosToolStripMenuItem_Click);
             // 
             // guardarToolStripMenuItem
             // 
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(209, 44);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(153, 30);
             this.guardarToolStripMenuItem.Text = "Guardar";
             this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
             // cargarToolStripMenuItem
             // 
             this.cargarToolStripMenuItem.Name = "cargarToolStripMenuItem";
-            this.cargarToolStripMenuItem.Size = new System.Drawing.Size(209, 44);
+            this.cargarToolStripMenuItem.Size = new System.Drawing.Size(153, 30);
             this.cargarToolStripMenuItem.Text = "Cargar";
             this.cargarToolStripMenuItem.Click += new System.EventHandler(this.cargarToolStripMenuItem_Click);
             // 
@@ -458,7 +410,7 @@
             this.cargarToolStripMenuItem,
             this.guardarToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(125, 44);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
             this.archivoToolStripMenuItem.Text = "Archivo";
             this.archivoToolStripMenuItem.Click += new System.EventHandler(this.archivoToolStripMenuItem_Click);
             // 
@@ -472,7 +424,7 @@
             this.editarToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(1256, 48);
+            this.menu.Size = new System.Drawing.Size(1256, 33);
             this.menu.TabIndex = 5;
             this.menu.Text = "menuStrip1";
             // 
@@ -482,20 +434,20 @@
             this.girarToolStripMenuItem,
             this.recortarToolStripMenuItem});
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(103, 44);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
             this.editarToolStripMenuItem.Text = "Editar";
             this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
             // 
             // girarToolStripMenuItem
             // 
             this.girarToolStripMenuItem.Name = "girarToolStripMenuItem";
-            this.girarToolStripMenuItem.Size = new System.Drawing.Size(212, 44);
+            this.girarToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
             this.girarToolStripMenuItem.Text = "Girar";
             // 
             // recortarToolStripMenuItem
             // 
             this.recortarToolStripMenuItem.Name = "recortarToolStripMenuItem";
-            this.recortarToolStripMenuItem.Size = new System.Drawing.Size(212, 44);
+            this.recortarToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
             this.recortarToolStripMenuItem.Text = "Recortar";
             // 
             // tabControl1
@@ -511,15 +463,16 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1011, 518);
             this.tabControl1.TabIndex = 7;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // cropping
             // 
             this.cropping.AutoScroll = true;
             this.cropping.Controls.Add(this.panel16);
             this.cropping.Controls.Add(this.panel15);
-            this.cropping.Location = new System.Drawing.Point(4, 29);
+            this.cropping.Location = new System.Drawing.Point(4, 22);
             this.cropping.Name = "cropping";
-            this.cropping.Size = new System.Drawing.Size(1003, 485);
+            this.cropping.Size = new System.Drawing.Size(1003, 492);
             this.cropping.TabIndex = 2;
             this.cropping.Text = "Recortar Imagen";
             this.cropping.UseVisualStyleBackColor = true;
@@ -531,7 +484,7 @@
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Location = new System.Drawing.Point(0, 0);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(792, 485);
+            this.panel16.Size = new System.Drawing.Size(792, 492);
             this.panel16.TabIndex = 2;
             // 
             // pictureBox4
@@ -552,7 +505,7 @@
             this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel15.Location = new System.Drawing.Point(792, 0);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(211, 485);
+            this.panel15.Size = new System.Drawing.Size(211, 492);
             this.panel15.TabIndex = 1;
             // 
             // btm_Recorte_Manual
@@ -590,7 +543,7 @@
             this.cropPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cropPanel.Location = new System.Drawing.Point(0, 0);
             this.cropPanel.Name = "cropPanel";
-            this.cropPanel.Size = new System.Drawing.Size(211, 485);
+            this.cropPanel.Size = new System.Drawing.Size(211, 492);
             this.cropPanel.TabIndex = 11;
             this.cropPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel14_Paint);
             // 
@@ -627,7 +580,7 @@
             this.posY.AutoSize = true;
             this.posY.Location = new System.Drawing.Point(81, 182);
             this.posY.Name = "posY";
-            this.posY.Size = new System.Drawing.Size(51, 20);
+            this.posY.Size = new System.Drawing.Size(35, 13);
             this.posY.TabIndex = 71;
             this.posY.Text = "label7";
             // 
@@ -635,7 +588,7 @@
             // 
             this.trackY.Location = new System.Drawing.Point(19, 124);
             this.trackY.Name = "trackY";
-            this.trackY.Size = new System.Drawing.Size(171, 69);
+            this.trackY.Size = new System.Drawing.Size(171, 45);
             this.trackY.TabIndex = 70;
             this.trackY.TickFrequency = 5;
             this.trackY.Scroll += new System.EventHandler(this.trackY_Scroll);
@@ -645,7 +598,7 @@
             this.posX.AutoSize = true;
             this.posX.Location = new System.Drawing.Point(81, 95);
             this.posX.Name = "posX";
-            this.posX.Size = new System.Drawing.Size(51, 20);
+            this.posX.Size = new System.Drawing.Size(35, 13);
             this.posX.TabIndex = 69;
             this.posX.Text = "label7";
             // 
@@ -653,7 +606,7 @@
             // 
             this.trackX.Location = new System.Drawing.Point(19, 41);
             this.trackX.Name = "trackX";
-            this.trackX.Size = new System.Drawing.Size(171, 69);
+            this.trackX.Size = new System.Drawing.Size(171, 45);
             this.trackX.TabIndex = 68;
             this.trackX.TickFrequency = 5;
             this.trackX.Scroll += new System.EventHandler(this.trackX_Scroll);
@@ -675,7 +628,7 @@
             this.txt_Largo.Location = new System.Drawing.Point(153, 245);
             this.txt_Largo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Largo.Name = "txt_Largo";
-            this.txt_Largo.Size = new System.Drawing.Size(40, 26);
+            this.txt_Largo.Size = new System.Drawing.Size(40, 20);
             this.txt_Largo.TabIndex = 65;
             // 
             // txt_Ancho
@@ -684,7 +637,7 @@
             this.txt_Ancho.Location = new System.Drawing.Point(153, 212);
             this.txt_Ancho.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Ancho.Name = "txt_Ancho";
-            this.txt_Ancho.Size = new System.Drawing.Size(40, 26);
+            this.txt_Ancho.Size = new System.Drawing.Size(40, 20);
             this.txt_Ancho.TabIndex = 64;
             // 
             // label5
@@ -693,7 +646,7 @@
             this.label5.Location = new System.Drawing.Point(20, 250);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 20);
+            this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 61;
             this.label5.Text = "Largo";
             // 
@@ -703,7 +656,7 @@
             this.label6.Location = new System.Drawing.Point(19, 214);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 20);
+            this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 60;
             this.label6.Text = "Ancho";
             // 
@@ -826,7 +779,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(70, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 29);
+            this.label1.Size = new System.Drawing.Size(67, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "Tamaño";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -837,10 +790,10 @@
             this.FIlterSelect.Controls.Add(this.colors);
             this.FIlterSelect.Controls.Add(this.other);
             this.FIlterSelect.Enabled = false;
-            this.FIlterSelect.Location = new System.Drawing.Point(417, 3);
+            this.FIlterSelect.Location = new System.Drawing.Point(792, 3);
             this.FIlterSelect.Name = "FIlterSelect";
             this.FIlterSelect.SelectedIndex = 0;
-            this.FIlterSelect.Size = new System.Drawing.Size(175, 530);
+            this.FIlterSelect.Size = new System.Drawing.Size(189, 530);
             this.FIlterSelect.TabIndex = 10;
             this.FIlterSelect.Visible = false;
             // 
@@ -852,10 +805,10 @@
             this.gscale.Controls.Add(this.p);
             this.gscale.Controls.Add(this.g);
             this.gscale.Controls.Add(this.b);
-            this.gscale.Location = new System.Drawing.Point(4, 29);
+            this.gscale.Location = new System.Drawing.Point(4, 22);
             this.gscale.Name = "gscale";
             this.gscale.Padding = new System.Windows.Forms.Padding(3);
-            this.gscale.Size = new System.Drawing.Size(167, 497);
+            this.gscale.Size = new System.Drawing.Size(181, 504);
             this.gscale.TabIndex = 0;
             this.gscale.Text = "Grayscale";
             this.gscale.UseVisualStyleBackColor = true;
@@ -871,7 +824,7 @@
             this.c.Dock = System.Windows.Forms.DockStyle.Top;
             this.c.Location = new System.Drawing.Point(3, 174);
             this.c.Name = "c";
-            this.c.Size = new System.Drawing.Size(161, 38);
+            this.c.Size = new System.Drawing.Size(175, 38);
             this.c.TabIndex = 8;
             // 
             // crPick
@@ -890,7 +843,7 @@
             this.blueRange.Location = new System.Drawing.Point(3, 179);
             this.blueRange.Maximum = 255;
             this.blueRange.Name = "blueRange";
-            this.blueRange.Size = new System.Drawing.Size(150, 69);
+            this.blueRange.Size = new System.Drawing.Size(150, 45);
             this.blueRange.TabIndex = 7;
             this.blueRange.TickFrequency = 10;
             this.blueRange.Value = 10;
@@ -902,7 +855,7 @@
             this.greenRange.Location = new System.Drawing.Point(3, 128);
             this.greenRange.Maximum = 255;
             this.greenRange.Name = "greenRange";
-            this.greenRange.Size = new System.Drawing.Size(150, 69);
+            this.greenRange.Size = new System.Drawing.Size(150, 45);
             this.greenRange.TabIndex = 6;
             this.greenRange.TickFrequency = 10;
             this.greenRange.Value = 10;
@@ -914,7 +867,7 @@
             this.redRange.Location = new System.Drawing.Point(4, 77);
             this.redRange.Maximum = 255;
             this.redRange.Name = "redRange";
-            this.redRange.Size = new System.Drawing.Size(150, 69);
+            this.redRange.Size = new System.Drawing.Size(150, 45);
             this.redRange.TabIndex = 5;
             this.redRange.TickFrequency = 10;
             this.redRange.Value = 10;
@@ -925,7 +878,7 @@
             this.cr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cr.Location = new System.Drawing.Point(5, 2);
             this.cr.Name = "cr";
-            this.cr.Size = new System.Drawing.Size(145, 35);
+            this.cr.Size = new System.Drawing.Size(152, 35);
             this.cr.TabIndex = 4;
             this.cr.Text = "Colores 🠟";
             this.cr.UseVisualStyleBackColor = true;
@@ -939,7 +892,7 @@
             this.uc.Dock = System.Windows.Forms.DockStyle.Top;
             this.uc.Location = new System.Drawing.Point(3, 130);
             this.uc.Name = "uc";
-            this.uc.Size = new System.Drawing.Size(161, 44);
+            this.uc.Size = new System.Drawing.Size(175, 44);
             this.uc.TabIndex = 7;
             // 
             // blue
@@ -967,7 +920,7 @@
             this.gc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gc.Location = new System.Drawing.Point(4, 3);
             this.gc.Name = "gc";
-            this.gc.Size = new System.Drawing.Size(145, 35);
+            this.gc.Size = new System.Drawing.Size(152, 35);
             this.gc.TabIndex = 0;
             this.gc.Text = "Rojo o Azul 🠟";
             this.gc.UseVisualStyleBackColor = true;
@@ -981,7 +934,7 @@
             this.p.Dock = System.Windows.Forms.DockStyle.Top;
             this.p.Location = new System.Drawing.Point(3, 86);
             this.p.Name = "p";
-            this.p.Size = new System.Drawing.Size(161, 44);
+            this.p.Size = new System.Drawing.Size(175, 44);
             this.p.TabIndex = 6;
             // 
             // print
@@ -989,7 +942,7 @@
             this.print.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.print.Location = new System.Drawing.Point(4, 3);
             this.print.Name = "print";
-            this.print.Size = new System.Drawing.Size(145, 35);
+            this.print.Size = new System.Drawing.Size(152, 35);
             this.print.TabIndex = 2;
             this.print.Text = "Fotocopia 🠟";
             this.print.UseVisualStyleBackColor = true;
@@ -1000,7 +953,7 @@
             this.valueRange.AutoSize = true;
             this.valueRange.Location = new System.Drawing.Point(4, 91);
             this.valueRange.Name = "valueRange";
-            this.valueRange.Size = new System.Drawing.Size(36, 20);
+            this.valueRange.Size = new System.Drawing.Size(25, 13);
             this.valueRange.TabIndex = 6;
             this.valueRange.Text = "100";
             // 
@@ -1010,7 +963,7 @@
             this.fotocopiaRange.Maximum = 255;
             this.fotocopiaRange.Minimum = 10;
             this.fotocopiaRange.Name = "fotocopiaRange";
-            this.fotocopiaRange.Size = new System.Drawing.Size(138, 69);
+            this.fotocopiaRange.Size = new System.Drawing.Size(138, 45);
             this.fotocopiaRange.SmallChange = 5;
             this.fotocopiaRange.TabIndex = 5;
             this.fotocopiaRange.Tag = "shades";
@@ -1026,7 +979,7 @@
             this.g.Dock = System.Windows.Forms.DockStyle.Top;
             this.g.Location = new System.Drawing.Point(3, 43);
             this.g.Name = "g";
-            this.g.Size = new System.Drawing.Size(161, 43);
+            this.g.Size = new System.Drawing.Size(175, 43);
             this.g.TabIndex = 5;
             // 
             // ss
@@ -1034,7 +987,7 @@
             this.ss.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ss.Location = new System.Drawing.Point(5, 4);
             this.ss.Name = "ss";
-            this.ss.Size = new System.Drawing.Size(145, 35);
+            this.ss.Size = new System.Drawing.Size(152, 35);
             this.ss.TabIndex = 1;
             this.ss.Text = "Grises 🠟";
             this.ss.UseVisualStyleBackColor = true;
@@ -1045,7 +998,7 @@
             this.valuedis.AutoSize = true;
             this.valuedis.Location = new System.Drawing.Point(4, 91);
             this.valuedis.Name = "valuedis";
-            this.valuedis.Size = new System.Drawing.Size(18, 20);
+            this.valuedis.Size = new System.Drawing.Size(13, 13);
             this.valuedis.TabIndex = 4;
             this.valuedis.Text = "8";
             // 
@@ -1054,7 +1007,7 @@
             this.shades.Location = new System.Drawing.Point(3, 43);
             this.shades.Minimum = 2;
             this.shades.Name = "shades";
-            this.shades.Size = new System.Drawing.Size(138, 69);
+            this.shades.Size = new System.Drawing.Size(138, 45);
             this.shades.TabIndex = 3;
             this.shades.Tag = "shades";
             this.shades.TickStyle = System.Windows.Forms.TickStyle.Both;
@@ -1067,14 +1020,14 @@
             this.b.Dock = System.Windows.Forms.DockStyle.Top;
             this.b.Location = new System.Drawing.Point(3, 3);
             this.b.Name = "b";
-            this.b.Size = new System.Drawing.Size(161, 40);
+            this.b.Size = new System.Drawing.Size(175, 40);
             this.b.TabIndex = 1;
             // 
             // bw
             // 
             this.bw.Location = new System.Drawing.Point(5, 4);
             this.bw.Name = "bw";
-            this.bw.Size = new System.Drawing.Size(145, 35);
+            this.bw.Size = new System.Drawing.Size(152, 35);
             this.bw.TabIndex = 9;
             this.bw.Text = "Blanco y Negro";
             this.bw.UseVisualStyleBackColor = true;
@@ -1083,7 +1036,7 @@
             // colors
             // 
             this.colors.AutoScroll = true;
-            this.colors.Controls.Add(this.panel10);
+            this.colors.Controls.Add(this.ac);
             this.colors.Controls.Add(this.panel5);
             this.colors.Controls.Add(this.panel4);
             this.colors.Controls.Add(this.cl);
@@ -1091,25 +1044,25 @@
             this.colors.Controls.Add(this.panel2);
             this.colors.Controls.Add(this.panel1);
             this.colors.Controls.Add(this.t);
-            this.colors.Location = new System.Drawing.Point(4, 29);
+            this.colors.Location = new System.Drawing.Point(4, 22);
             this.colors.Name = "colors";
             this.colors.Padding = new System.Windows.Forms.Padding(3);
-            this.colors.Size = new System.Drawing.Size(167, 497);
+            this.colors.Size = new System.Drawing.Size(181, 504);
             this.colors.TabIndex = 1;
             this.colors.Text = "Colors";
             this.colors.UseVisualStyleBackColor = true;
             // 
-            // panel10
+            // ac
             // 
-            this.panel10.Controls.Add(this.blueMore);
-            this.panel10.Controls.Add(this.greenMore);
-            this.panel10.Controls.Add(this.redMore);
-            this.panel10.Controls.Add(this.button3);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(3, 308);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(135, 237);
-            this.panel10.TabIndex = 17;
+            this.ac.Controls.Add(this.blueMore);
+            this.ac.Controls.Add(this.greenMore);
+            this.ac.Controls.Add(this.redMore);
+            this.ac.Controls.Add(this.aug);
+            this.ac.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ac.Location = new System.Drawing.Point(3, 308);
+            this.ac.Name = "ac";
+            this.ac.Size = new System.Drawing.Size(158, 237);
+            this.ac.TabIndex = 17;
             // 
             // blueMore
             // 
@@ -1117,7 +1070,7 @@
             this.blueMore.Location = new System.Drawing.Point(3, 145);
             this.blueMore.Maximum = 9;
             this.blueMore.Name = "blueMore";
-            this.blueMore.Size = new System.Drawing.Size(150, 69);
+            this.blueMore.Size = new System.Drawing.Size(150, 45);
             this.blueMore.TabIndex = 7;
             this.blueMore.Value = 2;
             this.blueMore.Scroll += new System.EventHandler(this.blueMore_Scroll);
@@ -1128,7 +1081,7 @@
             this.greenMore.Location = new System.Drawing.Point(3, 94);
             this.greenMore.Maximum = 9;
             this.greenMore.Name = "greenMore";
-            this.greenMore.Size = new System.Drawing.Size(150, 69);
+            this.greenMore.Size = new System.Drawing.Size(150, 45);
             this.greenMore.TabIndex = 6;
             this.greenMore.Value = 2;
             this.greenMore.Scroll += new System.EventHandler(this.greenMore_Scroll);
@@ -1139,20 +1092,21 @@
             this.redMore.Location = new System.Drawing.Point(4, 43);
             this.redMore.Maximum = 9;
             this.redMore.Name = "redMore";
-            this.redMore.Size = new System.Drawing.Size(150, 69);
+            this.redMore.Size = new System.Drawing.Size(150, 45);
             this.redMore.TabIndex = 5;
             this.redMore.Value = 2;
             this.redMore.Scroll += new System.EventHandler(this.trackBar3_Scroll);
             // 
-            // button3
+            // aug
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Location = new System.Drawing.Point(5, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(145, 35);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Aumentar 🠟";
-            this.button3.UseVisualStyleBackColor = true;
+            this.aug.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.aug.Location = new System.Drawing.Point(5, 2);
+            this.aug.Name = "aug";
+            this.aug.Size = new System.Drawing.Size(145, 35);
+            this.aug.TabIndex = 4;
+            this.aug.Text = "Aumentar 🠟";
+            this.aug.UseVisualStyleBackColor = true;
+            this.aug.Click += new System.EventHandler(this.aug_Click);
             // 
             // panel5
             // 
@@ -1160,7 +1114,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(3, 265);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(135, 43);
+            this.panel5.Size = new System.Drawing.Size(158, 43);
             this.panel5.TabIndex = 16;
             // 
             // rbwg
@@ -1179,7 +1133,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(3, 222);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(135, 43);
+            this.panel4.Size = new System.Drawing.Size(158, 43);
             this.panel4.TabIndex = 15;
             // 
             // rbw
@@ -1206,7 +1160,7 @@
             this.cl.Dock = System.Windows.Forms.DockStyle.Top;
             this.cl.Location = new System.Drawing.Point(3, 180);
             this.cl.Name = "cl";
-            this.cl.Size = new System.Drawing.Size(135, 42);
+            this.cl.Size = new System.Drawing.Size(158, 42);
             this.cl.TabIndex = 14;
             this.cl.Paint += new System.Windows.Forms.PaintEventHandler(this.cl_Paint);
             // 
@@ -1309,7 +1263,7 @@
             this.s.Dock = System.Windows.Forms.DockStyle.Top;
             this.s.Location = new System.Drawing.Point(3, 138);
             this.s.Name = "s";
-            this.s.Size = new System.Drawing.Size(135, 42);
+            this.s.Size = new System.Drawing.Size(158, 42);
             this.s.TabIndex = 13;
             // 
             // srnge
@@ -1317,7 +1271,7 @@
             this.srnge.AutoSize = true;
             this.srnge.Location = new System.Drawing.Point(15, 92);
             this.srnge.Name = "srnge";
-            this.srnge.Size = new System.Drawing.Size(18, 20);
+            this.srnge.Size = new System.Drawing.Size(13, 13);
             this.srnge.TabIndex = 12;
             this.srnge.Text = "8";
             // 
@@ -1327,7 +1281,7 @@
             this.simpleRange.Maximum = 15;
             this.simpleRange.Minimum = 1;
             this.simpleRange.Name = "simpleRange";
-            this.simpleRange.Size = new System.Drawing.Size(138, 69);
+            this.simpleRange.Size = new System.Drawing.Size(138, 45);
             this.simpleRange.TabIndex = 11;
             this.simpleRange.Tag = "shades";
             this.simpleRange.TickStyle = System.Windows.Forms.TickStyle.Both;
@@ -1351,7 +1305,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 92);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(135, 46);
+            this.panel2.Size = new System.Drawing.Size(158, 46);
             this.panel2.TabIndex = 11;
             // 
             // cst
@@ -1370,7 +1324,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 49);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(135, 43);
+            this.panel1.Size = new System.Drawing.Size(158, 43);
             this.panel1.TabIndex = 10;
             // 
             // ct
@@ -1393,7 +1347,7 @@
             this.t.Dock = System.Windows.Forms.DockStyle.Top;
             this.t.Location = new System.Drawing.Point(3, 3);
             this.t.Name = "t";
-            this.t.Size = new System.Drawing.Size(135, 46);
+            this.t.Size = new System.Drawing.Size(158, 46);
             this.t.TabIndex = 9;
             // 
             // button1
@@ -1412,7 +1366,7 @@
             this.blueRange2.Location = new System.Drawing.Point(3, 179);
             this.blueRange2.Maximum = 255;
             this.blueRange2.Name = "blueRange2";
-            this.blueRange2.Size = new System.Drawing.Size(150, 69);
+            this.blueRange2.Size = new System.Drawing.Size(150, 45);
             this.blueRange2.TabIndex = 7;
             this.blueRange2.TickFrequency = 10;
             this.blueRange2.Value = 10;
@@ -1424,7 +1378,7 @@
             this.greenRange2.Location = new System.Drawing.Point(3, 128);
             this.greenRange2.Maximum = 255;
             this.greenRange2.Name = "greenRange2";
-            this.greenRange2.Size = new System.Drawing.Size(150, 69);
+            this.greenRange2.Size = new System.Drawing.Size(150, 45);
             this.greenRange2.TabIndex = 6;
             this.greenRange2.TickFrequency = 10;
             this.greenRange2.Value = 10;
@@ -1436,7 +1390,7 @@
             this.redRange2.Location = new System.Drawing.Point(4, 77);
             this.redRange2.Maximum = 255;
             this.redRange2.Name = "redRange2";
-            this.redRange2.Size = new System.Drawing.Size(150, 69);
+            this.redRange2.Size = new System.Drawing.Size(150, 45);
             this.redRange2.TabIndex = 5;
             this.redRange2.TickFrequency = 10;
             this.redRange2.Value = 10;
@@ -1455,34 +1409,34 @@
             // 
             // other
             // 
-            this.other.Controls.Add(this.panel11);
+            this.other.Controls.Add(this.br);
             this.other.Controls.Add(this.panel8);
-            this.other.Controls.Add(this.panel7);
-            this.other.Location = new System.Drawing.Point(4, 29);
+            this.other.Controls.Add(this.bl);
+            this.other.Location = new System.Drawing.Point(4, 22);
             this.other.Name = "other";
-            this.other.Size = new System.Drawing.Size(167, 497);
+            this.other.Size = new System.Drawing.Size(181, 504);
             this.other.TabIndex = 2;
             this.other.Text = "Otros";
             this.other.UseVisualStyleBackColor = true;
             // 
-            // panel11
+            // br
             // 
-            this.panel11.Controls.Add(this.bright);
-            this.panel11.Controls.Add(this.button2);
-            this.panel11.Controls.Add(this.label4);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(0, 142);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(167, 111);
-            this.panel11.TabIndex = 12;
+            this.br.Controls.Add(this.bright);
+            this.br.Controls.Add(this.button2);
+            this.br.Controls.Add(this.label4);
+            this.br.Dock = System.Windows.Forms.DockStyle.Top;
+            this.br.Location = new System.Drawing.Point(0, 142);
+            this.br.Name = "br";
+            this.br.Size = new System.Drawing.Size(181, 115);
+            this.br.TabIndex = 12;
             // 
             // bright
             // 
-            this.bright.Location = new System.Drawing.Point(12, 45);
+            this.bright.Location = new System.Drawing.Point(3, 49);
             this.bright.Maximum = 19;
             this.bright.Minimum = 2;
             this.bright.Name = "bright";
-            this.bright.Size = new System.Drawing.Size(138, 69);
+            this.bright.Size = new System.Drawing.Size(173, 45);
             this.bright.TabIndex = 5;
             this.bright.Tag = "br";
             this.bright.Value = 10;
@@ -1491,19 +1445,20 @@
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(5, 4);
+            this.button2.Location = new System.Drawing.Point(3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 35);
+            this.button2.Size = new System.Drawing.Size(173, 35);
             this.button2.TabIndex = 1;
             this.button2.Text = "Brillo 🠟";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 91);
+            this.label4.Location = new System.Drawing.Point(6, 97);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(18, 20);
+            this.label4.Size = new System.Drawing.Size(13, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "8";
             // 
@@ -1513,61 +1468,61 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 99);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(167, 43);
+            this.panel8.Size = new System.Drawing.Size(181, 43);
             this.panel8.TabIndex = 11;
             // 
             // edge
             // 
-            this.edge.Location = new System.Drawing.Point(5, 4);
+            this.edge.Location = new System.Drawing.Point(7, 4);
             this.edge.Name = "edge";
-            this.edge.Size = new System.Drawing.Size(145, 35);
+            this.edge.Size = new System.Drawing.Size(169, 35);
             this.edge.TabIndex = 9;
             this.edge.Text = "Bordes";
             this.edge.UseVisualStyleBackColor = true;
             this.edge.Click += new System.EventHandler(this.edge_Click);
             // 
-            // panel7
+            // bl
             // 
-            this.panel7.Controls.Add(this.blur3);
-            this.panel7.Controls.Add(this.blur2);
-            this.panel7.Controls.Add(this.blur1);
-            this.panel7.Controls.Add(this.blur);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(167, 99);
-            this.panel7.TabIndex = 2;
+            this.bl.Controls.Add(this.blur3);
+            this.bl.Controls.Add(this.blur2);
+            this.bl.Controls.Add(this.blur1);
+            this.bl.Controls.Add(this.blur);
+            this.bl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bl.Location = new System.Drawing.Point(0, 0);
+            this.bl.Name = "bl";
+            this.bl.Size = new System.Drawing.Size(181, 99);
+            this.bl.TabIndex = 2;
             // 
             // blur3
             // 
-            this.blur3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blur3.Location = new System.Drawing.Point(116, 53);
+            this.blur3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blur3.Location = new System.Drawing.Point(124, 53);
             this.blur3.Name = "blur3";
-            this.blur3.Size = new System.Drawing.Size(48, 33);
+            this.blur3.Size = new System.Drawing.Size(52, 33);
             this.blur3.TabIndex = 12;
-            this.blur3.Text = "24";
+            this.blur3.Text = "15%";
             this.blur3.UseVisualStyleBackColor = true;
             this.blur3.Click += new System.EventHandler(this.blur3_Click);
             // 
             // blur2
             // 
-            this.blur2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blur2.Location = new System.Drawing.Point(64, 53);
+            this.blur2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blur2.Location = new System.Drawing.Point(60, 53);
             this.blur2.Name = "blur2";
-            this.blur2.Size = new System.Drawing.Size(46, 33);
+            this.blur2.Size = new System.Drawing.Size(60, 33);
             this.blur2.TabIndex = 11;
-            this.blur2.Text = "12";
+            this.blur2.Text = "10%";
             this.blur2.UseVisualStyleBackColor = true;
             this.blur2.Click += new System.EventHandler(this.blur2_Click);
             // 
             // blur1
             // 
-            this.blur1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blur1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.blur1.Location = new System.Drawing.Point(3, 53);
             this.blur1.Name = "blur1";
-            this.blur1.Size = new System.Drawing.Size(47, 33);
+            this.blur1.Size = new System.Drawing.Size(55, 33);
             this.blur1.TabIndex = 10;
-            this.blur1.Text = "9";
+            this.blur1.Text = "5%";
             this.blur1.UseVisualStyleBackColor = true;
             this.blur1.Click += new System.EventHandler(this.blur1_Click);
             // 
@@ -1576,7 +1531,7 @@
             this.blur.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.blur.Location = new System.Drawing.Point(3, 3);
             this.blur.Name = "blur";
-            this.blur.Size = new System.Drawing.Size(161, 35);
+            this.blur.Size = new System.Drawing.Size(173, 35);
             this.blur.TabIndex = 9;
             this.blur.Text = "Desenfoque 🠟";
             this.blur.UseVisualStyleBackColor = true;
@@ -1589,7 +1544,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(64, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 29);
+            this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 11;
             this.label2.Text = "label2";
             // 
@@ -1636,10 +1591,10 @@
             this.EditSelect.Controls.Add(this.spin);
             this.EditSelect.Controls.Add(this.crop);
             this.EditSelect.Controls.Add(this.stick);
-            this.EditSelect.Location = new System.Drawing.Point(229, 3);
+            this.EditSelect.Location = new System.Drawing.Point(223, 3);
             this.EditSelect.Name = "EditSelect";
             this.EditSelect.SelectedIndex = 0;
-            this.EditSelect.Size = new System.Drawing.Size(182, 530);
+            this.EditSelect.Size = new System.Drawing.Size(188, 530);
             this.EditSelect.TabIndex = 9;
             this.EditSelect.Visible = false;
             this.EditSelect.SelectedIndexChanged += new System.EventHandler(this.EditSelect_SelectedIndexChanged);
@@ -1649,9 +1604,9 @@
             // 
             this.spin.Controls.Add(this.panel9);
             this.spin.Controls.Add(this.panel6);
-            this.spin.Location = new System.Drawing.Point(4, 29);
+            this.spin.Location = new System.Drawing.Point(4, 22);
             this.spin.Name = "spin";
-            this.spin.Size = new System.Drawing.Size(174, 497);
+            this.spin.Size = new System.Drawing.Size(180, 504);
             this.spin.TabIndex = 0;
             this.spin.Text = "Girar";
             this.spin.UseVisualStyleBackColor = true;
@@ -1663,7 +1618,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 86);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(174, 83);
+            this.panel9.Size = new System.Drawing.Size(180, 83);
             this.panel9.TabIndex = 13;
             // 
             // turnup
@@ -1695,7 +1650,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(174, 86);
+            this.panel6.Size = new System.Drawing.Size(180, 86);
             this.panel6.TabIndex = 11;
             // 
             // turn270
@@ -1725,9 +1680,9 @@
             // 
             this.crop.Controls.Add(this.panel13);
             this.crop.Controls.Add(this.panel12);
-            this.crop.Location = new System.Drawing.Point(4, 29);
+            this.crop.Location = new System.Drawing.Point(4, 22);
             this.crop.Name = "crop";
-            this.crop.Size = new System.Drawing.Size(174, 497);
+            this.crop.Size = new System.Drawing.Size(174, 504);
             this.crop.TabIndex = 0;
             this.crop.Text = "Recortar";
             this.crop.UseVisualStyleBackColor = true;
@@ -1797,9 +1752,9 @@
             this.stick.Controls.Add(this.imp);
             this.stick.Controls.Add(this.panel18);
             this.stick.Controls.Add(this.stickerSize);
-            this.stick.Location = new System.Drawing.Point(4, 29);
+            this.stick.Location = new System.Drawing.Point(4, 22);
             this.stick.Name = "stick";
-            this.stick.Size = new System.Drawing.Size(174, 497);
+            this.stick.Size = new System.Drawing.Size(180, 504);
             this.stick.TabIndex = 1;
             this.stick.Text = "Stickers";
             this.stick.UseVisualStyleBackColor = true;
@@ -1811,16 +1766,16 @@
             this.imp.Dock = System.Windows.Forms.DockStyle.Top;
             this.imp.Location = new System.Drawing.Point(0, 245);
             this.imp.Name = "imp";
-            this.imp.Size = new System.Drawing.Size(174, 168);
+            this.imp.Size = new System.Drawing.Size(180, 168);
             this.imp.TabIndex = 10;
             // 
             // selSt
             // 
             this.selSt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.selSt.Enabled = false;
-            this.selSt.Location = new System.Drawing.Point(10, 57);
+            this.selSt.Location = new System.Drawing.Point(8, 48);
             this.selSt.Name = "selSt";
-            this.selSt.Size = new System.Drawing.Size(150, 96);
+            this.selSt.Size = new System.Drawing.Size(163, 105);
             this.selSt.TabIndex = 8;
             this.selSt.Text = "Seleccionar imagen";
             this.selSt.UseVisualStyleBackColor = true;
@@ -1831,9 +1786,9 @@
             this.impS.BackColor = System.Drawing.Color.White;
             this.impS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.impS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.impS.Location = new System.Drawing.Point(10, 7);
+            this.impS.Location = new System.Drawing.Point(6, 7);
             this.impS.Name = "impS";
-            this.impS.Size = new System.Drawing.Size(150, 35);
+            this.impS.Size = new System.Drawing.Size(167, 35);
             this.impS.TabIndex = 4;
             this.impS.Text = "Importar Sticker 🠟";
             this.impS.UseVisualStyleBackColor = false;
@@ -1853,7 +1808,7 @@
             this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel18.Location = new System.Drawing.Point(0, 0);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(174, 245);
+            this.panel18.Size = new System.Drawing.Size(180, 245);
             this.panel18.TabIndex = 2;
             // 
             // stSp
@@ -1862,7 +1817,7 @@
             this.stSp.BackgroundImage = global::mnrva.Properties.Resources.chispa;
             this.stSp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.stSp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.stSp.Location = new System.Drawing.Point(7, 271);
+            this.stSp.Location = new System.Drawing.Point(12, 271);
             this.stSp.Name = "stSp";
             this.stSp.Size = new System.Drawing.Size(63, 68);
             this.stSp.TabIndex = 17;
@@ -1875,7 +1830,7 @@
             this.stFlf.BackgroundImage = global::mnrva.Properties.Resources.florF;
             this.stFlf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.stFlf.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.stFlf.Location = new System.Drawing.Point(77, 197);
+            this.stFlf.Location = new System.Drawing.Point(85, 197);
             this.stFlf.Name = "stFlf";
             this.stFlf.Size = new System.Drawing.Size(63, 68);
             this.stFlf.TabIndex = 16;
@@ -1888,7 +1843,7 @@
             this.stFla.BackgroundImage = global::mnrva.Properties.Resources.florA;
             this.stFla.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.stFla.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.stFla.Location = new System.Drawing.Point(8, 197);
+            this.stFla.Location = new System.Drawing.Point(13, 197);
             this.stFla.Name = "stFla";
             this.stFla.Size = new System.Drawing.Size(63, 68);
             this.stFla.TabIndex = 15;
@@ -1901,7 +1856,7 @@
             this.stTor.BackgroundImage = global::mnrva.Properties.Resources.storm;
             this.stTor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.stTor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.stTor.Location = new System.Drawing.Point(77, 124);
+            this.stTor.Location = new System.Drawing.Point(85, 124);
             this.stTor.Name = "stTor";
             this.stTor.Size = new System.Drawing.Size(63, 68);
             this.stTor.TabIndex = 14;
@@ -1914,7 +1869,7 @@
             this.stHo.BackgroundImage = global::mnrva.Properties.Resources.hoja;
             this.stHo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.stHo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.stHo.Location = new System.Drawing.Point(7, 123);
+            this.stHo.Location = new System.Drawing.Point(12, 123);
             this.stHo.Name = "stHo";
             this.stHo.Size = new System.Drawing.Size(63, 68);
             this.stHo.TabIndex = 13;
@@ -1927,7 +1882,7 @@
             this.stGo.BackgroundImage = global::mnrva.Properties.Resources.gota;
             this.stGo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.stGo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.stGo.Location = new System.Drawing.Point(77, 51);
+            this.stGo.Location = new System.Drawing.Point(85, 51);
             this.stGo.Name = "stGo";
             this.stGo.Size = new System.Drawing.Size(63, 68);
             this.stGo.TabIndex = 12;
@@ -1940,7 +1895,7 @@
             this.stLi.BackgroundImage = global::mnrva.Properties.Resources.raio;
             this.stLi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.stLi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.stLi.Location = new System.Drawing.Point(7, 50);
+            this.stLi.Location = new System.Drawing.Point(12, 50);
             this.stLi.Name = "stLi";
             this.stLi.Size = new System.Drawing.Size(63, 68);
             this.stLi.TabIndex = 11;
@@ -1949,7 +1904,7 @@
             // 
             // stk
             // 
-            this.stk.Location = new System.Drawing.Point(3, 3);
+            this.stk.Location = new System.Drawing.Point(7, 3);
             this.stk.Name = "stk";
             this.stk.Size = new System.Drawing.Size(147, 39);
             this.stk.TabIndex = 9;
@@ -1962,7 +1917,7 @@
             this.stickerSize.Location = new System.Drawing.Point(10, 419);
             this.stickerSize.Minimum = 1;
             this.stickerSize.Name = "stickerSize";
-            this.stickerSize.Size = new System.Drawing.Size(147, 69);
+            this.stickerSize.Size = new System.Drawing.Size(161, 45);
             this.stickerSize.TabIndex = 10;
             this.stickerSize.Value = 1;
             // 
@@ -1973,9 +1928,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(143, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 29);
+            this.label3.Size = new System.Drawing.Size(31, 20);
             this.label3.TabIndex = 13;
-            this.label3.Text = "label3";
+            this.label3.Text = "0,0";
             // 
             // colorDis
             // 
@@ -1991,7 +1946,6 @@
             // 
             this.panel14.Controls.Add(this.goBack);
             this.panel14.Controls.Add(this.savePic);
-            this.panel14.Controls.Add(this.label7);
             this.panel14.Controls.Add(this.label2);
             this.panel14.Controls.Add(this.label3);
             this.panel14.Controls.Add(this.colorDis);
@@ -2025,10 +1979,12 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(295, 30);
+            this.label7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(0, 466);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 20);
-            this.label7.TabIndex = 15;
+            this.label7.TabIndex = 16;
             this.label7.Text = "label7";
             // 
             // Form1
@@ -2045,6 +2001,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabPage2.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
@@ -2084,8 +2041,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.shades)).EndInit();
             this.b.ResumeLayout(false);
             this.colors.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
+            this.ac.ResumeLayout(false);
+            this.ac.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.blueMore)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.greenMore)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.redMore)).EndInit();
@@ -2103,11 +2060,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.greenRange2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.redRange2)).EndInit();
             this.other.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
+            this.br.ResumeLayout(false);
+            this.br.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bright)).EndInit();
             this.panel8.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
+            this.bl.ResumeLayout(false);
             this.main.ResumeLayout(false);
             this.tool.ResumeLayout(false);
             this.tool.PerformLayout();
@@ -2133,11 +2090,7 @@
         #endregion
 
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button zoomOutOg;
-        private System.Windows.Forms.Button zoomInOg;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button zoomOutNew;
-        private System.Windows.Forms.Button zoomInNew;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -2227,19 +2180,19 @@
         private System.Windows.Forms.ToolStripMenuItem girarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recortarToolStripMenuItem;
         private System.Windows.Forms.TabPage other;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel bl;
         private System.Windows.Forms.Button blur;
         private System.Windows.Forms.Button blur3;
         private System.Windows.Forms.Button blur2;
         private System.Windows.Forms.Button blur1;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button edge;
-        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel ac;
         private System.Windows.Forms.TrackBar blueMore;
         private System.Windows.Forms.TrackBar greenMore;
         private System.Windows.Forms.TrackBar redMore;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Button aug;
+        private System.Windows.Forms.Panel br;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel13;
@@ -2276,7 +2229,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button colorDis;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button goBack;
         private System.Windows.Forms.Button savePic;
         private System.Windows.Forms.Button brnEnhance;
@@ -2294,6 +2246,7 @@
         private System.Windows.Forms.Panel imp;
         private System.Windows.Forms.Button selSt;
         private System.Windows.Forms.Button impS;
+        private System.Windows.Forms.Label label7;
     }
 }
 
