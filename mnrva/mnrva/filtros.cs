@@ -107,13 +107,14 @@ namespace mnrva
 
         public Bitmap grayscaleColor(Bitmap ruta, string si, int rango)
         {
-            // Filtro de escala de gfrises pero realta rojo o azul
+            // Filtro de escala de gfrises pero realza rojo o azul
             Bitmap gs;
             gs = new Bitmap(ruta);
             h = gs.Height;
             w = gs.Width;
             Color c, c2, cf;
-            int main, gray1, gray2;
+            //int main, gray1, gray2;
+            bool main, gray1, gray2;
 
             for (int y = 0; y < h; y++)
             {
@@ -124,11 +125,13 @@ namespace mnrva
                     int pr = (c.R + c.G + c.B) / 3;
                     c2 = Color.FromArgb(c.A, pr, pr, pr);
 
-                    main = (si == "r") ? c.R : (si == "g") ? c.G : c.B;
-                    gray1 = (si != "r") ? c.R : (si != "g") ? c.G : c.B;
-                    gray2 = (si != "g") ? c.G : c.B;
+                    //main = (si == "r") ? c.R : (si == "g") ? c.G : c.B;
+                    //gray1 = (si != "r") ? c.R : (si != "g") ? c.G : c.B;
+                    //gray2 = (si != "g") ? c.G : c.B;
+                    main = (si == "r") & (c.R > rango) & (c.G <= rango / 2) & (c.B <= c.R);
+                    gray1 = (si == "b") & (c.B > rango) & (c.G <= c.B) & (c.R < rango); // listo
 
-                    cf = (gray1 < rango) & (gray2 < rango) & (main > rango) ? c : c2;
+                    cf = (gray1) ^ (main) ? c : c2;
                     gs.SetPixel(x, y, cf);
                 }
             }

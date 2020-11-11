@@ -30,6 +30,7 @@
         {
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -47,6 +48,7 @@
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.girarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recortarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stickerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.cropping = new System.Windows.Forms.TabPage();
             this.panel16 = new System.Windows.Forms.Panel();
@@ -184,8 +186,6 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.goBack = new System.Windows.Forms.Button();
             this.savePic = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.stickerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -284,6 +284,17 @@
             this.splitContainer1.Size = new System.Drawing.Size(997, 486);
             this.splitContainer1.SplitterDistance = 509;
             this.splitContainer1.TabIndex = 7;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(0, 466);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(51, 20);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "label7";
             // 
             // pictureBox2
             // 
@@ -446,6 +457,13 @@
             this.recortarToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
             this.recortarToolStripMenuItem.Text = "Recortar";
             this.recortarToolStripMenuItem.Click += new System.EventHandler(this.recortarToolStripMenuItem_Click);
+            // 
+            // stickerToolStripMenuItem
+            // 
+            this.stickerToolStripMenuItem.Name = "stickerToolStripMenuItem";
+            this.stickerToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
+            this.stickerToolStripMenuItem.Text = "Sticker";
+            this.stickerToolStripMenuItem.Click += new System.EventHandler(this.stickerToolStripMenuItem_Click);
             // 
             // tabControl1
             // 
@@ -1972,24 +1990,6 @@
             this.savePic.Text = "Editar esto";
             this.savePic.UseVisualStyleBackColor = true;
             this.savePic.Click += new System.EventHandler(this.savePic_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(0, 466);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 20);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "label7";
-            // 
-            // stickerToolStripMenuItem
-            // 
-            this.stickerToolStripMenuItem.Name = "stickerToolStripMenuItem";
-            this.stickerToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
-            this.stickerToolStripMenuItem.Text = "Sticker";
-            this.stickerToolStripMenuItem.Click += new System.EventHandler(this.stickerToolStripMenuItem_Click);
             // 
             // Form1
             // 

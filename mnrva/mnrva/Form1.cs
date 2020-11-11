@@ -45,6 +45,8 @@ namespace mnrva
             br.Size = new Size(114, 40);
             bl.Size = new Size(114, 40);
             ac.Size = new Size(114, 40);
+            zoom.Enabled = false;
+            zoomout.Enabled = false;
             tool.Dock = DockStyle.Right;
             cropPanel.Enabled = false;
             currentColor = Color.FromArgb(255, 255, 255, 255);
@@ -78,6 +80,9 @@ namespace mnrva
                 trackY.Maximum = firstBmp.Height;
                 trackY.Value = firstBmp.Height / 2;
                 posY.Text = trackY.Value.ToString();
+
+                zoomout.Enabled = true;
+                zoom.Enabled = true;
             }
         }
 
